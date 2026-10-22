@@ -1,0 +1,49 @@
+GLWE error bootstrap, whole refresh (stair key switch from 2048, rounding with selection, rotation, extraction, subtraction), one thread; times in ms (median, min of 10); noise on 300 refreshes; margin of (4p̂)^2 (ν σ_out^2 + σ_KS^2) + 16 V*/p^2 ≤ 1/U^2
+k = 1 (p̂ = 2^ 2): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  566, (2^23,1): refresh   6.631 ms (min   6.318); out  -15.43 /  -15.49, max 2^-13.99, failures 0; KS   -7.97 /   -7.95; margin  0.23 bits; vterm 4.099e-5; BSK 42 MB (keys 1 s)
+CSV,glwe,1,2048,2,1,566,23,1,6.6309,6.3180,-15.4300,-7.9716,0.229,0
+k = 1 (p̂ = 2^ 2): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  568, (2^23,1): refresh   5.525 ms (min   5.466); out  -15.60 /  -15.47, max 2^-14.11, failures 0; KS   -7.86 /   -7.97; margin  0.11 bits; vterm 1.646e-4; BSK 58 MB (keys 1 s)
+CSV,glwe,1,1024,4,1,568,23,1,5.5252,5.4658,-15.6010,-7.8639,0.112,0
+k = 1 (p̂ = 2^ 2): GLWE kk =  8, np =  256, p =  512, m = 1, n =  576, (2^22,1): refresh   5.976 ms (min   5.934); out  -14.72 /  -14.69, max 2^-13.08, failures 0; KS   -8.22 /   -8.24; margin  0.29 bits; vterm 6.680e-4; BSK 96 MB (keys 1 s)
+CSV,glwe,1,512,8,1,576,22,1,5.9762,5.9335,-14.7198,-8.2156,0.286,0
+k = 2 (p̂ = 2^ 4): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  672, (2^23,1): refresh   7.193 ms (min   7.175); out  -15.37 /  -15.37, max 2^-13.72, failures 0; KS  -10.62 /  -10.57; margin  0.28 bits; vterm 4.905e-5; BSK 50 MB (keys 1 s)
+CSV,glwe,2,2048,2,1,672,23,1,7.1929,7.1754,-15.3734,-10.6231,0.276,0
+k = 2 (p̂ = 2^ 4): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  672, (2^23,1): refresh   6.506 ms (min   6.481); out  -15.36 /  -15.35, max 2^-13.63, failures 0; KS  -10.56 /  -10.57; margin  0.21 bits; vterm 1.962e-4; BSK 69 MB (keys 1 s)
+CSV,glwe,2,1024,4,1,672,23,1,6.5056,6.4808,-15.3556,-10.5590,0.214,0
+k = 2 (p̂ = 2^ 4): GLWE kk =  8, np =  256, p =  512, m = 1, n =  688, (2^23,1): refresh   7.214 ms (min   7.123); out  -15.40 /  -15.32, max 2^-13.65, failures 0; KS  -10.87 /  -10.93; margin  0.24 bits; vterm 8.043e-4; BSK 114 MB (keys 1 s)
+CSV,glwe,2,512,8,1,688,23,1,7.2140,7.1230,-15.4009,-10.8657,0.241,0
+k = 3 (p̂ = 2^ 6): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  734, (2^14,2): refresh  11.961 ms (min  11.900); out  -20.56 /  -20.53, max 2^-18.96, failures 0; KS  -11.90 /  -11.94; margin  0.17 bits; vterm 5.378e-5; BSK 108 MB (keys 1 s)
+CSV,glwe,3,2048,2,1,734,14,2,11.9605,11.9001,-20.5606,-11.9003,0.175,0
+k = 3 (p̂ = 2^ 6): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  736, (2^13,2): refresh  11.451 ms (min  11.370); out  -18.53 /  -18.53, max 2^-16.72, failures 0; KS  -12.17 /  -12.17; margin  0.32 bits; vterm 2.157e-4; BSK 151 MB (keys 1 s)
+CSV,glwe,3,1024,4,1,736,13,2,11.4508,11.3697,-18.5275,-12.1730,0.317,0
+k = 3 (p̂ = 2^ 6): GLWE kk =  8, np =  256, p =  512, m = 1, n =  736, (2^13,2): refresh  13.523 ms (min  13.137); out  -18.51 /  -18.53, max 2^-16.68, failures 0; KS  -12.28 /  -12.17; margin  0.28 bits; vterm 8.629e-4; BSK 244 MB (keys 2 s)
+CSV,glwe,3,512,8,1,736,13,2,13.5235,13.1369,-18.5132,-12.2818,0.275,0
+k = 4 (p̂ = 2^ 8): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  816, (2^14,2): refresh  14.061 ms (min  13.747); out  -20.56 /  -20.45, max 2^-19.01, failures 0; KS  -14.21 /  -14.15; margin  0.39 bits; vterm 6.004e-5; BSK 120 MB (keys 1 s)
+CSV,glwe,4,2048,2,1,816,14,2,14.0606,13.7475,-20.5616,-14.2147,0.388,0
+k = 4 (p̂ = 2^ 8): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  816, (2^14,2): refresh  13.131 ms (min  12.920); out  -20.54 /  -20.45, max 2^-18.84, failures 0; KS  -14.09 /  -14.15; margin  0.25 bits; vterm 2.402e-4; BSK 167 MB (keys 2 s)
+CSV,glwe,4,1024,4,1,816,14,2,13.1310,12.9199,-20.5422,-14.0897,0.246,0
+k = 4 (p̂ = 2^ 8): GLWE kk =  8, np =  256, p =  512, m = 1, n =  816, (2^15,2): refresh  15.019 ms (min  14.917); out  -22.43 /  -22.32, max 2^-20.93, failures 0; KS  -14.07 /  -14.15; margin  0.18 bits; vterm 9.606e-4; BSK 271 MB (keys 2 s)
+CSV,glwe,4,512,8,1,816,15,2,15.0194,14.9174,-22.4284,-14.0747,0.183,0
+k = 5 (p̂ = 2^10): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  896, (2^15,2): refresh  15.562 ms (min  15.453); out  -22.29 /  -22.27, max 2^-20.74, failures 0; KS  -16.14 /  -16.14; margin  0.28 bits; vterm 6.616e-5; BSK 132 MB (keys 2 s)
+CSV,glwe,5,2048,2,1,896,15,2,15.5619,15.4527,-22.2870,-16.1382,0.283,0
+k = 5 (p̂ = 2^10): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  896, (2^15,2): refresh  14.419 ms (min  14.371); out  -22.33 /  -22.26, max 2^-20.69, failures 0; KS  -16.16 /  -16.14; margin  0.27 bits; vterm 2.647e-4; BSK 184 MB (keys 2 s)
+CSV,glwe,5,1024,4,1,896,15,2,14.4190,14.3709,-22.3261,-16.1572,0.268,0
+k = 5 (p̂ = 2^10): GLWE kk =  8, np =  256, p =  512, m = 1, n =  902, (2^16,2): refresh  16.702 ms (min  16.604); out  -22.55 /  -22.45, max 2^-20.95, failures 0; KS  -16.17 /  -16.24; margin  0.17 bits; vterm 1.066e-3; BSK 299 MB (keys 2 s)
+CSV,glwe,5,512,8,1,902,16,2,16.7019,16.6036,-22.5500,-16.1709,0.171,0
+k = 6 (p̂ = 2^12): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  976, (2^11,3): refresh  22.936 ms (min  22.651); out  -25.19 /  -25.28, max 2^-23.49, failures 0; KS  -18.10 /  -18.15; margin  0.34 bits; vterm 7.230e-5; BSK 216 MB (keys 3 s)
+CSV,glwe,6,2048,2,1,976,11,3,22.9359,22.6510,-25.1870,-18.1028,0.338,0
+k = 6 (p̂ = 2^12): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  976, (2^11,3): refresh  21.428 ms (min  21.339); out  -25.25 /  -25.27, max 2^-23.88, failures 0; KS  -18.06 /  -18.15; margin  0.27 bits; vterm 2.892e-4; BSK 300 MB (keys 3 s)
+CSV,glwe,6,1024,4,1,976,11,3,21.4276,21.3390,-25.2536,-18.0643,0.265,0
+k = 6 (p̂ = 2^12): GLWE kk =  8, np =  256, p =  512, m = 1, n =  976, (2^12,3): refresh  25.121 ms (min  24.962); out  -26.21 /  -26.12, max 2^-24.63, failures 0; KS  -18.18 /  -18.15; margin  0.23 bits; vterm 1.157e-3; BSK 486 MB (keys 4 s)
+CSV,glwe,6,512,8,1,976,12,3,25.1207,24.9625,-26.2054,-18.1820,0.229,0
+k = 7 (p̂ = 2^14): GLWE kk =  2, np = 1024, p = 2048, m = 1, n = 1056, (2^12,3): refresh  24.614 ms (min  24.554); out  -25.96 /  -26.16, max 2^-24.25, failures 0; KS  -20.16 /  -20.14; margin  0.23 bits; vterm 7.844e-5; BSK 234 MB (keys 3 s)
+CSV,glwe,7,2048,2,1,1056,12,3,24.6143,24.5542,-25.9581,-20.1576,0.230,0
+k = 7 (p̂ = 2^14): GLWE kk =  4, np =  512, p = 1024, m = 1, n = 1056, (2^12,3): refresh  23.158 ms (min  23.028); out  -26.23 /  -26.10, max 2^-24.59, failures 0; KS  -20.25 /  -20.14; margin  0.31 bits; vterm 3.138e-4; BSK 324 MB (keys 3 s)
+CSV,glwe,7,1024,4,1,1056,12,3,23.1576,23.0276,-26.2280,-20.2492,0.312,0
+k = 7 (p̂ = 2^14): GLWE kk =  8, np =  256, p =  512, m = 1, n = 1072, (2^12,3): refresh  27.681 ms (min  27.253); out  -26.19 /  -26.05, max 2^-24.56, failures 0; KS  -20.56 /  -20.50; margin  0.31 bits; vterm 1.275e-3; BSK 533 MB (keys 4 s)
+CSV,glwe,7,512,8,1,1072,12,3,27.6809,27.2534,-26.1906,-20.5649,0.309,0
+k = 8 (p̂ = 2^16): GLWE kk =  2, np = 1024, p = 2048, m = 1, n = 1136, (2^9,4): refresh  33.128 ms (min  33.009); out  -27.96 /  -27.99, max 2^-26.12, failures 0; KS  -22.23 /  -22.15; margin  0.28 bits; vterm 8.459e-5; BSK 335 MB (keys 4 s)
+CSV,glwe,8,2048,2,1,1136,9,4,33.1285,33.0094,-27.9630,-22.2316,0.285,0
+k = 8 (p̂ = 2^16): GLWE kk =  4, np =  512, p = 1024, m = 1, n = 1136, (2^9,4): refresh  31.477 ms (min  31.330); out  -27.92 /  -27.97, max 2^-26.25, failures 0; KS  -22.20 /  -22.20; margin  0.21 bits; vterm 3.384e-4; BSK 465 MB (keys 5 s)
+CSV,glwe,8,1024,4,1,1136,9,4,31.4770,31.3300,-27.9165,-22.1983,0.206,0
+k = 8 (p̂ = 2^16): GLWE kk =  8, np =  256, p =  512, m = 1, n = 1152, (2^9,4): refresh  37.805 ms (min  37.614); out  -28.06 /  -27.95, max 2^-26.70, failures 0; KS  -22.55 /  -22.51; margin  0.26 bits; vterm 1.373e-3; BSK 764 MB (keys 6 s)
+CSV,glwe,8,512,8,1,1152,9,4,37.8055,37.6138,-28.0628,-22.5484,0.257,0

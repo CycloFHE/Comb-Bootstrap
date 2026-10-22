@@ -1,0 +1,23 @@
+RNS arithmetic on 32-bit integers, TFHE-rs 1.8.1, one thread: moduli [263, 262, 261, 259] (P32 = 2^32.12); refresh: CombBoot B = 8 (two integers), n = 832; before a product: error bootstrap m = 2, n = 816, (2^8,5), trace (2^5,9)
+  check: 3 pairs of 32-bit integers: refresh of x and y (one CombBoot), x + y, x y (mod P32) and the refresh of x y and x + y (one CombBoot), correct (CRT)
+  rns  32 bits: refresh (CombBoot, two integers)   95.916 ms,   47.958 ms per integer;  addition  0.00207 ms;  multiplication  223.510 ms (refresh before a product 212.694 + product 10.816, 4 residues)   (keys 11 s)
+  check: 3 pairs of 32-bit integers, TFHE-rs CRT: x + y, x y (mod 8485840800) and the refresh of x y, correct
+  tfhers CRT [19, 23, 25, 27, 29, 31, 32] (7 blocks, 2^32.98, MESSAGE_5_CARRY_1, n = 1006, N = 8192): refresh  1273.502 ms (181.93 per block);  addition  0.02250 ms;  multiplication  2874.250 ms,  4153.376 ms with the refresh   (keys 19 s)
+     key switch 40.815 ms (22 % of a block refresh); without KS: refresh   987.800 ms, multiplication with the refresh  3296.271 ms
+  tfhers FheUint32 (radix, 16 blocks): refresh (&a & MAX)   376.775 ms;  addition   794.604 ms;  multiplication  11333.170 ms;  16 blocks refreshed:  393.067 ms with its key switch,  242.002 ms with ours
+CSV
+rns,32,refresh_call,95.9156
+rns,32,refresh_int,47.9578
+rns,32,add,0.002074
+rns,32,mul,223.5104,212.6943,10.8161
+tfhers_crt,32,refresh,1273.5016
+tfhers_crt,32,add,0.022499
+tfhers_crt,32,mul,4153.3760,2874.2499
+tfhers_crt,32,ks,40.8145
+tfhers_crt,32,refresh_noks,987.8000
+tfhers_crt,32,mul_noks,3296.2714
+tfhers,32,refresh,376.7748
+tfhers,32,add,794.6044
+tfhers,32,mul,11333.1696
+tfhers,32,refresh_blocks_theirs,393.0667
+tfhers,32,refresh_blocks_ours,242.0022

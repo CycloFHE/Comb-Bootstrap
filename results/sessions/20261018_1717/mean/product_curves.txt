@@ -1,0 +1,14 @@
+Mean over 10 sessions (results/sessions/20261018_1717) of the minimum within each session
+CSV
+ebrs,1,product,11.9542,10.8008,1.1534
+ebrs,2,product,13.8263,12.6668,1.1596
+ebrs,3,product,20.1066,18.9447,1.1619
+ebrs,4,product,33.1216,31.6011,1.5205
+tfhers,1,product,14.5100,14.3820
+tfhers,2,product,89.0161,88.6544
+tfhers,3,product,209.2956,208.7128
+tfhers,4,product,422.7183,421.6686
+tfhers,5,product,665.6177,663.7178
+tfhers,6,product,955.1643,953.7862
+tfhers,7,product,1289.9090,1288.2635
+tfhers,8,product,1683.7481,1682.6230

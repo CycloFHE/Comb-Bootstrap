@@ -1,0 +1,37 @@
+Times (native, one thread, ms): error bootstrap at N = 2048, m = 2, d = 16, PCFG = exact
+  addition of two ciphertexts (dimension N): 0.00038 ms
+  k = 1 ( 2 bits) refresh:           n =  570, (2^23,1)  rotation    5.98 + key switch  0.138 =    6.12
+  k = 1 ( 2 bits) before a product:  n =  564, (2^13,2)  rotation    9.74 + key switch  0.176 =    9.91;  product, trace (2^8,5)    1.720;  total   11.63
+  k = 2 ( 4 bits) refresh:           n =  650, (2^13,2)  rotation   12.03 + key switch  0.209 =   12.24
+  k = 2 ( 4 bits) before a product:  n =  650, (2^15,2)  rotation   12.07 + key switch  0.196 =   12.27;  product, trace (2^8,5)    1.756;  total   14.02
+  k = 3 ( 6 bits) refresh:           n =  732, (2^15,2)  rotation   13.66 + key switch  0.233 =   13.89
+  k = 3 ( 6 bits) before a product:  n =  734, (2^11,3)  rotation   18.28 + key switch  0.231 =   18.51;  product, trace (2^8,5)    1.744;  total   20.25
+  k = 4 ( 8 bits) refresh:           n =  816, (2^14,2)  rotation   15.46 + key switch  0.172 =   15.64
+  k = 4 ( 8 bits) before a product:  n =  816, (2^8,5)   rotation   32.39 + key switch  0.185 =   32.57;  product, trace (2^6,8)    2.227;  total   34.80
+  k = 5 (10 bits) refresh:           n =  896, (2^15,2)  rotation   16.50 + key switch  0.294 =   16.80
+  k = 5 (10 bits) before a product:  n =  996, (2^2,22)  rotation  147.69 + key switch  0.292 =  147.99;  product, trace (2^2,24)   7.891;  total  155.88
+  k = 6 (12 bits) refresh:           n =  976, (2^11,3)  rotation   23.72 + key switch  0.237 =   23.96
+  k = 7 (14 bits) refresh:           n = 1088, (2^12,3)  rotation   27.62 + key switch  0.298 =   27.92
+  k = 8 (16 bits) refresh:           n = 1152, (2^9,4)   rotation   37.53 + key switch  0.249 =   37.78
+CSV (scheme,k,operation,ms)
+eb,1,refresh,6.1164
+eb,1,addition,0.00649
+eb,1,product,11.6342
+eb,2,refresh,12.2363
+eb,2,addition,0.01261
+eb,2,product,14.0230
+eb,3,refresh,13.8920
+eb,3,addition,0.01427
+eb,3,product,20.2520
+eb,4,refresh,15.6350
+eb,4,addition,0.01601
+eb,4,product,34.7985
+eb,5,refresh,16.7979
+eb,5,addition,0.01717
+eb,5,product,155.8768
+eb,6,refresh,23.9615
+eb,6,addition,0.02434
+eb,7,refresh,27.9156
+eb,7,addition,0.02829
+eb,8,refresh,37.7817
+eb,8,addition,0.03816

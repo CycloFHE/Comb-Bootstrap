@@ -1,0 +1,10 @@
+error bootstrap (A), optimized FFT backend: p = 2039, M0 = 1, B = 1, N = 2038, p̂ = 2^8, n = 816, m = 1, BR (2^14,2), aut (2^1,1), σ = 2^-50.03, keys 2 s
+  64 outputs: σ_out 2^-20.46 measured / 2^-19.93 predicted, max |e| 2^-19.08; σ_KS 2^-14.26 / 2^-14.15; |E| ≤ 90 (window 1019); 0.0 s per refresh of 1
+  margin at 2^-128 after ν = 1000 additions: 1.41 bits; largest p̂ for this noise: 2^9.42
+  case (B), same keys (p = 4096, predicted noise of case (B) = half): margin 0.42 bits, largest p̂ 2^8.42
+  errors at the edges of the window ±1019: largest output error 2^-19.93 (exact correction E/R)
+comb bootstrap (A), optimized FFT backend: p = 257, M0 = 16, B = 8, N = 2048, p̂ = 2^8, n = 896, m = 1, BR (2^11,3), aut (2^11,3), σ = 2^-50.29, keys 2 s
+  64 outputs: σ_out 2^-22.51 measured / 2^-21.95 predicted, max |e| 2^-21.38; σ_KS 2^-15.82 / 2^-16.14; |E| ≤ 7 (window 128); 0.1 s per refresh of 8
+  margin at 2^-128 after ν = 1000 additions: 1.18 bits; largest p̂ for this noise: 2^10.90
+  case (B), same keys (p = 512, predicted noise of case (B) = half): margin 1.02 bits, largest p̂ 2^9.89
+  errors at the edges of the window ±128: largest output error 2^-21.07 (exact correction E/R)

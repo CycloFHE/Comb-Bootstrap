@@ -1,0 +1,87 @@
+CombBoot with t threads, N = 2048, m = 1, h = 1, configurations of Table 3, rounding with selection included, threads 1, 4, 6, 8, 10 (julia -t 10)
+
+ 2 bits: p = 256, B = 16, n = 608, RGSW (2^23,1), aut (2^14,2), V* = 11.60
+   1 thread , 1 batch  :   16 ciphertexts in    44.73 ms (rounding  0.40 + rotation    43.72 + key switches   1.97):  2.795 ms per ciphertext (×1.0)   [|E|/window 0.09, error/margin: rotation 1.2e-03, KS 6.4e-02]
+      phases (µs per iteration): 13.28 | 34.77 | 0.02 | 5.63 | 4.90 | 3.06 | 9.05;  total 70.7
+   4 threads, 1 batch  :   16 ciphertexts in    17.61 ms (rounding  0.14 + rotation    16.73 + key switches   0.59):  1.101 ms per ciphertext (×2.5)   [|E|/window 0.09, error/margin: rotation 1.1e-03, KS 6.1e-02]
+      phases (µs per iteration): 5.00 | 14.90 | 0.01 | 3.54 | 3.38 | 2.31 | 4.92;  total 34.1
+   6 threads, 1 batch  :   16 ciphertexts in    17.14 ms (rounding  0.25 + rotation    16.41 + key switches   0.45):  1.071 ms per ciphertext (×2.6)   [|E|/window 0.09, error/margin: rotation 8.0e-04, KS 5.4e-02]
+      phases (µs per iteration): 5.06 | 11.01 | 0.01 | 4.13 | 3.16 | 1.97 | 4.56;  total 29.9
+   8 threads, 1 batch  :   16 ciphertexts in    16.02 ms (rounding  0.11 + rotation    15.64 + key switches   0.34):  1.001 ms per ciphertext (×2.8)   [|E|/window 0.09, error/margin: rotation 7.7e-04, KS 9.1e-02]
+      phases (µs per iteration): 5.15 | 8.78 | 0.01 | 6.45 | 3.52 | 2.03 | 4.77;  total 30.7
+  10 threads, 1 batch  :   16 ciphertexts in    15.46 ms (rounding  0.11 + rotation    15.06 + key switches   0.32):  0.966 ms per ciphertext (×2.9)   [|E|/window 0.12, error/margin: rotation 9.9e-04, KS 5.0e-02]
+      phases (µs per iteration): 5.14 | 7.48 | 0.01 | 3.68 | 3.30 | 2.13 | 4.62;  total 26.4
+
+ 4 bits: p = 256, B = 16, n = 688, RGSW (2^14,2), aut (2^14,2) shifted by 4, V* = 13.20
+   1 thread , 1 batch  :   16 ciphertexts in    59.33 ms (rounding  0.47 + rotation    56.93 + key switches   2.17):  3.708 ms per ciphertext (×1.0)   [|E|/window 0.11, error/margin: rotation 1.1e-04, KS 1.3e-01]
+      phases (µs per iteration): 14.00 | 36.15 | 0.02 | 5.95 | 10.29 | 5.68 | 10.81;  total 82.9
+   4 threads, 1 batch  :   16 ciphertexts in    21.77 ms (rounding  0.31 + rotation    21.27 + key switches   0.67):  1.361 ms per ciphertext (×2.7)   [|E|/window 0.11, error/margin: rotation 1.1e-04, KS 5.0e-02]
+      phases (µs per iteration): 4.32 | 10.93 | 0.01 | 3.32 | 3.24 | 2.77 | 5.23;  total 29.8
+   6 threads, 1 batch  :   16 ciphertexts in    21.58 ms (rounding  0.13 + rotation    20.92 + key switches   0.48):  1.349 ms per ciphertext (×2.7)   [|E|/window 0.09, error/margin: rotation 1.6e-04, KS 7.6e-02]
+      phases (µs per iteration): 4.65 | 11.25 | 0.01 | 3.57 | 3.56 | 3.27 | 5.87;  total 32.2
+   8 threads, 1 batch  :   16 ciphertexts in    20.28 ms (rounding  0.16 + rotation    19.67 + key switches   0.33):  1.267 ms per ciphertext (×2.9)   [|E|/window 0.11, error/margin: rotation 8.1e-05, KS 1.1e-01]
+      phases (µs per iteration): 4.97 | 8.57 | 0.01 | 3.77 | 3.72 | 3.25 | 5.98;  total 30.3
+  10 threads, 1 batch  :   16 ciphertexts in    20.07 ms (rounding  0.22 + rotation    19.21 + key switches   0.35):  1.254 ms per ciphertext (×3.0)   [|E|/window 0.09, error/margin: rotation 1.2e-04, KS 6.9e-02]
+      phases (µs per iteration): 4.59 | 7.30 | 0.01 | 3.71 | 3.65 | 2.96 | 5.86;  total 28.1
+
+ 8 bits: p = 256, B = 16, n = 896, RGSW (2^11,3), aut (2^11,3) shifted by 4, V* = 17.37
+   1 thread , 1 batch  :   16 ciphertexts in    99.51 ms (rounding  0.61 + rotation    95.96 + key switches   3.45):  6.219 ms per ciphertext (×1.0)   [|E|/window 0.16, error/margin: rotation 1.3e-04, KS 2.4e-02]
+      phases (µs per iteration): 17.48 | 48.26 | 0.01 | 5.93 | 15.28 | 10.83 | 10.84;  total 108.6
+   4 threads, 1 batch  :   16 ciphertexts in    37.68 ms (rounding  0.25 + rotation    36.25 + key switches   0.96):  2.355 ms per ciphertext (×2.6)   [|E|/window 0.14, error/margin: rotation 1.1e-04, KS 3.3e-02]
+      phases (µs per iteration): 7.64 | 15.79 | 0.01 | 3.57 | 6.18 | 4.48 | 5.51;  total 43.2
+   6 threads, 1 batch  :   16 ciphertexts in    31.98 ms (rounding  0.25 + rotation    31.08 + key switches   0.69):  1.999 ms per ciphertext (×3.1)   [|E|/window 0.14, error/margin: rotation 1.3e-04, KS 2.6e-02]
+      phases (µs per iteration): 4.99 | 13.45 | 0.01 | 4.36 | 3.91 | 3.89 | 6.20;  total 36.8
+   8 threads, 1 batch  :   16 ciphertexts in    28.97 ms (rounding  0.18 + rotation    28.25 + key switches   0.50):  1.811 ms per ciphertext (×3.4)   [|E|/window 0.11, error/margin: rotation 1.4e-04, KS 3.1e-02]
+      phases (µs per iteration): 4.72 | 9.62 | 0.01 | 3.74 | 3.95 | 3.45 | 5.90;  total 31.4
+  10 threads, 1 batch  :   16 ciphertexts in    28.59 ms (rounding  0.22 + rotation    27.51 + key switches   0.48):  1.787 ms per ciphertext (×3.5)   [|E|/window 0.16, error/margin: rotation 1.0e-04, KS 2.8e-02]
+      phases (µs per iteration): 4.74 | 8.49 | 0.01 | 3.85 | 4.05 | 3.65 | 5.96;  total 30.7
+
+12 bits: p = 512, B = 8, n = 986, RGSW (2^11,3), aut (2^11,3) shifted by 3, V* = 19.18
+   1 thread , 1 batch  :    8 ciphertexts in    87.97 ms (rounding  0.34 + rotation    85.03 + key switches   2.48): 10.997 ms per ciphertext (×1.0)   [|E|/window 0.06, error/margin: rotation 1.3e-03, KS 7.7e-02]
+      phases (µs per iteration): 17.52 | 28.32 | 0.02 | 6.06 | 15.29 | 8.53 | 10.67;  total 86.4
+   4 threads, 1 batch  :    8 ciphertexts in    35.13 ms (rounding  0.15 + rotation    34.00 + key switches   0.69):  4.391 ms per ciphertext (×2.5)   [|E|/window 0.05, error/margin: rotation 1.6e-03, KS 5.3e-02]
+      phases (µs per iteration): 7.44 | 8.38 | 0.02 | 3.33 | 5.99 | 4.03 | 5.16;  total 34.3
+   6 threads, 1 batch  :    8 ciphertexts in    31.57 ms (rounding  0.12 + rotation    30.02 + key switches   0.73):  3.946 ms per ciphertext (×2.8)   [|E|/window 0.05, error/margin: rotation 1.4e-03, KS 8.9e-02]
+      phases (µs per iteration): 5.21 | 8.36 | 0.01 | 3.70 | 4.15 | 4.10 | 6.07;  total 31.6
+   8 threads, 1 batch  :    8 ciphertexts in    30.63 ms (rounding  0.10 + rotation    28.28 + key switches   0.38):  3.828 ms per ciphertext (×2.9)   [|E|/window 0.05, error/margin: rotation 1.7e-03, KS 6.8e-02]
+      phases (µs per iteration): 5.84 | 8.19 | 0.01 | 3.78 | 4.95 | 4.50 | 6.79;  total 34.1
+  10 threads, 1 batch  :    8 ciphertexts in    27.86 ms (rounding  0.10 + rotation    27.26 + key switches   0.39):  3.483 ms per ciphertext (×3.2)   [|E|/window 0.05, error/margin: rotation 1.7e-03, KS 1.2e-01]
+      phases (µs per iteration): 5.05 | 5.90 | 0.01 | 3.85 | 4.03 | 4.01 | 6.07;  total 28.9
+
+16 bits: p = 512, B = 8, n = 1157, RGSW (2^8,5), aut (2^6,6) shifted by 3, V* = 22.63
+   1 thread , 1 batch  :    8 ciphertexts in   157.10 ms (rounding  0.56 + rotation   155.27 + key switches   2.81): 19.638 ms per ciphertext (×1.0)   [|E|/window 0.07, error/margin: rotation 2.3e-03, KS 7.3e-02]
+      phases (µs per iteration): 28.21 | 48.49 | 0.02 | 6.07 | 25.44 | 14.61 | 10.62;  total 133.5
+   4 threads, 1 batch  :    8 ciphertexts in    54.65 ms (rounding  0.22 + rotation    53.48 + key switches   0.79):  6.832 ms per ciphertext (×2.9)   [|E|/window 0.10, error/margin: rotation 2.0e-03, KS 9.1e-02]
+      phases (µs per iteration): 8.68 | 15.61 | 0.02 | 3.63 | 9.27 | 7.17 | 5.56;  total 49.9
+   6 threads, 1 batch  :    8 ciphertexts in    50.65 ms (rounding  0.17 + rotation    49.19 + key switches   0.76):  6.331 ms per ciphertext (×3.1)   [|E|/window 0.08, error/margin: rotation 1.4e-03, KS 3.9e-02]
+      phases (µs per iteration): 8.71 | 12.84 | 0.02 | 4.06 | 7.62 | 6.53 | 6.96;  total 46.7
+   8 threads, 1 batch  :    8 ciphertexts in    42.78 ms (rounding  0.18 + rotation    42.14 + key switches   0.40):  5.348 ms per ciphertext (×3.7)   [|E|/window 0.08, error/margin: rotation 1.5e-03, KS 6.5e-02]
+      phases (µs per iteration): 5.65 | 10.49 | 0.01 | 4.15 | 7.53 | 6.18 | 6.95;  total 41.0
+  10 threads, 1 batch  :    8 ciphertexts in    39.02 ms (rounding  0.17 + rotation    38.23 + key switches   0.41):  4.878 ms per ciphertext (×4.0)   [|E|/window 0.08, error/margin: rotation 1.5e-03, KS 5.1e-02]
+      phases (µs per iteration): 5.35 | 7.46 | 0.01 | 3.93 | 4.82 | 5.66 | 6.28;  total 33.5
+CSV (scheme,bits,threads,mode,ciphertexts,latency in ms,ms per ciphertext; cbtr: rounding with selection included)
+cbtr,2,1,1batch,16,44.725,2.7953
+cbtr,2,4,1batch,16,17.609,1.1006
+cbtr,2,6,1batch,16,17.136,1.0710
+cbtr,2,8,1batch,16,16.023,1.0015
+cbtr,2,10,1batch,16,15.462,0.9664
+cbtr,4,1,1batch,16,59.328,3.7080
+cbtr,4,4,1batch,16,21.773,1.3608
+cbtr,4,6,1batch,16,21.578,1.3486
+cbtr,4,8,1batch,16,20.275,1.2672
+cbtr,4,10,1batch,16,20.065,1.2541
+cbtr,8,1,1batch,16,99.508,6.2193
+cbtr,8,4,1batch,16,37.679,2.3549
+cbtr,8,6,1batch,16,31.980,1.9987
+cbtr,8,8,1batch,16,28.973,1.8108
+cbtr,8,10,1batch,16,28.591,1.7869
+cbtr,12,1,1batch,8,87.973,10.9966
+cbtr,12,4,1batch,8,35.127,4.3909
+cbtr,12,6,1batch,8,31.571,3.9463
+cbtr,12,8,1batch,8,30.626,3.8282
+cbtr,12,10,1batch,8,27.862,3.4828
+cbtr,16,1,1batch,8,157.104,19.6380
+cbtr,16,4,1batch,8,54.654,6.8318
+cbtr,16,6,1batch,8,50.647,6.3309
+cbtr,16,8,1batch,8,42.785,5.3481
+cbtr,16,10,1batch,8,39.024,4.8780

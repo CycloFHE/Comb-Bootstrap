@@ -1,0 +1,10 @@
+ 2 bits: keys (MB): bootstrapping 38.2, automorphisms 1.19, key switch 1.59, pool 0.60, total 41.6
+   outputs of one comb bootstrap (300 runs): correlation mean -0.003, largest |.| 0.186 (adjacent columns: mean 0.014); var(e_k + e_l)/(var e_k + var e_l): mean 0.997, range 0.816 to 1.112
+ 4 bits: keys (MB): bootstrapping 86.3, automorphisms 1.19, key switch 1.86, pool 0.68, total 90.1
+   outputs of one comb bootstrap (300 runs): correlation mean 0.010, largest |.| 0.160 (adjacent columns: mean -0.001); var(e_k + e_l)/(var e_k + var e_l): mean 1.010, range 0.867 to 1.160
+ 8 bits: keys (MB): bootstrapping 168.6, automorphisms 1.66, key switch 2.95, pool 0.88, total 174.1
+   outputs of one comb bootstrap (300 runs): correlation mean 0.002, largest |.| 0.139 (adjacent columns: mean 0.009); var(e_k + e_l)/(var e_k + var e_l): mean 1.002, range 0.861 to 1.133
+12 bits: keys (MB): bootstrapping 185.5, automorphisms 0.78, key switch 4.49, pool 0.97, total 191.8
+   outputs of one comb bootstrap (300 runs): correlation mean -0.001, largest |.| 0.134 (adjacent columns: mean 0.001); var(e_k + e_l)/(var e_k + var e_l): mean 0.999, range 0.867 to 1.105
+16 bits: keys (MB): bootstrapping 363.3, automorphisms 1.43, key switch 5.17, pool 1.14, total 371.0
+   outputs of one comb bootstrap (300 runs): correlation mean -0.001, largest |.| 0.124 (adjacent columns: mean -0.016); var(e_k + e_l)/(var e_k + var e_l): mean 0.999, range 0.889 to 1.124

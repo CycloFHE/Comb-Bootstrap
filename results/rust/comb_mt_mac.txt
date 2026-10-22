@@ -1,0 +1,12 @@
+ 8 bits, n = 896, B = 16: single-thread 110.9 ms per call (6.93 ms per error)
+    1 threads: 114.4 ms per call (7.15 ms per error), speed-up 0.97
+    2 threads: 64.0 ms per call (4.00 ms per error), speed-up 1.73
+    4 threads: 43.2 ms per call (2.70 ms per error), speed-up 2.57
+    6 threads: 39.4 ms per call (2.46 ms per error), speed-up 2.82
+    8 threads: 35.9 ms per call (2.24 ms per error), speed-up 3.09
+16 bits, n = 1157, B = 8: single-thread 164.8 ms per call (20.60 ms per error)
+    1 threads: 164.4 ms per call (20.55 ms per error), speed-up 1.00
+    2 threads: 93.6 ms per call (11.71 ms per error), speed-up 1.76
+    4 threads: 58.4 ms per call (7.29 ms per error), speed-up 2.82
+    6 threads: 62.6 ms per call (7.82 ms per error), speed-up 2.63
+    8 threads: 50.8 ms per call (6.35 ms per error), speed-up 3.25

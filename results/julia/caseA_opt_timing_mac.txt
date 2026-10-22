@@ -1,0 +1,12 @@
+Comb bootstrap, B = 8, n = 896, BR and aut (2^11,3), h = 1, m = 1
+  case (A), p = 257, optimized: min  104.12 ms, median  104.31 ms per call; 13.02 ms per error (min); σ_out 2^-22.69 (exact prediction 2^-21.95, 48 outputs)
+  case (B), p = 512, optimized: min   77.41 ms, median   77.46 ms per call;  9.68 ms per error (min)
+  case (A) / case (B): 1.35 (minima), 1.35 (medians)
+Error bootstrap, n = 816, BR (2^14,2), m = 1
+  case (A), p = 2039, zero padding: min  43.13 ms, median  43.29 ms; σ_out 2^-20.84 (exact prediction 2^-19.93, 6 outputs); case (A) / case (B): 2.36 (minima)
+  case (A), p = 2017, Rader       : min  39.60 ms, median  39.73 ms; σ_out 2^-19.75 (exact prediction 2^-19.94, 6 outputs); case (A) / case (B): 2.17 (minima)
+  case (B), p = 4096, optimized  : min  18.26 ms, median  18.32 ms
+Comb bootstrap, B = 8, n = 896, BR and aut (2^11,3), h = 1, m = 2
+  case (A), p = 257, optimized: min  103.93 ms, median  104.01 ms per call; 12.99 ms per error (min); σ_out 2^-22.93 (exact prediction 2^-21.95, 48 outputs)
+  case (B), p = 512, optimized: min   73.12 ms, median   73.21 ms per call;  9.14 ms per error (min)
+  case (A) / case (B): 1.42 (minima), 1.42 (medians)

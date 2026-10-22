@@ -1,0 +1,23 @@
+Times (native, one thread, ms): error bootstrap at N = 2048, m = 2, d = 16, PCFG = gauss
+  addition of two ciphertexts (dimension N): 0.00038 ms
+  k = 1 ( 2 bits) refresh:           n =  570, (2^23,1)  rotation    6.31 + key switch  0.135 =    6.45
+  k = 1 ( 2 bits) before a product:  n =  576, (2^22,1)  rotation    6.26 + key switch  0.130 =    6.39;  product, trace (2^8,5)    1.817;  total    8.20
+  k = 3 ( 6 bits) refresh:           n =  732, (2^15,2)  rotation   12.82 + key switch  0.233 =   13.06
+  k = 3 ( 6 bits) before a product:  n =  768, (2^15,2)  rotation   13.86 + key switch  0.156 =   14.02;  product, trace (2^8,5)    1.839;  total   15.86
+  k = 4 ( 8 bits) refresh:           n =  816, (2^14,2)  rotation   14.82 + key switch  0.185 =   15.00
+  k = 4 ( 8 bits) before a product:  n =  816, (2^9,4)   rotation   25.62 + key switch  0.185 =   25.81;  product, trace (2^7,6)    1.998;  total   27.81
+  k = 5 (10 bits) refresh:           n =  896, (2^15,2)  rotation   16.18 + key switch  0.280 =   16.46
+  k = 5 (10 bits) before a product:  n =  906, (2^6,7)   rotation   48.08 + key switch  0.285 =   48.37;  product, trace (2^2,23)   7.383;  total   55.75
+CSV (scheme,k,operation,ms)
+eb,1,refresh,6.4490
+eb,1,addition,0.00682
+eb,1,product,8.2035
+eb,3,refresh,13.0562
+eb,3,addition,0.01343
+eb,3,product,15.8563
+eb,4,refresh,14.9998
+eb,4,addition,0.01537
+eb,4,product,27.8063
+eb,5,refresh,16.4556
+eb,5,addition,0.01683
+eb,5,product,55.7510

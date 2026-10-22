@@ -1,0 +1,33 @@
+Product (ms), one thread, TFHE-rs 1.8.1 for both; relinearization (2^10,4)
+  ebrs k = 1 ( 2 bits) before a product: n =  564, (2^13,2), refresh  18.930 ms;  product, trace (2^8,5)  2.033 ms (one trace 0.794);  total  20.963 ms   (keys 2 s)
+    noise (200 products): in  -18.88 /  -18.72   √T  -25.63 /  -25.54   √V0  -26.44 /  -26.34   product  -13.04 /  -13.01 (measured inputs  -13.18)   KS   -7.97 /   -7.92   (9 s)
+  ebrs k = 2 ( 4 bits) before a product: n =  650, (2^15,2), refresh  21.364 ms;  product, trace (2^8,5)  1.870 ms (one trace 0.760);  total  23.233 ms   (keys 2 s)
+    noise (200 products): in  -22.42 /  -22.38   √T  -25.49 /  -25.54   √V0  -26.19 /  -26.34   product  -14.61 /  -14.67 (measured inputs  -14.70)   KS   -9.88 /   -9.93   (10 s)
+  ebrs k = 3 ( 6 bits) before a product: n =  732, (2^12,3), refresh  31.367 ms;  product, trace (2^8,5)  1.926 ms (one trace 0.774);  total  33.293 ms   (keys 3 s)
+    noise (200 products): in  -26.09 /  -25.91   √T  -25.53 /  -25.54   √V0  -26.24 /  -26.34   product  -15.46 /  -15.50 (measured inputs  -15.55)   KS  -11.87 /  -11.92   (15 s)
+  ebrs k = 4 ( 8 bits) before a product: n =  848, (2^9,4), refresh  43.078 ms;  product, trace (2^4,11)  2.570 ms (one trace 1.120);  total  45.649 ms   (keys 5 s)
+    noise (200 products): in  -28.10 /  -28.02   √T  -29.36 /  -29.32   √V0  -30.16 /  -30.12   product  -16.53 /  -16.20 (measured inputs  -16.28)   KS  -15.06 /  -14.97   (21 s)
+  tfhers FheUint2  (k = 1) product    22.540 ms (min    21.293)
+  tfhers FheUint4  (k = 2) product   143.341 ms (min   136.035)
+  tfhers FheUint6  (k = 3) product   338.303 ms (min   314.986)
+  tfhers FheUint8  (k = 4) product   708.740 ms (min   655.942)
+CSV
+ebrs,1,product,20.9635,18.9303,2.0331
+noise,1,4.272060e-12,3.716938e-16,1.199921e-16,1.411858e-8,1.599431e-5,1.020900e-5
+ebrs,2,product,23.2335,21.3638,1.8697
+noise,2,3.164472e-14,4.478251e-16,1.696642e-16,1.590631e-9,1.126240e-6,1.184300e-5
+ebrs,3,product,33.2935,31.3673,1.9262
+noise,3,1.966926e-16,4.257020e-16,1.599110e-16,4.904271e-10,7.175929e-8,1.340600e-5
+ebrs,4,product,45.6486,43.0783,2.5704
+noise,4,1.202192e-17,2.104387e-18,6.951552e-19,1.111735e-10,8.576711e-10,1.562200e-5
+tfhers,1,product,22.5395,21.2932
+tfhers,2,product,143.3406,136.0345
+tfhers,3,product,338.3033,314.9857
+tfhers,4,product,708.7397,655.9417
+
+# margins (the noise model)
+k  p̂     log2 σ_in  log2 √T  log2 σ_prod  log2 σ_KS   share(Laplace)   log2 P(fail)   margin (bits)
+1  4        -18.88   -25.63      -13.04      -7.97            0.001         -179.9       0.25
+2  16       -22.42   -25.49      -14.61      -9.88            0.001         -160.0       0.16
+3  64       -26.09   -25.53      -15.46     -11.87            0.003         -156.1       0.15
+4  256      -28.10   -29.36      -16.53     -15.06            0.138         -157.9       0.29

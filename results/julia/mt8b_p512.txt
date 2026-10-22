@@ -1,0 +1,15 @@
+N = 2048, p = 512, n = 624, RGSW (2^23,1), aut (2^14,2), σ = 2^-50.3
+
+h = 1, (g, h) = (8, 1), B = 8
+  m = 1: CombBoot  4.56 ms/error, separate  8.11 ms/error; ratio 1.78; log2 std -14.98 / -16.77
+        µs per coordinate: division 1.5; FFTs, digits, tables 16.4; baby + public 21.4; giant steps 0.0; inv FFT, digits C_L-C 11.1; ext. product 2.6; final inv FFT 5.2; total 58.2
+     8 threads, 1 batch   : CombBoot  1.84 ms/error (×2.5), separate  1.13 ms/error (×7.2); ratio 0.61
+        µs per coordinate: division 1.0; FFTs, digits, tables 4.9; baby + public 5.3; giant steps 0.0; inv FFT, digits C_L-C 6.5; ext. product 1.7; final inv FFT 3.8; total 23.3
+  m = 2: CombBoot  4.09 ms/error, separate  6.37 ms/error; ratio 1.56; log2 std -15.35 / -15.21
+        µs per coordinate: division 0.7; FFTs, digits, tables 10.4; baby + public 17.8; giant steps 0.0; inv FFT, digits C_L-C 16.7; ext. product 4.0; final inv FFT 2.6; total 52.3
+     8 threads, 1 batch   : CombBoot  1.18 ms/error (×3.5), separate  0.87 ms/error (×7.4); ratio 0.73
+        µs per coordinate: division 0.5; FFTs, digits, tables 2.4; baby + public 4.0; giant steps 0.0; inv FFT, digits C_L-C 3.9; ext. product 1.7; final inv FFT 2.3; total 14.7
+  m = 3: CombBoot  5.22 ms/error, separate  6.35 ms/error; ratio 1.22; log2 std -15.44 / -14.81
+        µs per coordinate: division 0.5; FFTs, digits, tables 9.9; baby + public 22.4; giant steps 0.0; inv FFT, digits C_L-C 26.1; ext. product 6.3; final inv FFT 1.7; total 66.9
+     8 threads, 1 batch   : CombBoot  1.30 ms/error (×4.0), separate  0.88 ms/error (×7.3); ratio 0.67
+        µs per coordinate: division 0.3; FFTs, digits, tables 2.6; baby + public 4.3; giant steps 0.0; inv FFT, digits C_L-C 5.1; ext. product 2.3; final inv FFT 1.6; total 16.3

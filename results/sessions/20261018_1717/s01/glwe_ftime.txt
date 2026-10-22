@@ -1,0 +1,117 @@
+Whole refreshes, one thread, interleaved (15 rounds): ms, minimum (median); ratio = TFHE-rs / operation (minima)
+k = 1 ( 2 bits):
+   TFHE-rs FheUint2                                                 14.902 (  15.016)  ratio  1.00
+CSV,ftime,1,TFHE-rs FheUint2,14.9023,15.0162
+   EB N = 2048, m = 2, n = 570, (2^23,1)                             7.630 (   7.759)  ratio  1.95
+CSV,ftime,1,EB N = 2048; m = 2; n = 570; (2^23;1),7.6303,7.7588
+   GLWE kk = 2, np = 1024, p = 2048, m = 1, n = 566, (2^23,1)        6.442 (   6.514)  ratio  2.31
+CSV,ftime,1,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 566; (2^23;1),6.4422,6.5142
+   GLWE kk = 4, np = 512, p = 1024, m = 1, n = 568, (2^23,1)         5.847 (   5.904)  ratio  2.55
+CSV,ftime,1,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 568; (2^23;1),5.8465,5.9040
+   GLWE kk = 1, np = 2048, p = 4096, m = 1, n = 566, (2^23,1)        8.646 (   8.718)  ratio  1.72
+CSV,ftime,1,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 566; (2^23;1),8.6465,8.7184
+   GLWE kk = 8, np = 256, p = 512, m = 1, n = 576, (2^22,1)          6.350 (   6.434)  ratio  2.35
+CSV,ftime,1,GLWE kk = 8; np = 256; p = 512; m = 1; n = 576; (2^22;1),6.3505,6.4338
+   CombBoot B = 16, p = 256, m = 1, n = 608 (per ciphertext)         2.657 (   2.682)  ratio  5.61
+CSV,ftime,1,CombBoot B = 16; p = 256; m = 1; n = 608 (per ciphertext),2.6572,2.6816
+k = 2 ( 4 bits):
+   TFHE-rs FheUint4                                                 29.217 (  30.370)  ratio  1.00
+CSV,ftime,2,TFHE-rs FheUint4,29.2168,30.3700
+   EB N = 2048, m = 1, n = 688, (2^23,1)                             9.907 (  10.531)  ratio  2.95
+CSV,ftime,2,EB N = 2048; m = 1; n = 688; (2^23;1),9.9069,10.5309
+   GLWE kk = 2, np = 1024, p = 2048, m = 1, n = 672, (2^23,1)        7.192 (   7.658)  ratio  4.06
+CSV,ftime,2,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 672; (2^23;1),7.1916,7.6576
+   GLWE kk = 4, np = 512, p = 1024, m = 1, n = 672, (2^23,1)         6.660 (   6.911)  ratio  4.39
+CSV,ftime,2,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 672; (2^23;1),6.6603,6.9115
+   GLWE kk = 1, np = 2048, p = 4096, m = 1, n = 672, (2^23,1)       10.013 (  10.347)  ratio  2.92
+CSV,ftime,2,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 672; (2^23;1),10.0126,10.3474
+   GLWE kk = 8, np = 256, p = 512, m = 1, n = 688, (2^23,1)          7.523 (   7.619)  ratio  3.88
+CSV,ftime,2,GLWE kk = 8; np = 256; p = 512; m = 1; n = 688; (2^23;1),7.5227,7.6188
+   CombBoot B = 16, p = 256, m = 1, n = 688 (per ciphertext)         3.462 (   3.503)  ratio  8.44
+CSV,ftime,2,CombBoot B = 16; p = 256; m = 1; n = 688 (per ciphertext),3.4622,3.5035
+k = 3 ( 6 bits):
+   TFHE-rs FheUint6                                                 45.639 (  45.711)  ratio  1.00
+CSV,ftime,3,TFHE-rs FheUint6,45.6395,45.7111
+   EB N = 2048, m = 2, n = 732, (2^15,2)                            14.823 (  14.876)  ratio  3.08
+CSV,ftime,3,EB N = 2048; m = 2; n = 732; (2^15;2),14.8231,14.8763
+   GLWE kk = 2, np = 1024, p = 2048, m = 1, n = 734, (2^14,2)       12.580 (  12.891)  ratio  3.63
+CSV,ftime,3,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 734; (2^14;2),12.5799,12.8913
+   GLWE kk = 4, np = 512, p = 1024, m = 1, n = 736, (2^13,2)        11.518 (  11.874)  ratio  3.96
+CSV,ftime,3,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 736; (2^13;2),11.5181,11.8742
+   GLWE kk = 1, np = 2048, p = 4096, m = 1, n = 732, (2^15,2)       16.813 (  17.126)  ratio  2.71
+CSV,ftime,3,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 732; (2^15;2),16.8128,17.1257
+   GLWE kk = 8, np = 256, p = 512, m = 1, n = 736, (2^13,2)         13.496 (  13.589)  ratio  3.38
+CSV,ftime,3,GLWE kk = 8; np = 256; p = 512; m = 1; n = 736; (2^13;2),13.4962,13.5885
+   CombBoot B = 16, p = 256, m = 1, n = 784 (per ciphertext)         4.066 (   4.085)  ratio 11.22
+CSV,ftime,3,CombBoot B = 16; p = 256; m = 1; n = 784 (per ciphertext),4.0662,4.0846
+k = 4 ( 8 bits):
+   TFHE-rs FheUint8                                                 60.934 (  60.998)  ratio  1.00
+CSV,ftime,4,TFHE-rs FheUint8,60.9335,60.9983
+   EB N = 2048, m = 2, n = 816, (2^14,2)                            16.463 (  16.580)  ratio  3.70
+CSV,ftime,4,EB N = 2048; m = 2; n = 816; (2^14;2),16.4635,16.5801
+   GLWE kk = 2, np = 1024, p = 2048, m = 1, n = 816, (2^14,2)       14.207 (  14.269)  ratio  4.29
+CSV,ftime,4,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 816; (2^14;2),14.2074,14.2690
+   GLWE kk = 4, np = 512, p = 1024, m = 1, n = 816, (2^14,2)        13.089 (  13.163)  ratio  4.66
+CSV,ftime,4,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 816; (2^14;2),13.0894,13.1631
+   GLWE kk = 1, np = 2048, p = 4096, m = 1, n = 814, (2^15,2)       19.027 (  19.131)  ratio  3.20
+CSV,ftime,4,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 814; (2^15;2),19.0272,19.1312
+   GLWE kk = 8, np = 256, p = 512, m = 1, n = 816, (2^15,2)         14.998 (  15.142)  ratio  4.06
+CSV,ftime,4,GLWE kk = 8; np = 256; p = 512; m = 1; n = 816; (2^15;2),14.9975,15.1422
+   CombBoot B = 16, p = 256, m = 1, n = 896 (per ciphertext)         6.217 (   6.255)  ratio  9.80
+CSV,ftime,4,CombBoot B = 16; p = 256; m = 1; n = 896 (per ciphertext),6.2173,6.2547
+k = 5 (10 bits):
+   TFHE-rs FheUint10                                                76.252 (  76.343)  ratio  1.00
+CSV,ftime,5,TFHE-rs FheUint10,76.2519,76.3427
+   EB N = 2048, m = 2, n = 900, (2^15,2)                            18.083 (  18.223)  ratio  4.22
+CSV,ftime,5,EB N = 2048; m = 2; n = 900; (2^15;2),18.0827,18.2226
+   GLWE kk = 2, np = 1024, p = 2048, m = 1, n = 896, (2^15,2)       15.574 (  15.642)  ratio  4.90
+CSV,ftime,5,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 896; (2^15;2),15.5737,15.6417
+   GLWE kk = 4, np = 512, p = 1024, m = 1, n = 896, (2^15,2)        14.338 (  14.440)  ratio  5.32
+CSV,ftime,5,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 896; (2^15;2),14.3381,14.4402
+   GLWE kk = 1, np = 2048, p = 4096, m = 1, n = 896, (2^15,2)       20.785 (  20.882)  ratio  3.67
+CSV,ftime,5,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 896; (2^15;2),20.7850,20.8823
+   GLWE kk = 8, np = 256, p = 512, m = 1, n = 902, (2^16,2)         16.625 (  16.676)  ratio  4.59
+CSV,ftime,5,GLWE kk = 8; np = 256; p = 512; m = 1; n = 902; (2^16;2),16.6250,16.6757
+k = 6 (12 bits):
+   TFHE-rs FheUint12                                                91.189 (  91.523)  ratio  1.00
+CSV,ftime,6,TFHE-rs FheUint12,91.1891,91.5225
+   EB N = 2048, m = 2, n = 976, (2^11,3)                            25.868 (  26.016)  ratio  3.53
+CSV,ftime,6,EB N = 2048; m = 2; n = 976; (2^11;3),25.8684,26.0163
+   GLWE kk = 2, np = 1024, p = 2048, m = 1, n = 976, (2^11,3)       22.684 (  22.735)  ratio  4.02
+CSV,ftime,6,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 976; (2^11;3),22.6842,22.7345
+   GLWE kk = 1, np = 2048, p = 4096, m = 1, n = 976, (2^11,3)       30.260 (  30.324)  ratio  3.01
+CSV,ftime,6,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 976; (2^11;3),30.2598,30.3238
+   GLWE kk = 4, np = 512, p = 1024, m = 1, n = 976, (2^11,3)        21.256 (  21.367)  ratio  4.29
+CSV,ftime,6,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 976; (2^11;3),21.2560,21.3666
+   GLWE kk = 8, np = 256, p = 512, m = 1, n = 976, (2^12,3)         24.579 (  24.963)  ratio  3.71
+CSV,ftime,6,GLWE kk = 8; np = 256; p = 512; m = 1; n = 976; (2^12;3),24.5791,24.9633
+   CombBoot B = 8, p = 512, m = 1, n = 986 (per ciphertext)         10.631 (  10.686)  ratio  8.58
+CSV,ftime,6,CombBoot B = 8; p = 512; m = 1; n = 986 (per ciphertext),10.6314,10.6856
+k = 7 (14 bits):
+   TFHE-rs FheUint14                                               106.756 ( 106.883)  ratio  1.00
+CSV,ftime,7,TFHE-rs FheUint14,106.7556,106.8834
+   EB N = 2048, m = 1, n = 1060, (2^12,3)                           33.026 (  33.104)  ratio  3.23
+CSV,ftime,7,EB N = 2048; m = 1; n = 1060; (2^12;3),33.0260,33.1044
+   GLWE kk = 2, np = 1024, p = 2048, m = 1, n = 1056, (2^12,3)      24.551 (  24.622)  ratio  4.35
+CSV,ftime,7,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 1056; (2^12;3),24.5510,24.6218
+   GLWE kk = 1, np = 2048, p = 4096, m = 1, n = 1056, (2^12,3)      32.656 (  32.804)  ratio  3.27
+CSV,ftime,7,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 1056; (2^12;3),32.6559,32.8044
+   GLWE kk = 4, np = 512, p = 1024, m = 1, n = 1056, (2^12,3)       23.027 (  23.145)  ratio  4.64
+CSV,ftime,7,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 1056; (2^12;3),23.0274,23.1453
+   GLWE kk = 8, np = 256, p = 512, m = 1, n = 1072, (2^12,3)        27.347 (  27.541)  ratio  3.90
+CSV,ftime,7,GLWE kk = 8; np = 256; p = 512; m = 1; n = 1072; (2^12;3),27.3470,27.5408
+k = 8 (16 bits):
+   TFHE-rs FheUint16                                               121.820 ( 122.130)  ratio  1.00
+CSV,ftime,8,TFHE-rs FheUint16,121.8196,122.1305
+   EB N = 2048, m = 2, n = 1152, (2^9,4)                            38.018 (  38.186)  ratio  3.20
+CSV,ftime,8,EB N = 2048; m = 2; n = 1152; (2^9;4),38.0181,38.1862
+   GLWE kk = 2, np = 1024, p = 2048, m = 1, n = 1136, (2^9,4)       33.008 (  33.242)  ratio  3.69
+CSV,ftime,8,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 1136; (2^9;4),33.0077,33.2423
+   GLWE kk = 1, np = 2048, p = 4096, m = 1, n = 1136, (2^9,4)       43.995 (  44.284)  ratio  2.77
+CSV,ftime,8,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 1136; (2^9;4),43.9952,44.2841
+   GLWE kk = 4, np = 512, p = 1024, m = 1, n = 1136, (2^9,4)        31.376 (  31.570)  ratio  3.88
+CSV,ftime,8,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 1136; (2^9;4),31.3763,31.5701
+   GLWE kk = 8, np = 256, p = 512, m = 1, n = 1152, (2^9,4)         37.564 (  37.800)  ratio  3.24
+CSV,ftime,8,GLWE kk = 8; np = 256; p = 512; m = 1; n = 1152; (2^9;4),37.5636,37.8000
+   CombBoot B = 8, p = 512, m = 1, n = 1157 (per ciphertext)        22.047 (  22.138)  ratio  5.53
+CSV,ftime,8,CombBoot B = 8; p = 512; m = 1; n = 1157 (per ciphertext),22.0468,22.1381

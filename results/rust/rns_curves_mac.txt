@@ -1,0 +1,8 @@
+RNS on TFHE-rs 1.8.1, one thread: moduli [263, 262, 261, 259, 257, 253, 251, 247] (product 2^64.03); CombBoot B = 8, p = 512, n = 832, RGSW (2^14,2), aut (2^14,2) shift 3
+  check: 20 integers refreshed and recombined (CRT), max |output error| 2^-18.67 (window 2^-10.04)
+  rns  64 bits (8 residues, one CombBoot):   57.144 ms per integer  [key switches 1.28, roundings 0.48, CombBoot 55.4; 7.143 ms per residue]  (keys 2 s)
+  noise (1600 errors): out  -19.95 /  -19.98 predicted, max |e| 2^-18.00, margin 0.26 bits at p̂ = 263 (KS -14.51)
+  tfhers FheUint64 refresh (&a & MAX):  490.210 ms
+CSV
+rns,64,57.1442
+tfhers,64,490.2096

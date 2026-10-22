@@ -1,0 +1,34 @@
+Product (ms), one thread, TFHE-rs 1.8.1 for both; relinearization (2^10,4)
+  ebrs k = 1 ( 2 bits) before a product: n =  564, (2^13,2), refresh  12.641 ms;  product, trace (2^8,5)  1.154 ms (one trace 0.481);  total  13.795 ms   (keys 1 s)
+    noise (200 products): in  -18.80 /  -18.72   √T  -25.63 /  -25.54   √V0  -26.48 /  -26.34   product  -13.33 /  -13.01 (measured inputs  -13.09)   KS   -7.85 /   -7.92   (6 s)
+  ebrs k = 2 ( 4 bits) before a product: n =  650, (2^15,2), refresh  14.805 ms;  product, trace (2^8,5)  1.167 ms (one trace 0.484);  total  15.972 ms   (keys 1 s)
+    noise (200 products): in  -22.59 /  -22.38   √T  -25.61 /  -25.54   √V0  -26.43 /  -26.34   product  -14.81 /  -14.67 (measured inputs  -14.87)   KS   -9.86 /   -9.93   (7 s)
+  ebrs k = 3 ( 6 bits) before a product: n =  732, (2^12,3), refresh  23.190 ms;  product, trace (2^8,5)  1.166 ms (one trace 0.486);  total  24.356 ms   (keys 2 s)
+    noise (200 products): in  -26.20 /  -25.91   √T  -25.56 /  -25.54   √V0  -26.36 /  -26.34   product  -15.54 /  -15.50 (measured inputs  -15.60)   KS  -11.94 /  -11.92   (10 s)
+  ebrs k = 4 ( 8 bits) before a product: n =  848, (2^9,4), refresh  34.032 ms;  product, trace (2^4,11)  1.857 ms (one trace 0.834);  total  35.889 ms   (keys 3 s)
+    noise (200 products): in  -28.14 /  -28.02   √T  -29.37 /  -29.32   √V0  -30.19 /  -30.12   product  -16.48 /  -16.20 (measured inputs  -16.31)   KS  -15.06 /  -14.97   (15 s)
+  tfhers FheUint2  (k = 1) product    14.580 ms (min    14.419)
+  tfhers FheUint4  (k = 2) product    89.474 ms (min    89.398)
+  tfhers FheUint6  (k = 3) product   210.143 ms (min   209.800)
+  tfhers FheUint8  (k = 4) product   422.418 ms (min   420.120)
+  tfhers FheUint10 (k = 5) product   667.392 ms (min   665.395)
+  tfhers FheUint12 (k = 6) product   955.831 ms (min   954.516)
+  tfhers FheUint14 (k = 7) product  1290.088 ms (min  1289.415)
+  tfhers FheUint16 (k = 8) product  1686.311 ms (min  1684.726)
+CSV
+ebrs,1,product,13.7946,12.6409,1.1537
+noise,1,4.797129e-12,3.700850e-16,1.136034e-16,9.461924e-9,1.890164e-5,1.020900e-5
+ebrs,2,product,15.9721,14.8052,1.1669
+noise,2,2.523375e-14,3.789873e-16,1.221590e-16,1.217236e-9,1.154902e-6,1.184300e-5
+ebrs,3,product,24.3558,23.1899,1.1660
+noise,3,1.686806e-16,4.072434e-16,1.339609e-16,4.398463e-10,6.456526e-8,1.340600e-5
+ebrs,4,product,35.8893,34.0325,1.8569
+noise,4,1.137012e-17,2.089150e-18,6.681767e-19,1.190240e-10,8.622791e-10,1.562200e-5
+tfhers,1,product,14.5798,14.4187
+tfhers,2,product,89.4740,89.3983
+tfhers,3,product,210.1425,209.7999
+tfhers,4,product,422.4184,420.1202
+tfhers,5,product,667.3922,665.3955
+tfhers,6,product,955.8306,954.5160
+tfhers,7,product,1290.0877,1289.4147
+tfhers,8,product,1686.3106,1684.7262

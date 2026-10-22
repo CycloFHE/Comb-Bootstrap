@@ -1,0 +1,21 @@
+Error bootstrap, n = 816, BR (2^14,2)
+  case (A), p = 2039, M0 = 1, B = 1, N = 2038, transform zero padding (keys 8 s)
+    FFT          :  142.71 ms per call (min 129.90), 142.71 ms per error; σ_out 2^-20.54 measured / 2^-19.93 predicted (exact backend), max |e| 2^-19.59, 16 outputs
+  case (A), p = 2017, M0 = 1, B = 1, N = 2016, transform Rader (keys 7 s)
+    FFT          :  132.27 ms per call (min 118.40), 132.27 ms per error; σ_out 2^-20.31 measured / 2^-19.94 predicted (exact backend), max |e| 2^-19.43, 16 outputs
+  case (B), p = 4096, B = 1, N = 2048 (keys 2 s)
+    FFT, reference:   86.75 ms per call (min 75.01),  86.75 ms per error; σ_out 2^-20.43 measured / 2^-20.47 predicted (exact backend), 16 outputs
+    FFT, optimized:   27.94 ms per call (min 26.61),  27.94 ms per error; σ_out 2^-20.06
+  error bootstrap, p = 2039: case (A) / case (B), reference implementations: 1.65; case (A) optimized as case (B): about 45.96 ms per error
+  error bootstrap, p = 2017: case (A) / case (B), reference implementations: 1.52; case (A) optimized as case (B): about 42.60 ms per error
+Comb bootstrap, B = 8, n = 896, BR and aut (2^11,3), h = 1
+  case (A), p = 257, M0 = 16, B = 8, N = 2048, transform Rader (keys 12 s)
+    FFT          :  387.77 ms per call (min 358.91),  48.47 ms per error; σ_out 2^-22.48 measured / 2^-21.95 predicted (exact backend), max |e| 2^-21.20, 32 outputs
+  case (B), p = 512, B = 8, N = 2048 (keys 4 s)
+    FFT, reference:  305.08 ms per call (min 276.61),  38.14 ms per error; σ_out 2^-22.65 measured / 2^-22.48 predicted (exact backend), 32 outputs
+    FFT, optimized:  111.33 ms per call (min 91.16),  13.92 ms per error; σ_out 2^-22.40
+  comb bootstrap: case (A) / case (B), reference implementations: 1.27; case (A) optimized as case (B): about 17.69 ms per error
+Error of the FFT against the exact backend (same keys, same inputs)
+  p = 2039, B = 1, transform zero padding: one external product (2^14,2) 2^-29.72 (standard deviation per coordinate of the phase)
+  p = 2017, B = 1, transform Rader: one external product (2^14,2) 2^-28.82 (standard deviation per coordinate of the phase)
+  p = 257, B = 8, transform Rader: one external product (2^11,3) 2^-31.51, one key switching (2^11,3) 2^-32.02 (standard deviation per coordinate of the phase)

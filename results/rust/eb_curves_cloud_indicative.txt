@@ -1,0 +1,42 @@
+# Cloud container (x86, 2 vCPU), indicative only, not for the paper. The labels ebrs_m<number> come from a bug of
+# the label (fixed since): all these error-bootstrap runs use m = 1 and CONFIGS_RS.
+Times (ms), one thread, TFHE-rs 1.8.1 for both
+  ebrs k = 1 ( 2 bits), m = 1, n =  566, (2^23,1): refresh  17.046 ms  [mean: key switch 1.029, rounding 0.164, rotation 16.503, rest 0.006]
+  ebrs k = 2 ( 4 bits), m = 14, n =  688, (2^23,1): refresh  15.740 ms  [mean: key switch 0.378, rounding 0.165, rotation 15.816, rest 0.006]
+  ebrs k = 3 ( 6 bits), m = 55, n =  732, (2^15,2): refresh  32.803 ms  [mean: key switch 0.805, rounding 0.097, rotation 30.582, rest 0.007]
+  ebrs k = 4 ( 8 bits), m = 76, n =  816, (2^14,2): refresh  41.263 ms  [mean: key switch 0.803, rounding 0.328, rotation 42.388, rest 0.008]
+  ebrs k = 5 (10 bits), m = 113, n =  896, (2^15,2): refresh  37.823 ms  [mean: key switch 0.697, rounding 0.149, rotation 37.768, rest 0.008]
+  ebrs k = 6 (12 bits), m = 2898, n =  976, (2^11,3): refresh  56.301 ms  [mean: key switch 0.865, rounding 0.087, rotation 60.956, rest 0.009]
+  ebrs k = 7 (14 bits), m = 5145, n = 1060, (2^12,3): refresh  60.945 ms  [mean: key switch 1.615, rounding 0.248, rotation 67.047, rest 0.012]
+  ebrs k = 8 (16 bits), m = 2236, n = 1136, (2^9,4): refresh  98.118 ms  [mean: key switch 1.530, rounding 0.289, rotation 93.898, rest 0.009]
+  tfhers_pbs classic (2^23,1), default          n =  918: key switch  3.649 + PBS  25.064 =  28.713 ms per block
+  tfhers_pbs multi-bit group 3 (2^15,2)         n =  918: key switch  4.031 + PBS  63.730 =  67.761 ms per block
+  tfhers_pbs multi-bit group 4 (2^22,1)         n =  920: key switch  3.399 + PBS  43.850 =  47.248 ms per block
+  tfhers FheUint2  (k = 1) refresh    28.615 ms (min    27.275)
+  tfhers FheUint4  (k = 2) refresh    55.845 ms (min    55.087)
+  tfhers FheUint6  (k = 3) refresh    83.958 ms (min    80.980)
+  tfhers FheUint8  (k = 4) refresh   128.231 ms (min   111.126)
+  tfhers FheUint10 (k = 5) refresh   145.383 ms (min   132.709)
+  tfhers FheUint12 (k = 6) refresh   161.843 ms (min   150.383)
+  tfhers FheUint14 (k = 7) refresh   196.336 ms (min   186.191)
+  tfhers FheUint16 (k = 8) refresh   230.930 ms (min   215.942)
+CSV
+ebrs_m1,1,refresh,17.0461
+ebrs_m14,2,refresh,15.7399
+ebrs_m55,3,refresh,32.8026
+ebrs_m76,4,refresh,41.2627
+ebrs_m113,5,refresh,37.8226
+ebrs_m2898,6,refresh,56.3013
+ebrs_m5145,7,refresh,60.9449
+ebrs_m2236,8,refresh,98.1181
+tfhers_pbs,classic (2^23,1), default,918,3.6492,25.0636,28.7128
+tfhers_pbs,multi-bit group 3 (2^15,2),918,4.0313,63.7298,67.7611
+tfhers_pbs,multi-bit group 4 (2^22,1),920,3.3987,43.8496,47.2483
+tfhers,1,refresh,28.6150,27.2753
+tfhers,2,refresh,55.8448,55.0873
+tfhers,3,refresh,83.9581,80.9803
+tfhers,4,refresh,128.2312,111.1258
+tfhers,5,refresh,145.3834,132.7085
+tfhers,6,refresh,161.8426,150.3834
+tfhers,7,refresh,196.3360,186.1910
+tfhers,8,refresh,230.9303,215.9424

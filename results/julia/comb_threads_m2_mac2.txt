@@ -1,0 +1,42 @@
+CombBoot with t threads, N = 2048, m = 2, h = 1, configurations of Table 3, rounding with selection included, threads 1, 8, 10 (julia -t 10)
+
+ 2 bits: p = 256, B = 16, n = 608, RGSW (2^23,1), aut (2^14,2), V* = 11.60
+   1 thread , 1 batch  :   16 ciphertexts in    41.72 ms (rounding  0.35 + rotation    39.21 + key switches   2.07):  2.607 ms per ciphertext (×1.0)   [|E|/window 0.12, error/margin: rotation 7.6e-04, KS 6.0e-02]
+   8 threads, 1 batch  :   16 ciphertexts in    11.44 ms (rounding  0.09 + rotation    10.90 + key switches   0.33):  0.715 ms per ciphertext (×3.6)   [|E|/window 0.14, error/margin: rotation 9.7e-04, KS 5.9e-02]
+  10 threads, 1 batch  :   16 ciphertexts in    10.73 ms (rounding  0.15 + rotation    10.33 + key switches   0.34):  0.671 ms per ciphertext (×3.9)   [|E|/window 0.11, error/margin: rotation 5.8e-04, KS 6.8e-02]
+
+ 4 bits: p = 256, B = 16, n = 688, RGSW (2^14,2), aut (2^14,2) shifted by 4, V* = 13.20
+   1 thread , 1 batch  :   16 ciphertexts in    55.94 ms (rounding  0.59 + rotation    52.96 + key switches   2.36):  3.496 ms per ciphertext (×1.0)   [|E|/window 0.09, error/margin: rotation 1.1e-04, KS 7.5e-02]
+   8 threads, 1 batch  :   16 ciphertexts in    15.18 ms (rounding  0.11 + rotation    14.63 + key switches   0.38):  0.949 ms per ciphertext (×3.7)   [|E|/window 0.09, error/margin: rotation 1.4e-04, KS 1.0e-01]
+  10 threads, 1 batch  :   16 ciphertexts in    14.55 ms (rounding  0.08 + rotation    14.05 + key switches   0.35):  0.909 ms per ciphertext (×3.8)   [|E|/window 0.09, error/margin: rotation 1.1e-04, KS 7.2e-02]
+
+ 8 bits: p = 256, B = 16, n = 896, RGSW (2^11,3), aut (2^11,3) shifted by 4, V* = 17.37
+   1 thread , 1 batch  :   16 ciphertexts in    90.16 ms (rounding  0.70 + rotation    85.83 + key switches   3.51):  5.635 ms per ciphertext (×1.0)   [|E|/window 0.11, error/margin: rotation 2.0e-04, KS 3.2e-02]
+   8 threads, 1 batch  :   16 ciphertexts in    23.85 ms (rounding  0.21 + rotation    22.91 + key switches   0.55):  1.491 ms per ciphertext (×3.8)   [|E|/window 0.16, error/margin: rotation 8.7e-05, KS 2.0e-02]
+  10 threads, 1 batch  :   16 ciphertexts in    21.32 ms (rounding  0.11 + rotation    20.76 + key switches   0.50):  1.332 ms per ciphertext (×4.2)   [|E|/window 0.16, error/margin: rotation 1.4e-04, KS 2.7e-02]
+
+12 bits: p = 512, B = 8, n = 986, RGSW (2^11,3), aut (2^11,3) shifted by 3, V* = 19.18
+   1 thread , 1 batch  :    8 ciphertexts in    83.39 ms (rounding  0.20 + rotation    80.33 + key switches   2.52): 10.423 ms per ciphertext (×1.0)   [|E|/window 0.08, error/margin: rotation 6.7e-04, KS 1.0e-01]
+   8 threads, 1 batch  :    8 ciphertexts in    23.02 ms (rounding  0.10 + rotation    22.46 + key switches   0.39):  2.877 ms per ciphertext (×3.6)   [|E|/window 0.08, error/margin: rotation 1.5e-03, KS 9.1e-02]
+  10 threads, 1 batch  :    8 ciphertexts in    20.95 ms (rounding  0.09 + rotation    20.34 + key switches   0.39):  2.619 ms per ciphertext (×4.0)   [|E|/window 0.08, error/margin: rotation 1.5e-03, KS 8.4e-02]
+
+16 bits: p = 512, B = 8, n = 1158, RGSW (2^8,5), aut (2^6,6) shifted by 3, V* = 22.65
+   1 thread , 1 batch  :    8 ciphertexts in   142.00 ms (rounding  0.42 + rotation   140.17 + key switches   2.80): 17.750 ms per ciphertext (×1.0)   [|E|/window 0.05, error/margin: rotation 2.8e-03, KS 1.1e-01]
+   8 threads, 1 batch  :    8 ciphertexts in    34.38 ms (rounding  0.12 + rotation    33.81 + key switches   0.43):  4.297 ms per ciphertext (×4.1)   [|E|/window 0.10, error/margin: rotation 1.4e-03, KS 5.8e-02]
+  10 threads, 1 batch  :    8 ciphertexts in    30.68 ms (rounding  0.13 + rotation    30.06 + key switches   0.41):  3.835 ms per ciphertext (×4.6)   [|E|/window 0.10, error/margin: rotation 1.4e-03, KS 6.6e-02]
+CSV (scheme,bits,threads,mode,ciphertexts,latency in ms,ms per ciphertext; cbtr: rounding with selection included, m = 1; cbtr_m2: m = 2)
+cbtr_m2,2,1,1batch,16,41.717,2.6073
+cbtr_m2,2,8,1batch,16,11.442,0.7151
+cbtr_m2,2,10,1batch,16,10.732,0.6708
+cbtr_m2,4,1,1batch,16,55.942,3.4964
+cbtr_m2,4,8,1batch,16,15.183,0.9489
+cbtr_m2,4,10,1batch,16,14.551,0.9095
+cbtr_m2,8,1,1batch,16,90.157,5.6348
+cbtr_m2,8,8,1batch,16,23.850,1.4906
+cbtr_m2,8,10,1batch,16,21.320,1.3325
+cbtr_m2,12,1,1batch,8,83.386,10.4233
+cbtr_m2,12,8,1batch,8,23.016,2.8771
+cbtr_m2,12,10,1batch,8,20.948,2.6186
+cbtr_m2,16,1,1batch,8,141.997,17.7496
+cbtr_m2,16,8,1batch,8,34.377,4.2971
+cbtr_m2,16,10,1batch,8,30.678,3.8348

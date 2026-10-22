@@ -1,0 +1,6 @@
+Output noise of the error bootstrap, FFT backend, N = 2048, p̂ = 2^10, n = 996, m = 2 (cloud, 1 thread; run_fft_floor.jl)
+(2^6,7) n=996: out  -30.59 measured,  -30.58 predicted ( -32.77 without FFT)  [40 samples, 38 s]
+(2^5,9) n=996: out  -30.82 measured,  -31.41 predicted ( -33.73 without FFT)  [40 samples, 45 s]
+(2^4,11) n=996: out  -31.29 measured,  -32.26 predicted ( -34.49 without FFT)  [40 samples, 39 s]
+(2^3,15) n=996: out  -31.61 measured,  -33.03 predicted ( -35.28 without FFT)  [40 samples, 51 s]
+(2^2,22) n=996: out  -30.92 measured,  -33.73 predicted ( -35.51 without FFT)  [40 samples, 86 s]

@@ -1,0 +1,25 @@
+Product (ms), one thread, TFHE-rs 1.8.1 for both; relinearization (2^10,4)
+  ebrs k = 1 ( 2 bits) before a product: m = 2, n =  564, (2^13,2), refresh  16.879 ms;  product, trace (2^8,5)  1.915 ms (one trace 0.802);  total  18.795 ms   (keys 4 s)
+    noise (200 products): in  -18.57 /  -18.43   √T  -25.67 /  -25.54   √V0  -26.63 /  -26.34   product  -12.86 /  -12.72 (measured inputs  -12.87)   KS   -7.87 /   -7.92   (11 s)
+  ebrs k = 2 ( 4 bits) before a product: m = 2, n =  650, (2^15,2), refresh  23.653 ms;  product, trace (2^8,5)  1.743 ms (one trace 0.676);  total  25.396 ms   (keys 3 s)
+    noise (200 products): in  -21.94 /  -21.93   √T  -25.58 /  -25.54   √V0  -26.39 /  -26.34   product  -14.26 /  -14.22 (measured inputs  -14.23)   KS   -9.93 /   -9.93   (11 s)
+  ebrs k = 3 ( 6 bits) before a product: m = 2, n =  734, (2^11,3), refresh  31.883 ms;  product, trace (2^8,5)  2.005 ms (one trace 0.837);  total  33.889 ms   (keys 6 s)
+    noise (200 products): in  -25.00 /  -25.07   √T  -25.56 /  -25.54   √V0  -26.35 /  -26.34   product  -14.93 /  -15.06 (measured inputs  -15.02)   KS  -11.89 /  -11.94   (15 s)
+  ebrs k = 4 ( 8 bits) before a product: m = 2, n =  816, (2^8,5), refresh  53.243 ms;  product, trace (2^6,8)  2.429 ms (one trace 1.129);  total  55.672 ms   (keys 9 s)
+    noise (200 products): in  -28.65 /  -28.73   √T  -28.19 /  -28.09   √V0  -29.06 /  -28.88   product  -16.38 /  -16.13 (measured inputs  -16.17)   KS  -14.09 /  -14.18   (26 s)
+CSV
+ebrs,1,product,18.7948,16.8793,1.9155
+noise,1,6.564752e-12,3.489333e-16,9.314188e-17,1.800987e-8,1.830997e-5,1.020900e-5
+ebrs,2,product,25.3960,23.6531,1.7429
+noise,2,6.153743e-14,3.989313e-16,1.291976e-16,2.596033e-9,1.045172e-6,1.184300e-5
+ebrs,3,product,33.8886,31.8833,2.0054
+noise,3,8.906518e-16,4.100684e-16,1.370617e-16,1.020237e-9,6.966938e-8,1.344400e-5
+ebrs,4,product,55.6723,53.2434,2.4289
+noise,4,5.646119e-18,1.072490e-17,3.173343e-18,1.377985e-10,3.290868e-9,1.501000e-5
+
+# margins (the noise model)
+k  p̂     log2 σ_in  log2 √T  log2 σ_prod  log2 σ_KS   share(Laplace)   log2 P(fail)   margin (bits)
+1  4        -18.57   -25.67      -12.86      -7.87            0.001         -157.6       0.15
+2  16       -21.94   -25.58      -14.26      -9.93            0.003         -171.8       0.22
+3  64       -25.00   -25.56      -14.93     -11.89            0.010         -156.9       0.16
+4  256      -28.65   -28.19      -16.38     -14.09            0.030         -148.8       0.16

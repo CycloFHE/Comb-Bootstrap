@@ -1,0 +1,147 @@
+[2026-10-18 17:17:37] start: 10 sessions into <path> (power: 'AC Power')
+[2026-10-18 17:18:38]   eb_curves: start (load 1,93; thermal: )
+[2026-10-18 17:19:34]   eb_curves: done in 56 s
+[2026-10-18 17:20:34]   comb_curves: start (load 1,76; thermal: )
+[2026-10-18 17:21:08]   comb_curves: done in 34 s
+[2026-10-18 17:22:08]   product_curves: start (load 1,79; thermal: )
+[2026-10-18 17:23:28]   product_curves: done in 80 s
+[2026-10-18 17:24:28]   tfhe_curves: start (load 1,85; thermal: )
+[2026-10-18 17:25:53]   tfhe_curves: done in 85 s
+[2026-10-18 17:26:53]   rns_small: start (load 1,22; thermal: )
+[2026-10-18 17:28:51]   rns_small: done in 118 s
+[2026-10-18 17:33:37]     waited 225 s for the load average to drop below 1.5 (now 1,93)
+[2026-10-18 17:33:37]   glwe_ftime: start (load 1,93; thermal: )
+[2026-10-18 17:35:58]   glwe_ftime: done in 141 s
+[2026-10-18 17:37:42] session 1 done in 20 min; about 180 min left (thermal: )
+[2026-10-18 17:41:44]   comb_curves: start (load 1,88; thermal: )
+[2026-10-18 17:42:17]   comb_curves: done in 33 s
+[2026-10-18 17:44:17]     waited 60 s for the load average to drop below 1.5 (now 1,91)
+[2026-10-18 17:44:17]   product_curves: start (load 1,91; thermal: )
+[2026-10-18 17:45:37]   product_curves: done in 80 s
+[2026-10-18 17:46:52]     waited 15 s for the load average to drop below 1.5 (now 1,88)
+[2026-10-18 17:46:52]   tfhe_curves: start (load 1,88; thermal: )
+[2026-10-18 17:48:17]   tfhe_curves: done in 85 s
+[2026-10-18 17:49:17]   rns_small: start (load 1,87; thermal: )
+[2026-10-18 17:51:15]   rns_small: done in 118 s
+[2026-10-18 17:52:15]   glwe_ftime: start (load 1,85; thermal: )
+[2026-10-18 17:54:39]   glwe_ftime: done in 144 s
+[2026-10-18 17:55:54]     waited 15 s for the load average to drop below 1.5 (now 1,67)
+[2026-10-18 17:55:54]   eb_curves: start (load 1,67; thermal: )
+[2026-10-18 17:56:51]   eb_curves: done in 57 s
+[2026-10-18 17:58:36] session 2 done in 17 min; about 163 min left (thermal: )
+[2026-10-18 18:05:22]     waited 165 s for the load average to drop below 1.5 (now 1,91)
+[2026-10-18 18:05:22]   product_curves: start (load 1,91; thermal: )
+[2026-10-18 18:06:42]   product_curves: done in 80 s
+[2026-10-18 18:09:12]     waited 90 s for the load average to drop below 1.5 (now 1,64)
+[2026-10-18 18:09:12]   tfhe_curves: start (load 1,64; thermal: )
+[2026-10-18 18:10:37]   tfhe_curves: done in 85 s
+[2026-10-18 18:11:37]   rns_small: start (load 1,61; thermal: )
+[2026-10-18 18:13:36]   rns_small: done in 119 s
+[2026-10-18 18:14:36]   glwe_ftime: start (load 1,92; thermal: )
+[2026-10-18 18:16:59]   glwe_ftime: done in 143 s
+[2026-10-18 18:18:29]     waited 30 s for the load average to drop below 1.5 (now 1,95)
+[2026-10-18 18:18:29]   eb_curves: start (load 1,95; thermal: )
+[2026-10-18 18:19:27]   eb_curves: done in 58 s
+[2026-10-18 18:20:27]   comb_curves: start (load 1,64; thermal: )
+[2026-10-18 18:21:02]   comb_curves: done in 35 s
+[2026-10-18 18:22:46] session 3 done in 21 min; about 152 min left (thermal: )
+[2026-10-18 18:26:47]   tfhe_curves: start (load 1,71; thermal: )
+[2026-10-18 18:28:12]   tfhe_curves: done in 85 s
+[2026-10-18 18:29:12]   rns_small: start (load 1,78; thermal: )
+[2026-10-18 18:31:10]   rns_small: done in 118 s
+[2026-10-18 18:32:10]   glwe_ftime: start (load 1,60; thermal: )
+[2026-10-18 18:34:34]   glwe_ftime: done in 144 s
+[2026-10-18 18:35:34]   eb_curves: start (load 1,01; thermal: )
+[2026-10-18 18:36:31]   eb_curves: done in 57 s
+[2026-10-18 18:37:31]   comb_curves: start (load 1,52; thermal: )
+[2026-10-18 18:38:04]   comb_curves: done in 33 s
+[2026-10-18 18:39:04]   product_curves: start (load 1,60; thermal: )
+[2026-10-18 18:40:23]   product_curves: done in 79 s
+[2026-10-18 18:42:07] session 4 done in 16 min; about 126 min left (thermal: )
+[2026-10-18 18:46:08]   rns_small: start (load 1,80; thermal: )
+[2026-10-18 18:48:05]   rns_small: done in 117 s
+[2026-10-18 18:49:05]   glwe_ftime: start (load 1,76; thermal: )
+[2026-10-18 18:51:25]   glwe_ftime: done in 140 s
+[2026-10-18 18:52:25]   eb_curves: start (load 1,54; thermal: )
+[2026-10-18 18:53:21]   eb_curves: done in 56 s
+[2026-10-18 18:54:22]   comb_curves: start (load 0,89; thermal: )
+[2026-10-18 18:54:55]   comb_curves: done in 33 s
+[2026-10-18 18:55:55]   product_curves: start (load 1,49; thermal: )
+[2026-10-18 18:57:15]   product_curves: done in 80 s
+[2026-10-18 18:58:15]   tfhe_curves: start (load 1,69; thermal: )
+[2026-10-18 18:59:39]   tfhe_curves: done in 84 s
+[2026-10-18 19:01:23] session 5 done in 16 min; about 103 min left (thermal: )
+[2026-10-18 19:05:25]   glwe_ftime: start (load 1,57; thermal: )
+[2026-10-18 19:07:44]   glwe_ftime: done in 139 s
+[2026-10-18 19:09:14]     waited 30 s for the load average to drop below 1.5 (now 1,80)
+[2026-10-18 19:09:14]   eb_curves: start (load 1,80; thermal: )
+[2026-10-18 19:10:10]   eb_curves: done in 56 s
+[2026-10-18 19:11:11]   comb_curves: start (load 1,75; thermal: )
+[2026-10-18 19:11:45]   comb_curves: done in 34 s
+[2026-10-18 19:13:45]     waited 60 s for the load average to drop below 1.5 (now 1,75)
+[2026-10-18 19:13:45]   product_curves: start (load 1,75; thermal: )
+[2026-10-18 19:15:04]   product_curves: done in 79 s
+[2026-10-18 19:18:34]     waited 150 s for the load average to drop below 1.5 (now 1,77)
+[2026-10-18 19:18:35]   tfhe_curves: start (load 1,77; thermal: )
+[2026-10-18 19:19:59]   tfhe_curves: done in 84 s
+[2026-10-18 19:20:59]   rns_small: start (load 1,55; thermal: )
+[2026-10-18 19:22:57]   rns_small: done in 118 s
+[2026-10-18 19:24:41] session 6 done in 20 min; about 84 min left (thermal: )
+[2026-10-18 19:28:42]   eb_curves: start (load 1,96; thermal: )
+[2026-10-18 19:29:38]   eb_curves: done in 56 s
+[2026-10-18 19:30:38]   comb_curves: start (load 1,97; thermal: )
+[2026-10-18 19:31:12]   comb_curves: done in 34 s
+[2026-10-18 19:32:12]   product_curves: start (load 1,69; thermal: )
+[2026-10-18 19:33:32]   product_curves: done in 80 s
+[2026-10-18 19:35:32]     waited 60 s for the load average to drop below 1.5 (now 1,73)
+[2026-10-18 19:35:32]   tfhe_curves: start (load 1,73; thermal: )
+[2026-10-18 19:36:57]   tfhe_curves: done in 85 s
+[2026-10-18 19:37:57]   rns_small: start (load 1,66; thermal: )
+[2026-10-18 19:39:55]   rns_small: done in 118 s
+[2026-10-18 19:42:55]     waited 120 s for the load average to drop below 1.5 (now 1,68)
+[2026-10-18 19:42:55]   glwe_ftime: start (load 1,68; thermal: )
+[2026-10-18 19:45:16]   glwe_ftime: done in 141 s
+[2026-10-18 19:47:00] session 7 done in 19 min; about 64 min left (thermal: )
+[2026-10-18 19:52:01]     waited 60 s for the load average to drop below 1.5 (now 1,99)
+[2026-10-18 19:52:01]   comb_curves: start (load 1,99; thermal: )
+[2026-10-18 19:52:34]   comb_curves: done in 33 s
+[2026-10-18 19:53:34]   product_curves: start (load 1,84; thermal: )
+[2026-10-18 19:54:53]   product_curves: done in 79 s
+[2026-10-18 19:55:53]   tfhe_curves: start (load 1,76; thermal: )
+[2026-10-18 19:57:18]   tfhe_curves: done in 85 s
+[2026-10-18 19:58:18]   rns_small: start (load 0,97; thermal: )
+[2026-10-18 20:00:15]   rns_small: done in 117 s
+[2026-10-18 20:01:15]   glwe_ftime: start (load 1,72; thermal: )
+[2026-10-18 20:03:37]   glwe_ftime: done in 142 s
+[2026-10-18 20:04:37]   eb_curves: start (load 0,92; thermal: )
+[2026-10-18 20:05:34]   eb_curves: done in 57 s
+[2026-10-18 20:07:18] session 8 done in 17 min; about 42 min left (thermal: )
+[2026-10-18 20:11:19]   product_curves: start (load 1,37; thermal: )
+[2026-10-18 20:12:38]   product_curves: done in 79 s
+[2026-10-18 20:13:38]   tfhe_curves: start (load 1,71; thermal: )
+[2026-10-18 20:15:04]   tfhe_curves: done in 86 s
+[2026-10-18 20:16:04]   rns_small: start (load 1,31; thermal: )
+[2026-10-18 20:18:02]   rns_small: done in 118 s
+[2026-10-18 20:19:02]   glwe_ftime: start (load 1,88; thermal: )
+[2026-10-18 20:21:25]   glwe_ftime: done in 143 s
+[2026-10-18 20:22:25]   eb_curves: start (load 1,47; thermal: )
+[2026-10-18 20:23:23]   eb_curves: done in 58 s
+[2026-10-18 20:24:23]   comb_curves: start (load 1,84; thermal: )
+[2026-10-18 20:24:58]   comb_curves: done in 35 s
+[2026-10-18 20:26:43] session 9 done in 16 min; about 21 min left (thermal: )
+[2026-10-18 20:30:44]   tfhe_curves: start (load 1,92; thermal: )
+[2026-10-18 20:32:09]   tfhe_curves: done in 85 s
+[2026-10-18 20:33:09]   rns_small: start (load 1,19; thermal: )
+[2026-10-18 20:35:08]   rns_small: done in 119 s
+[2026-10-18 20:36:23]     waited 15 s for the load average to drop below 1.5 (now 1,81)
+[2026-10-18 20:36:23]   glwe_ftime: start (load 1,81; thermal: )
+[2026-10-18 20:38:46]   glwe_ftime: done in 143 s
+[2026-10-18 20:40:16]     waited 30 s for the load average to drop below 1.5 (now 1,92)
+[2026-10-18 20:40:16]   eb_curves: start (load 1,92; thermal: )
+[2026-10-18 20:41:14]   eb_curves: done in 58 s
+[2026-10-18 20:42:14]   comb_curves: start (load 1,77; thermal: )
+[2026-10-18 20:42:48]   comb_curves: done in 34 s
+[2026-10-18 20:43:48]   product_curves: start (load 1,69; thermal: )
+[2026-10-18 20:45:08]   product_curves: done in 80 s
+[2026-10-18 20:46:53] session 10 done in 17 min; about 0 min left (thermal: )
+[2026-10-18 20:46:53] all sessions done: <path>

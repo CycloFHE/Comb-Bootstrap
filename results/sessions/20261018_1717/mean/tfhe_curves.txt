@@ -1,0 +1,26 @@
+Mean over 10 sessions (results/sessions/20261018_1717) of the minimum within each session
+CSV
+tfhers,1,refresh,14.7187,14.6134
+tfhers,1,addition,29.4751,28.6046
+tfhers,1,product,14.4394,14.3542
+tfhers,2,refresh,29.1270,28.9197
+tfhers,2,addition,58.1991,58.0890
+tfhers,2,product,88.3389,88.0028
+tfhers,3,refresh,44.2185,43.9500
+tfhers,3,addition,88.2796,87.9362
+tfhers,3,product,210.1046,209.2169
+tfhers,4,refresh,59.8747,59.5495
+tfhers,4,addition,118.9669,118.7560
+tfhers,4,product,421.9158,419.9195
+tfhers,5,refresh,75.2483,74.9107
+tfhers,5,addition,149.3597,149.1183
+tfhers,5,product,665.8604,665.1178
+tfhers,6,refresh,90.6363,90.4845
+tfhers,6,addition,180.3821,180.1265
+tfhers,6,product,954.7766,953.7215
+tfhers,7,refresh,106.0003,105.8353
+tfhers,7,addition,210.8843,210.5744
+tfhers,7,product,1288.1377,1287.3440
+tfhers,8,refresh,121.1462,121.0213
+tfhers,8,addition,242.0619,241.6992
+tfhers,8,product,1682.1267,1681.1522

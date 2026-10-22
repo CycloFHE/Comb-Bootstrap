@@ -1,0 +1,9 @@
+Error bootstrap on TFHE-rs 1.8.1 (multi-bit rotation m = 2, FFT of TFHE-rs): noise, log2 σ measured / predicted
+k = 1 (p̂ = 2^ 2), n =  570, (2^23,1): out  -13.63 /  -15.39 (FFTW model  -14.91), max |e| 2^-11.85, failures 0   KS   -8.01 /   -7.97   margin  0.04 bits   (13 s)
+k = 2 (p̂ = 2^ 4), n =  650, (2^13,2): out  -18.62 /  -18.33 (FFTW model  -18.33), max |e| 2^-17.03, failures 0   KS  -10.01 /   -9.93   margin  0.30 bits   (23 s)
+k = 3 (p̂ = 2^ 6), n =  732, (2^15,2): out  -20.97 /  -22.23 (FFTW model  -21.94), max |e| 2^-19.47, failures 0   KS  -11.94 /  -11.92   margin  0.22 bits   (31 s)
+k = 4 (p̂ = 2^ 8), n =  816, (2^14,2): out  -20.29 /  -20.16 (FFTW model  -20.16), max |e| 2^-18.70, failures 0   KS  -14.20 /  -14.15   margin  0.35 bits   (32 s)
+k = 5 (p̂ = 2^10), n =  896, (2^15,2): out  -20.76 /  -22.08 (FFTW model  -21.79), max |e| 2^-18.90, failures 0   KS  -16.27 /  -16.18   margin -0.23 bits   (34 s)
+k = 6 (p̂ = 2^12), n =  976, (2^11,3): out  -24.33 /  -25.03 (FFTW model  -24.91), max |e| 2^-22.77, failures 0   KS  -18.23 /  -18.15   margin  0.37 bits   (52 s)
+k = 7 (p̂ = 2^14), n = 1088, (2^12,3): out  -24.79 /  -27.17 (FFTW model  -25.12), max |e| 2^-22.88, failures 0   KS  -20.90 /  -20.99   margin -0.05 bits   (58 s)
+k = 8 (p̂ = 2^16), n = 1152, (2^9,4): out  -26.09 /  -27.89 (FFTW model  -27.40), max |e| 2^-24.04, failures 0   KS  -22.46 /  -22.51   margin -0.71 bits   (79 s)

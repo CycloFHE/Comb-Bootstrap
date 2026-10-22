@@ -1,0 +1,22 @@
+Blind rotation, one thread: CMux of TFHE-rs (m = 1) / our multi-bit rotation (m = 2, kernels 0, 1, 2), min over 20 runs
+  k = 1 n =  566 (2^23,1): m = 1   7.962 ms (14.07 us/coord); m = 2: kernel 0   8.301 ms (14.67), kernel 1   7.089 ms (12.52), kernel 2  11.148 ms (19.70); best ratio 1.123   |message diff| <= 2^-18.9
+    kernel 0, us per pair (mean): decomposition 2.76, forward FFTs 4.28, monomials 1.58, products 15.35, backward FFTs 5.31
+    kernel 1, us per pair (mean): decomposition 2.76, forward FFTs 4.26, monomials 1.76, products 10.84, backward FFTs 5.26
+    kernel 2, us per pair (mean): decomposition 2.76, forward FFTs 4.26, monomials 1.53, products 25.73, backward FFTs 5.28
+  k = 4 n =  816 (2^14,2): m = 1  17.463 ms (21.40 us/coord); m = 2: kernel 0  23.133 ms (28.35), kernel 1  15.044 ms (18.44), kernel 2  27.228 ms (33.37); best ratio 1.161   |message diff| <= 2^-21.5
+    kernel 0, us per pair (mean): decomposition 3.99, forward FFTs 8.61, monomials 1.60, products 37.78, backward FFTs 5.31
+    kernel 1, us per pair (mean): decomposition 4.06, forward FFTs 8.80, monomials 1.61, products 17.51, backward FFTs 5.38
+    kernel 2, us per pair (mean): decomposition 3.99, forward FFTs 8.74, monomials 2.21, products 46.89, backward FFTs 5.48
+  k = 6 n =  976 (2^11,3): m = 1  28.603 ms (29.31 us/coord); m = 2: kernel 0  44.251 ms (45.34), kernel 1  24.150 ms (24.74), kernel 2  41.018 ms (42.03); best ratio 1.184   |message diff| <= 2^-27.6
+    kernel 0, us per pair (mean): decomposition 5.17, forward FFTs 12.99, monomials 2.03, products 66.56, backward FFTs 5.33
+    kernel 1, us per pair (mean): decomposition 5.37, forward FFTs 13.28, monomials 1.63, products 24.55, backward FFTs 5.46
+    kernel 2, us per pair (mean): decomposition 5.18, forward FFTs 13.05, monomials 2.37, products 58.87, backward FFTs 5.45
+  k = 8 n = 1136 (2^9,4): m = 1  43.720 ms (38.49 us/coord); m = 2: kernel 0  71.903 ms (63.29), kernel 1  36.187 ms (31.85), kernel 2  57.833 ms (50.91); best ratio 1.208   |message diff| <= 2^-26.7
+    kernel 0, us per pair (mean): decomposition 6.38, forward FFTs 17.38, monomials 2.24, products 95.77, backward FFTs 5.39
+    kernel 1, us per pair (mean): decomposition 6.78, forward FFTs 18.17, monomials 1.70, products 31.79, backward FFTs 5.62
+    kernel 2, us per pair (mean): decomposition 6.37, forward FFTs 17.34, monomials 2.27, products 70.55, backward FFTs 5.43
+CSV (rot,k,n,logB,l,ms m=1,ms m=2 kernels 0 1 2,us per pair of the products for kernels 0 1 2)
+rot,1,566,23,1,7.9622,8.3008,7.0891,11.1481,15.354,10.842,25.728
+rot,4,816,14,2,17.4635,23.1333,15.0442,27.2280,37.779,17.510,46.894
+rot,6,976,11,3,28.6031,44.2505,24.1501,41.0180,66.559,24.551,58.868
+rot,8,1136,9,4,43.7197,71.9027,36.1868,57.8327,95.767,31.793,70.554

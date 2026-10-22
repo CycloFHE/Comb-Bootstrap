@@ -1,0 +1,114 @@
+Mean over 10 sessions (results/sessions/20261018_1717); times: minimum over the repetitions within each session; ratios computed within each session. sd: standard deviation over the sessions; cv: sd / mean; min-max: over the sessions.
+
+== Section 7, Table at 8 bits
+  error bootstrap, refresh (ms)                              16  sd     0.23  cv   1.4%  [15.6, 16.3]  n=10   text: 15.3
+  TFHE-rs, refresh with our key switch (ms)                55.8  sd     0.13  cv   0.2%  [55.6, 56]  n=10   text: 56.1
+  ratio                                                    3.48  sd    0.049  cv   1.4%  [3.43, 3.56]  n=10   text: 3.7
+  CombBoot, refresh per ciphertext (ms)                    6.14  sd     0.13  cv   2.1%  [5.85, 6.25]  n=10   text: 6.08
+  ratio                                                     9.1  sd     0.19  cv   2.1%  [8.91, 9.53]  n=10   text: 9.2
+  product, operands refreshed (ms)                         64.7  sd     0.85  cv   1.3%  [63.5, 66.1]  n=10   text: 65.6
+  TFHE-rs product (ms)                                      422  sd      1.7  cv   0.4%  [419, 424]  n=10   text: 425
+  ratio                                                    6.52  sd    0.075  cv   1.1%  [6.38, 6.63]  n=10   text: 6.5
+== Section 7 and Figure 4, refresh: TFHE-rs (our key switch) / error bootstrap
+  k = 1 ( 2 bits)                                          1.86  sd    0.052  cv   2.8%  [1.8, 1.94]  n=10   text: 1.9 to 4.2
+  k = 2 ( 4 bits)                                           2.7  sd    0.056  cv   2.1%  [2.65, 2.8]  n=10   text: 
+  k = 3 ( 6 bits)                                          2.92  sd    0.067  cv   2.3%  [2.86, 3.03]  n=10   text: 
+  k = 4 ( 8 bits)                                          3.48  sd    0.049  cv   1.4%  [3.43, 3.56]  n=10   text: 
+  k = 5 (10 bits)                                           3.9  sd    0.039  cv   1.0%  [3.86, 3.97]  n=10   text: 
+  k = 6 (12 bits)                                          3.28  sd    0.044  cv   1.3%  [3.24, 3.36]  n=10   text: 
+  k = 7 (14 bits)                                          2.95  sd   0.0084  cv   0.3%  [2.94, 2.97]  n=10   text: 
+  k = 8 (16 bits)                                          2.96  sd    0.013  cv   0.4%  [2.95, 2.99]  n=10   text: 
+  range of the means over the rows                   1.9 to 3.9
+== Section 7, refresh: TFHE-rs (its own key switch) / error bootstrap
+  k = 1                                                    2.01  sd    0.062  cv   3.1%  [1.93, 2.13]  n=10   text: 
+  k = 2                                                    2.89  sd    0.053  cv   1.8%  [2.84, 3.01]  n=10   text: 
+  k = 3                                                    3.14  sd    0.059  cv   1.9%  [3.08, 3.26]  n=10   text: 
+  k = 4                                                    3.75  sd    0.047  cv   1.2%  [3.69, 3.83]  n=10   text: 
+  k = 5                                                    4.21  sd    0.033  cv   0.8%  [4.18, 4.27]  n=10   text: 
+  k = 6                                                    3.55  sd    0.041  cv   1.2%  [3.51, 3.62]  n=10   text: 
+  k = 7                                                    3.19  sd    0.013  cv   0.4%  [3.18, 3.22]  n=10   text: 
+  k = 8                                                     3.2  sd   0.0086  cv   0.3%  [3.18, 3.21]  n=10   text: 
+  range of the means over the rows                     2 to 4.2
+== Section 7 and Figure 4, refresh: TFHE-rs (our key switch) / CombBoot
+   2 bits                                                  5.23  sd     0.14  cv   2.6%  [5.05, 5.42]  n=10   text: 5.1 to 9.2
+   4 bits                                                  8.05  sd     0.21  cv   2.6%  [7.88, 8.47]  n=10   text: 
+   8 bits                                                   9.1  sd     0.19  cv   2.1%  [8.91, 9.53]  n=10   text: 
+  12 bits                                                     8  sd      0.2  cv   2.5%  [7.8, 8.38]  n=10   text: 
+  16 bits                                                  5.17  sd    0.078  cv   1.5%  [5.11, 5.38]  n=10   text: 
+  range of the means over the rows                   5.2 to 9.1
+== Appendix (E2), error bootstrap / CombBoot (same program)
+   2 bits                                                  2.84  sd    0.067  cv   2.4%  [2.71, 2.94]  n=10   text: 1.8 to 3.0
+   4 bits                                                  2.97  sd    0.014  cv   0.5%  [2.95, 3]  n=10   text: 
+   8 bits                                                  2.63  sd    0.032  cv   1.2%  [2.57, 2.69]  n=10   text: 
+  12 bits                                                  2.45  sd    0.037  cv   1.5%  [2.41, 2.52]  n=10   text: 
+  16 bits                                                  1.76  sd    0.013  cv   0.8%  [1.74, 1.78]  n=10   text: 
+  range of the means over the rows                     1.8 to 3
+== Figure 4, error bootstrap (eb_curves) / CombBoot (comb_curves)
+   2 bits                                                  2.82  sd    0.085  cv   3.0%  [2.74, 3]  n=10   text: 1.7 to 2.9
+   4 bits                                                  2.98  sd    0.098  cv   3.3%  [2.83, 3.15]  n=10   text: 
+   8 bits                                                  2.62  sd    0.067  cv   2.6%  [2.55, 2.76]  n=10   text: 
+  12 bits                                                  2.44  sd    0.073  cv   3.0%  [2.38, 2.57]  n=10   text: 
+  16 bits                                                  1.75  sd    0.028  cv   1.6%  [1.73, 1.82]  n=10   text: 
+  range of the means over the rows                     1.7 to 3
+== Section 7, latency of CombBoot (16 at once up to 8 bits, 8 beyond), s
+  8 bits, 16 ciphertexts                                  0.098  sd    0.002  cv   2.1%  [0.094, 0.100]  n=10   text: 0.10
+  2 bits, 16 ciphertexts                                  0.043  sd   0.0011  cv   2.5%  [0.041, 0.044]  n=10   text: 0.04
+== Section 7, product: TFHE-rs / error bootstrap (refreshes of both operands)
+  k = 1                                                   0.632  sd    0.014  cv   2.1%  [0.616, 0.656]  n=10   text: 1/1.6
+  k = 2                                                    3.35  sd     0.05  cv   1.5%  [3.28, 3.44]  n=10   text: 3.3 to 6.5
+  k = 3                                                    5.35  sd      0.1  cv   1.9%  [5.23, 5.55]  n=10   text: 
+  k = 4                                                    6.52  sd    0.075  cv   1.1%  [6.38, 6.63]  n=10   text: 
+  range of the means over the rows                   0.63 to 6.5
+== Section 7, TFHE-rs addition (tfhe_curves), ms
+  FheUint8                                                118.8  sd      1.1  cv   0.9%  [116.1, 120.0]  n=10   text: 121
+== Appendix, PBS of TFHE-rs alone against our rotation, k = 1 (ms)
+  PBS of TFHE-rs (2^23,1), n = 918                         13.9  sd    0.031  cv   0.2%  [13.9, 14]  n=10   text: 13.2
+  rotation of the error bootstrap (mean)                   7.36  sd     0.21  cv   2.8%  [7.03, 7.64]  n=10   text: 7.1
+== Table 1, residues (CombBoot) against TFHE-rs, ms
+  32 bits, refresh, ours                                   45.5  sd     0.96  cv   2.1%  [42.9, 46.2]  n=10   text: 45.7
+  32 bits, multiplication, ours                             127  sd      2.6  cv   2.1%  [119, 128]  n=10   text: 127.2
+  16 bits, refresh, ours                                   38.7  sd     0.65  cv   1.7%  [36.9, 39.1]  n=10   text: 39.1
+  16 bits, multiplication, ours                              96  sd      1.7  cv   1.8%  [91.2, 97]  n=10   text: 96.6
+  32 bits, refresh, radix                                 242.1  sd      0.3  cv   0.1%  [241.5, 242.5]  n=10   text: 245
+  32 bits, multiplication, radix                           6666  sd      7.2  cv   0.1%  [6656, 6674]  n=10   text: 6716
+  32 bits, refresh, CRT                                   816.4  sd      2.4  cv   0.3%  [813.7, 822.4]  n=10   text: 815
+  32 bits, multiplication, CRT                             2451  sd      7.3  cv   0.3%  [2444, 2469]  n=10   text: 2453
+  16 bits, refresh, radix                                 121.1  sd      0.2  cv   0.2%  [120.7, 121.4]  n=10   text: 122
+  16 bits, multiplication, radix                           1681  sd      2.2  cv   0.1%  [1678, 1684]  n=10   text: 1686
+  16 bits, refresh, CRT                                   172.5  sd      1.3  cv   0.8%  [170.2, 173.7]  n=10   text: 174
+  16 bits, multiplication, CRT                            517.6  sd      3.6  cv   0.7%  [511.3, 521.7]  n=10   text: 524
+  32 bits, ratio refresh (faster of radix and CRT)         5.32  sd     0.11  cv   2.1%  [5.24, 5.64]  n=10   text: 5.4
+  32 bits, ratio multiplication                            19.4  sd     0.44  cv   2.2%  [19.1, 20.6]  n=10   text: 19.3
+  16 bits, ratio refresh (faster of radix and CRT)         3.13  sd    0.051  cv   1.6%  [3.1, 3.27]  n=10   text: 3.1
+  16 bits, ratio multiplication                            5.39  sd     0.08  cv   1.5%  [5.31, 5.61]  n=10   text: 5.4
+  16 bits, two per call: refresh                           22.3  sd     0.24  cv   1.1%  [21.6, 22.5]  n=10   text: 22.4
+  16 bits, two per call: multiplication                    56.4  sd     0.66  cv   1.2%  [54.5, 56.7]  n=10   text: 56.6
+  32 bits, addition, ours                                0.0030  sd  0.00019  cv   6.1%  [0.0029, 0.0035]  n=10   text: 0.003
+  32 bits, addition, CRT                                 0.0168  sd  0.00038  cv   2.3%  [0.0158, 0.0173]  n=10   text: 0.016
+  32 bits, addition, radix                                483.2  sd      1.6  cv   0.3%  [479.7, 484.7]  n=10   text: 491
+== Section 5, separate rotations in GLWE: rank 4 / CombBoot (eb_glwe ftime, minimum of the rounds)
+  k = 1                                                    2.17  sd    0.021  cv   1.0%  [2.13, 2.2]  n=10   text: 1.4 to 2.9
+  k = 2                                                    1.96  sd    0.034  cv   1.7%  [1.89, 2]  n=10   text: 
+  k = 3                                                     2.9  sd    0.026  cv   0.9%  [2.83, 2.93]  n=10   text: 
+  k = 4                                                    2.11  sd   0.0082  cv   0.4%  [2.1, 2.13]  n=10   text: 
+  k = 6                                                    1.99  sd   0.0066  cv   0.3%  [1.98, 2]  n=10   text: 
+  k = 8                                                    1.42  sd   0.0043  cv   0.3%  [1.41, 1.42]  n=10   text: 
+  range of the means over the rows                   1.4 to 2.9
+== Section 5, separate rotations in GLWE: error bootstrap / rank 4
+  k = 1                                                    1.33  sd    0.025  cv   1.9%  [1.28, 1.36]  n=10   text: 1.2 to 1.5
+  k = 2                                                    1.51  sd    0.036  cv   2.4%  [1.46, 1.57]  n=10   text: 
+  k = 3                                                    1.25  sd    0.025  cv   2.0%  [1.2, 1.29]  n=10   text: 
+  k = 4                                                    1.25  sd    0.013  cv   1.0%  [1.22, 1.27]  n=10   text: 
+  k = 5                                                    1.26  sd   0.0078  cv   0.6%  [1.25, 1.27]  n=10   text: 
+  k = 6                                                    1.21  sd   0.0082  cv   0.7%  [1.2, 1.22]  n=10   text: 
+  k = 7                                                    1.43  sd   0.0029  cv   0.2%  [1.43, 1.44]  n=10   text: 
+  k = 8                                                    1.21  sd   0.0054  cv   0.4%  [1.21, 1.22]  n=10   text: 
+  range of the means over the rows                   1.2 to 1.5
+
+== Coefficient of variation of the times, largest per program (stats.csv)
+  eb_curves       median  0.29%, largest  2.59% (ebrs_m2,1,refresh, column 0)
+  comb_curves     median  2.06%, largest  3.70% (eb,2, column 0)
+  product_curves  median  1.14%, largest  2.65% (ebrs,4,product, column 2)
+  tfhe_curves     median  0.70%, largest  2.27% (tfhers,1,refresh, column 1)
+  rns_small       median  1.08%, largest  6.57% (rns32w,32,mul, column 2)
+  glwe_ftime      median  0.51%, largest  2.69% (CSV,ftime,2,EB N = 2048; m = 1; n = 688; (2^23;1), column 0)

@@ -1,0 +1,17 @@
+Mean over 10 sessions (results/sessions/20261018_1717) of the minimum within each session
+CSV
+comb,2,2.6714
+eb,2,7.5933
+comb,4,3.4730
+eb,4,10.3313
+comb,8,6.1381
+eb,8,16.1304
+comb,12,10.4794
+eb,12,25.6997
+comb,16,21.6197
+eb,16,37.9414
+tfhers,2,15.0861
+tfhers,4,29.7081
+tfhers,8,59.9559
+tfhers,12,90.1267
+tfhers,16,120.4128

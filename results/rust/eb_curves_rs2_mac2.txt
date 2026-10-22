@@ -1,0 +1,72 @@
+Times (ms), one thread, TFHE-rs 1.8.1 for both
+  ebrs k = 1 ( 2 bits), m = 2, n =  570, (2^23,1): refresh   7.195 ms  [mean: key switch 0.167, rounding 0.056, rotation 7.083, rest 0.002]
+  ebrs k = 2 ( 4 bits), m = 1, n =  688, (2^23,1): refresh   9.818 ms  [mean: key switch 0.125, rounding 0.050, rotation 9.739, rest 0.002]
+  ebrs k = 3 ( 6 bits), m = 2, n =  732, (2^15,2): refresh  13.531 ms  [mean: key switch 0.209, rounding 0.061, rotation 13.390, rest 0.002]
+  ebrs k = 4 ( 8 bits), m = 2, n =  816, (2^14,2): refresh  15.258 ms  [mean: key switch 0.167, rounding 0.155, rotation 15.054, rest 0.003]
+  ebrs k = 5 (10 bits), m = 2, n =  900, (2^15,2): refresh  16.847 ms  [mean: key switch 0.260, rounding 0.077, rotation 16.794, rest 0.003]
+  ebrs k = 6 (12 bits), m = 2, n =  976, (2^11,3): refresh  24.134 ms  [mean: key switch 0.214, rounding 0.070, rotation 24.645, rest 0.003]
+  ebrs k = 7 (14 bits), m = 1, n = 1060, (2^12,3): refresh  32.001 ms  [mean: key switch 0.403, rounding 0.103, rotation 31.705, rest 0.002]
+  ebrs k = 8 (16 bits), m = 2, n = 1152, (2^9,4): refresh  36.681 ms  [mean: key switch 0.316, rounding 0.123, rotation 36.468, rest 0.003]
+  tfhers_pbs classic (2^23,1), default          n =  918: key switch  1.194 + PBS  13.193 =  14.387 ms per block
+  tfhers_pbs multi-bit group 3 (2^15,2)         n =  918: key switch  1.490 + PBS  21.827 =  23.317 ms per block
+  tfhers_pbs multi-bit group 4 (2^22,1)         n =  920: key switch  1.247 + PBS  15.410 =  16.657 ms per block
+  tfhers FheUint2  (k = 1) refresh    15.270 ms (min    14.583)
+  tfhers FheUint4  (k = 2) refresh    29.937 ms (min    29.559)
+  tfhers FheUint6  (k = 3) refresh    44.993 ms (min    44.429)
+  tfhers FheUint8  (k = 4) refresh    59.874 ms (min    59.354)
+  tfhers FheUint10 (k = 5) refresh    75.234 ms (min    75.010)
+  tfhers FheUint12 (k = 6) refresh    90.250 ms (min    87.376)
+  tfhers FheUint14 (k = 7) refresh   103.706 ms (min   102.387)
+  tfhers FheUint16 (k = 8) refresh   118.848 ms (min   117.290)
+  tfhers_core FheUint2  (k = 1) refresh    14.942 ms (min    14.921)  [1 x (its key switch + PBS of TFHE-rs)]
+  tfhers_ours FheUint2  (k = 1) refresh    13.747 ms (min    13.666)  [1 x (our key switch + PBS of TFHE-rs)]
+  tfhers_core FheUint4  (k = 2) refresh    29.943 ms (min    29.882)  [2 x (its key switch + PBS of TFHE-rs)]
+  tfhers_ours FheUint4  (k = 2) refresh    27.514 ms (min    27.414)  [2 x (our key switch + PBS of TFHE-rs)]
+  tfhers_core FheUint6  (k = 3) refresh    45.600 ms (min    44.918)  [3 x (its key switch + PBS of TFHE-rs)]
+  tfhers_ours FheUint6  (k = 3) refresh    42.119 ms (min    42.005)  [3 x (our key switch + PBS of TFHE-rs)]
+  tfhers_core FheUint8  (k = 4) refresh    61.139 ms (min    61.028)  [4 x (its key switch + PBS of TFHE-rs)]
+  tfhers_ours FheUint8  (k = 4) refresh    56.237 ms (min    56.098)  [4 x (our key switch + PBS of TFHE-rs)]
+  tfhers_core FheUint10 (k = 5) refresh    76.539 ms (min    76.395)  [5 x (its key switch + PBS of TFHE-rs)]
+  tfhers_ours FheUint10 (k = 5) refresh    70.200 ms (min    70.053)  [5 x (our key switch + PBS of TFHE-rs)]
+  tfhers_core FheUint12 (k = 6) refresh    92.010 ms (min    91.788)  [6 x (its key switch + PBS of TFHE-rs)]
+  tfhers_ours FheUint12 (k = 6) refresh    84.210 ms (min    84.045)  [6 x (our key switch + PBS of TFHE-rs)]
+  tfhers_core FheUint14 (k = 7) refresh   107.117 ms (min   104.909)  [7 x (its key switch + PBS of TFHE-rs)]
+  tfhers_ours FheUint14 (k = 7) refresh    98.063 ms (min    97.970)  [7 x (our key switch + PBS of TFHE-rs)]
+  tfhers_core FheUint16 (k = 8) refresh   121.278 ms (min   119.867)  [8 x (its key switch + PBS of TFHE-rs)]
+  tfhers_ours FheUint16 (k = 8) refresh   112.117 ms (min   111.874)  [8 x (our key switch + PBS of TFHE-rs)]
+CSV
+ebrs_m2,1,refresh,7.1951
+ebrs_m1,2,refresh,9.8183
+ebrs_m2,3,refresh,13.5309
+ebrs_m2,4,refresh,15.2584
+ebrs_m2,5,refresh,16.8466
+ebrs_m2,6,refresh,24.1342
+ebrs_m1,7,refresh,32.0008
+ebrs_m2,8,refresh,36.6813
+tfhers_pbs,classic (2^23,1), default,918,1.1939,13.1928,14.3867
+tfhers_pbs,multi-bit group 3 (2^15,2),918,1.4903,21.8270,23.3173
+tfhers_pbs,multi-bit group 4 (2^22,1),920,1.2474,15.4099,16.6572
+tfhers,1,refresh,15.2701,14.5834
+tfhers,2,refresh,29.9368,29.5591
+tfhers,3,refresh,44.9935,44.4290
+tfhers,4,refresh,59.8737,59.3545
+tfhers,5,refresh,75.2340,75.0097
+tfhers,6,refresh,90.2502,87.3765
+tfhers,7,refresh,103.7063,102.3872
+tfhers,8,refresh,118.8484,117.2899
+tfhers_core,1,refresh,14.9418,14.9211
+tfhers_ours,1,refresh,13.7475,13.6664
+tfhers_core,2,refresh,29.9431,29.8823
+tfhers_ours,2,refresh,27.5140,27.4135
+tfhers_core,3,refresh,45.6005,44.9183
+tfhers_ours,3,refresh,42.1194,42.0050
+tfhers_core,4,refresh,61.1393,61.0282
+tfhers_ours,4,refresh,56.2371,56.0981
+tfhers_core,5,refresh,76.5394,76.3955
+tfhers_ours,5,refresh,70.1999,70.0529
+tfhers_core,6,refresh,92.0103,91.7883
+tfhers_ours,6,refresh,84.2104,84.0449
+tfhers_core,7,refresh,107.1166,104.9088
+tfhers_ours,7,refresh,98.0630,97.9703
+tfhers_core,8,refresh,121.2784,119.8670
+tfhers_ours,8,refresh,112.1165,111.8741

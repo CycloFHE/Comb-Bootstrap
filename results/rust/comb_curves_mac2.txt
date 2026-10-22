@@ -1,0 +1,32 @@
+Times (ms), one thread, TFHE-rs 1.8.1: comb bootstrap (per ciphertext), error bootstrap alone, TFHE-rs
+  comb  2 bits: p = 256, B = 16, n =  608:    3.438 ms per ciphertext  [55.0 ms for B: key switches 1.80, roundings 0.65, comb bootstrap 52.6]
+  eb    2 bits: n =  566, (2^23,1):    8.748 ms
+  comb  4 bits: p = 256, B = 16, n =  688:    4.379 ms per ciphertext  [70.1 ms for B: key switches 2.03, roundings 0.63, comb bootstrap 67.4]
+  eb    4 bits: n =  688, (2^23,1):   10.518 ms
+  comb  8 bits: p = 256, B = 16, n =  896:    7.685 ms per ciphertext  [123.0 ms for B: key switches 3.02, roundings 1.00, comb bootstrap 118.9]
+  eb    8 bits: n =  816, (2^14,2):   18.907 ms
+  comb 12 bits: p = 512, B =  8, n =  986:   11.849 ms per ciphertext  [94.8 ms for B: key switches 2.21, roundings 0.54, comb bootstrap 92.0]
+  eb   12 bits: n =  976, (2^11,3):   30.151 ms
+  comb 16 bits: p = 512, B =  8, n = 1157:   21.289 ms per ciphertext  [170.3 ms for B: key switches 2.49, roundings 0.75, comb bootstrap 167.1]
+  eb   16 bits: n = 1136, (2^9,4):   43.957 ms
+  tfhers FheUint2 :   15.123 ms
+  tfhers FheUint4 :   30.281 ms
+  tfhers FheUint8 :   60.723 ms
+  tfhers FheUint12:   91.145 ms
+  tfhers FheUint16:  121.684 ms
+CSV (scheme,bits,ms)
+comb,2,3.4377
+eb,2,8.7484
+comb,4,4.3795
+eb,4,10.5185
+comb,8,7.6846
+eb,8,18.9075
+comb,12,11.8491
+eb,12,30.1508
+comb,16,21.2885
+eb,16,43.9566
+tfhers,2,15.1225
+tfhers,4,30.2815
+tfhers,8,60.7229
+tfhers,12,91.1449
+tfhers,16,121.6841

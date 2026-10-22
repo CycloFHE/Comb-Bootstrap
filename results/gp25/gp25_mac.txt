@@ -1,0 +1,120 @@
+== SET_2_3_2048
+Sparse bootstrapping with binary keys
+Input: (N=2048, h=39, binary, σ=2^-15)
+Packing: (N=2048, h=256, ternary, σ=2^-44)
+Output: (N=2048, h=512, ternary, σ=2^-50)
+Decomposition: BS(ℓ=1, β=2^23) PCK(ℓ=2, β=2^14) KS(ℓ=12, β=2^1)
+Message precision: 3 - Repetitions: 3
+
+Max monomial distance (log B): 7
+Rejection Sampling Attempts: 153
+Bootstrapping time: 17,143,907μs +- 282038.400231
+Pass
+== SET_4_5_2048
+Sparse bootstrapping with binary keys
+Input: (N=2048, h=42, binary, σ=2^-17)
+Packing: (N=2048, h=256, ternary, σ=2^-44)
+Output: (N=2048, h=512, ternary, σ=2^-50)
+Decomposition: BS(ℓ=1, β=2^23) PCK(ℓ=2, β=2^14) KS(ℓ=14, β=2^1)
+Message precision: 5 - Repetitions: 3
+
+Max monomial distance (log B): 7
+Rejection Sampling Attempts: 111
+Bootstrapping time: 18,706,265μs +- 13022.127694
+Pass
+== SET_2_3_4096
+Sparse bootstrapping with binary keys
+Input: (N=4096, h=32, binary, σ=2^-15)
+Packing: (N=4096, h=256, ternary, σ=2^-44)
+Output: (N=2048, h=512, ternary, σ=2^-50)
+Decomposition: BS(ℓ=1, β=2^23) PCK(ℓ=2, β=2^14) KS(ℓ=12, β=2^1)
+Message precision: 3 - Repetitions: 3
+
+Max monomial distance (log B): 8
+Rejection Sampling Attempts: 1491
+Bootstrapping time: 32,701,410μs +- 57933.880039
+Pass
+== SET_4_5_4096
+Sparse bootstrapping with binary keys
+Input: (N=4096, h=34, binary, σ=2^-18)
+Packing: (N=4096, h=256, ternary, σ=2^-44)
+Output: (N=2048, h=512, ternary, σ=2^-50)
+Decomposition: BS(ℓ=1, β=2^23) PCK(ℓ=2, β=2^14) KS(ℓ=14, β=2^1)
+Message precision: 5 - Repetitions: 3
+
+Max monomial distance (log B): 8
+Rejection Sampling Attempts: 1165
+Bootstrapping time: 35,149,351μs +- 26903.184731
+Pass
+== SET_6_7_4096
+Sparse bootstrapping with binary keys
+Input: (N=4096, h=33, binary, σ=2^-21)
+Packing: (N=4096, h=256, ternary, σ=2^-44)
+Output: (N=2048, h=512, ternary, σ=2^-50)
+Decomposition: BS(ℓ=1, β=2^23) PCK(ℓ=2, β=2^14) KS(ℓ=17, β=2^1)
+Message precision: 7 - Repetitions: 3
+
+Max monomial distance (log B): 9
+Rejection Sampling Attempts: 1
+Bootstrapping time: 38,099,177μs +- 27684.367201
+Pass
+== SET_8_9_4096
+Sparse bootstrapping with binary keys
+Input: (N=4096, h=34, binary, σ=2^-24)
+Packing: (N=4096, h=256, ternary, σ=2^-44)
+Output: (N=8192, h=512, ternary, σ=2^-51)
+Decomposition: BS(ℓ=1, β=2^22) PCK(ℓ=2, β=2^14) KS(ℓ=20, β=2^1)
+Message precision: 9 - Repetitions: 3
+
+Max monomial distance (log B): 9
+Rejection Sampling Attempts: 2
+Bootstrapping time: 180,415,089μs +- 100462.881479
+Pass
+== SET_2_3_8192
+Sparse bootstrapping with binary keys
+Input: (N=8192, h=25, binary, σ=2^-15)
+Packing: (N=8192, h=256, ternary, σ=2^-44)
+Output: (N=2048, h=512, ternary, σ=2^-50)
+Decomposition: BS(ℓ=1, β=2^23) PCK(ℓ=2, β=2^14) KS(ℓ=12, β=2^1)
+Message precision: 3 - Repetitions: 3
+
+Max monomial distance (log B): 10
+Rejection Sampling Attempts: 1
+Bootstrapping time: 64,804,388μs +- 111235.776097
+Pass
+== SET_4_5_8192
+Sparse bootstrapping with binary keys
+Input: (N=8192, h=26, binary, σ=2^-18)
+Packing: (N=8192, h=256, ternary, σ=2^-44)
+Output: (N=2048, h=512, ternary, σ=2^-50)
+Decomposition: BS(ℓ=1, β=2^23) PCK(ℓ=2, β=2^14) KS(ℓ=14, β=2^1)
+Message precision: 5 - Repetitions: 3
+
+Max monomial distance (log B): 10
+Rejection Sampling Attempts: 2
+Bootstrapping time: 67,207,779μs +- 69802.436075
+Pass
+== SET_6_7_8192
+Sparse bootstrapping with binary keys
+Input: (N=8192, h=27, binary, σ=2^-21)
+Packing: (N=8192, h=256, ternary, σ=2^-44)
+Output: (N=2048, h=512, ternary, σ=2^-50)
+Decomposition: BS(ℓ=1, β=2^23) PCK(ℓ=2, β=2^14) KS(ℓ=17, β=2^1)
+Message precision: 7 - Repetitions: 3
+
+Max monomial distance (log B): 10
+Rejection Sampling Attempts: 2
+Bootstrapping time: 69,746,429μs +- 23032.473698
+Pass
+== SET_8_9_8192
+Sparse bootstrapping with binary keys
+Input: (N=8192, h=28, binary, σ=2^-24)
+Packing: (N=8192, h=256, ternary, σ=2^-44)
+Output: (N=8192, h=512, ternary, σ=2^-51)
+Decomposition: BS(ℓ=1, β=2^22) PCK(ℓ=2, β=2^14) KS(ℓ=20, β=2^1)
+Message precision: 9 - Repetitions: 3
+
+Max monomial distance (log B): 10
+Rejection Sampling Attempts: 1
+Bootstrapping time: 368,250,793μs +- 52602274.652428
+Pass

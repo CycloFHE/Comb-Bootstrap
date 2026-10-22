@@ -1,0 +1,53 @@
+FFT of TFHE-rs: output of the rotation, n = 800, k = 4 (p̂ = 2^8), 300 refreshes, log2 σ measured / predicted without FFT
+m = 1, (2^23,1): out  -15.19 /  -15.46   FFT: log2 c =  -87.74 (FFTW model -85)   rotation  25.221 ms
+CSV,1,23,1,-15.1924,-15.4551,-87.741,25.2215
+m = 1, (2^22,1): out  -14.48 /  -14.47   FFT: log2 c =     NaN (FFTW model -85)   rotation  19.501 ms
+CSV,1,22,1,-14.4814,-14.4689,NaN,19.5014
+m = 1, (2^20,1): out  -12.46 /  -12.47   FFT: log2 c =  -80.52 (FFTW model -85)   rotation  20.258 ms
+CSV,1,20,1,-12.4581,-12.4698,-80.518,20.2584
+m = 1, (2^18,1): out  -10.54 /  -10.47   FFT: log2 c =     NaN (FFTW model -85)   rotation  21.431 ms
+CSV,1,18,1,-10.5396,-10.4698,NaN,21.4314
+m = 1, (2^16,2): out  -22.39 /  -24.10   FFT: log2 c =  -87.56 (FFTW model -85)   rotation  42.559 ms
+CSV,1,16,2,-22.3869,-24.1046,-87.558,42.5589
+m = 1, (2^15,2): out  -22.24 /  -22.46   FFT: log2 c =  -87.01 (FFTW model -85)   rotation  32.444 ms
+CSV,1,15,2,-22.2369,-22.4625,-87.014,32.4437
+m = 1, (2^14,2): out  -20.30 /  -20.47   FFT: log2 c =  -81.51 (FFTW model -85)   rotation  33.135 ms
+CSV,1,14,2,-20.3015,-20.4697,-81.512,33.1350
+m = 1, (2^13,2): out  -18.51 /  -18.47   FFT: log2 c =     NaN (FFTW model -85)   rotation  34.121 ms
+CSV,1,13,2,-18.5101,-18.4698,NaN,34.1214
+m = 1, (2^12,3): out  -26.24 /  -27.97   FFT: log2 c =  -87.84 (FFTW model -85)   rotation  44.397 ms
+CSV,1,12,3,-26.2393,-27.9739,-87.844,44.3975
+m = 1, (2^11,3): out  -25.44 /  -25.47   FFT: log2 c =  -88.73 (FFTW model -85)   rotation  46.557 ms
+CSV,1,11,3,-25.4373,-25.4671,-88.731,46.5574
+m = 1, (2^10,3): out  -22.54 /  -22.47   FFT: log2 c =     NaN (FFTW model -85)   rotation  42.329 ms
+CSV,1,10,3,-22.5443,-22.4698,NaN,42.3288
+m = 1, (2^ 9,4): out  -28.15 /  -28.46   FFT: log2 c =  -87.47 (FFTW model -85)   rotation  53.722 ms
+CSV,1,9,4,-28.1480,-28.4551,-87.468,53.7220
+m = 1, (2^ 8,5): out  -29.75 /  -31.77   FFT: log2 c =  -87.56 (FFTW model -85)   rotation  68.879 ms
+CSV,1,8,5,-29.7497,-31.7674,-87.556,68.8791
+m = 2, (2^23,1): out  -13.30 /  -15.15   FFT: log2 c =  -81.35 (FFTW model -85)   rotation  32.355 ms
+CSV,2,23,1,-13.2968,-15.1482,-81.353,32.3546
+m = 2, (2^22,1): out  -13.95 /  -14.18   FFT: log2 c =  -82.41 (FFTW model -85)   rotation  35.533 ms
+CSV,2,22,1,-13.9453,-14.1755,-82.406,35.5332
+m = 2, (2^20,1): out  -12.64 /  -12.18   FFT: log2 c =     NaN (FFTW model -85)   rotation  35.980 ms
+CSV,2,20,1,-12.6442,-12.1774,NaN,35.9800
+m = 2, (2^18,1): out  -10.56 /  -10.18   FFT: log2 c =     NaN (FFTW model -85)   rotation  31.664 ms
+CSV,2,18,1,-10.5636,-10.1774,NaN,31.6639
+m = 2, (2^16,2): out  -21.06 /  -23.57   FFT: log2 c =  -83.81 (FFTW model -85)   rotation  54.500 ms
+CSV,2,16,2,-21.0602,-23.5709,-83.809,54.5004
+m = 2, (2^15,2): out  -20.90 /  -22.16   FFT: log2 c =  -81.73 (FFTW model -85)   rotation  56.055 ms
+CSV,2,15,2,-20.9038,-22.1627,-81.728,56.0551
+m = 2, (2^14,2): out  -20.37 /  -20.18   FFT: log2 c =     NaN (FFTW model -85)   rotation  48.702 ms
+CSV,2,14,2,-20.3745,-20.1771,NaN,48.7020
+m = 2, (2^13,2): out  -18.52 /  -18.18   FFT: log2 c =     NaN (FFTW model -85)   rotation  50.067 ms
+CSV,2,13,2,-18.5224,-18.1774,NaN,50.0672
+m = 2, (2^12,3): out  -25.03 /  -27.39   FFT: log2 c =  -84.35 (FFTW model -85)   rotation  64.197 ms
+CSV,2,12,3,-25.0329,-27.3904,-84.351,64.1974
+m = 2, (2^11,3): out  -24.37 /  -25.17   FFT: log2 c =  -81.55 (FFTW model -85)   rotation  77.678 ms
+CSV,2,11,3,-24.3703,-25.1718,-81.545,77.6779
+m = 2, (2^10,3): out  -22.50 /  -22.18   FFT: log2 c =     NaN (FFTW model -85)   rotation  65.505 ms
+CSV,2,10,3,-22.4968,-22.1773,NaN,65.5052
+m = 2, (2^ 9,4): out  -26.41 /  -28.15   FFT: log2 c =  -81.60 (FFTW model -85)   rotation  81.362 ms
+CSV,2,9,4,-26.4102,-28.1482,-81.600,81.3622
+m = 2, (2^ 8,5): out  -28.93 /  -31.13   FFT: log2 c =  -84.90 (FFTW model -85)   rotation 109.663 ms
+CSV,2,8,5,-28.9319,-31.1259,-84.900,109.6634

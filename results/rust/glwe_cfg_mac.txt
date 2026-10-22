@@ -1,0 +1,81 @@
+FFT log2 c: {(1, 2048, 1): -87.58, (1, 2048, 2): -84.49, (2, 1024, 1): -88.09, (2, 1024, 2): -85.02, (4, 512, 1): -87.95, (4, 512, 2): -84.59, (8, 256, 1): -87.86, (8, 256, 2): -85.49, (16, 128, 1): -87.67, (16, 128, 2): -84.87}
+time µs/coord = a + b l: {(1, 2048, 1): (np.float64(5.86), np.float64(8.13)), (1, 2048, 2): (np.float64(6.96), np.float64(6.37)), (2, 1024, 1): (np.float64(4.19), np.float64(6.06)), (2, 1024, 2): (np.float64(4.59), np.float64(5.23)), (4, 512, 1): (np.float64(3.37), np.float64(5.86)), (4, 512, 2): (np.float64(3.48), np.float64(6.02)), (8, 256, 1): (np.float64(2.79), np.float64(7.36)), (8, 256, 2): (np.float64(3.2), np.float64(8.66)), (16, 128, 1): (np.float64(2.82), np.float64(9.91)), (16, 128, 2): (np.float64(2.9), np.float64(13.27))}
+k = 1 (2 bits): kk = 1 best 7.67 ms (m = 2, n = 570, (2^23,1))
+   kk =  4, np =  512, p = 1024, m = 1: n =  570 (2^23,1) est   5.32 ms (rotation 5.26, KS 0.06) ratio 0.693  out 2^-15.47 KS 2^-7.97 vterm 1.65e-04
+   kk =  4, np =  512, p = 1024, m = 2: n =  576 (2^22,1) est   5.53 ms (rotation 5.47, KS 0.06) ratio 0.720  out 2^-14.36 KS 2^-8.24 vterm 1.67e-04
+   kk =  2, np = 1024, p = 2048, m = 2: n =  570 (2^23,1) est   5.65 ms (rotation 5.60, KS 0.06) ratio 0.737  out 2^-14.92 KS 2^-7.97 vterm 4.13e-05
+   kk =  2, np = 1024, p = 2048, m = 1: n =  566 (2^23,1) est   5.88 ms (rotation 5.80, KS 0.08) ratio 0.766  out 2^-15.49 KS 2^-7.95 vterm 4.10e-05
+   kk =  8, np =  256, p =  512, m = 1: n =  576 (2^22,1) est   5.90 ms (rotation 5.85, KS 0.06) ratio 0.769  out 2^-14.69 KS 2^-8.24 vterm 6.68e-04
+   kk =  8, np =  256, p =  512, m = 2: n =  576 (2^22,1) est   6.89 ms (rotation 6.83, KS 0.06) ratio 0.898  out 2^-14.38 KS 2^-8.24 vterm 6.68e-04
+   kk = 16, np =  128, p =  256, m = 1: n =  596 (2^23,1) est   7.66 ms (rotation 7.59, KS 0.07) ratio 0.999  out 2^-15.40 KS 2^-8.70 vterm 2.77e-03
+   kk =  1, np = 2048, p = 4096, m = 2: n =  570 (2^23,1) est   7.67 ms (rotation 7.60, KS 0.08) ratio 1.000  out 2^-14.77 KS 2^-7.99 vterm 1.03e-05
+   kk =  1, np = 2048, p = 4096, m = 1: n =  566 (2^23,1) est   7.99 ms (rotation 7.91, KS 0.08) ratio 1.041  out 2^-15.42 KS 2^-7.95 vterm 1.02e-05
+   kk = 16, np =  128, p =  256, m = 2: n =  608 (2^23,1) est   9.89 ms (rotation 9.83, KS 0.05) ratio 1.288  out 2^-14.83 KS 2^-8.97 vterm 2.83e-03
+k = 2 (4 bits): kk = 1 best 9.46 ms (m = 1, n = 672, (2^23,1))
+   kk =  4, np =  512, p = 1024, m = 1: n =  672 (2^23,1) est   6.27 ms (rotation 6.21, KS 0.06) ratio 0.663  out 2^-15.35 KS 2^-10.57 vterm 1.96e-04
+   kk =  2, np = 1024, p = 2048, m = 1: n =  672 (2^23,1) est   6.95 ms (rotation 6.89, KS 0.06) ratio 0.735  out 2^-15.37 KS 2^-10.57 vterm 4.90e-05
+   kk =  8, np =  256, p =  512, m = 1: n =  688 (2^23,1) est   7.04 ms (rotation 6.98, KS 0.06) ratio 0.745  out 2^-15.32 KS 2^-10.93 vterm 8.04e-04
+   kk =  1, np = 2048, p = 4096, m = 1: n =  672 (2^23,1) est   9.46 ms (rotation 9.40, KS 0.06) ratio 1.000  out 2^-15.29 KS 2^-10.57 vterm 1.23e-05
+   kk =  2, np = 1024, p = 2048, m = 2: n =  650 (2^13,2) est   9.87 ms (rotation 9.78, KS 0.09) ratio 1.044  out 2^-18.33 KS 2^-9.93 vterm 4.74e-05
+   kk =  4, np =  512, p = 1024, m = 2: n =  652 (2^14,2) est  10.21 ms (rotation 10.12, KS 0.09) ratio 1.079  out 2^-20.32 KS 2^-9.95 vterm 1.90e-04
+   kk =  1, np = 2048, p = 4096, m = 2: n =  650 (2^13,2) est  12.89 ms (rotation 12.80, KS 0.09) ratio 1.363  out 2^-18.33 KS 2^-9.93 vterm 1.18e-05
+   kk =  8, np =  256, p =  512, m = 2: n =  656 (2^12,2) est  13.53 ms (rotation 13.46, KS 0.07) ratio 1.430  out 2^-16.32 KS 2^-10.20 vterm 7.65e-04
+   kk = 16, np =  128, p =  256, m = 1: n =  688 (2^13,2) est  15.64 ms (rotation 15.58, KS 0.06) ratio 1.654  out 2^-18.58 KS 2^-10.93 vterm 3.22e-03
+   kk = 16, np =  128, p =  256, m = 2: n =  688 (2^13,2) est  20.32 ms (rotation 20.26, KS 0.06) ratio 2.148  out 2^-18.29 KS 2^-10.93 vterm 3.22e-03
+k = 3 (6 bits): kk = 1 best 14.52 ms (m = 2, n = 732, (2^15,2))
+   kk =  2, np = 1024, p = 2048, m = 2: n =  734 (2^14,2) est  11.15 ms (rotation 11.04, KS 0.10) ratio 0.768  out 2^-20.23 KS 2^-11.94 vterm 5.38e-05
+   kk =  4, np =  512, p = 1024, m = 1: n =  736 (2^13,2) est  11.19 ms (rotation 11.11, KS 0.08) ratio 0.771  out 2^-18.53 KS 2^-12.17 vterm 2.16e-04
+   kk =  4, np =  512, p = 1024, m = 2: n =  736 (2^13,2) est  11.50 ms (rotation 11.42, KS 0.08) ratio 0.792  out 2^-18.24 KS 2^-12.17 vterm 2.16e-04
+   kk =  2, np = 1024, p = 2048, m = 1: n =  734 (2^14,2) est  12.08 ms (rotation 11.97, KS 0.10) ratio 0.832  out 2^-20.53 KS 2^-11.94 vterm 5.38e-05
+   kk =  8, np =  256, p =  512, m = 1: n =  736 (2^13,2) est  12.96 ms (rotation 12.89, KS 0.08) ratio 0.893  out 2^-18.53 KS 2^-12.17 vterm 8.63e-04
+   kk =  1, np = 2048, p = 4096, m = 2: n =  732 (2^15,2) est  14.52 ms (rotation 14.42, KS 0.10) ratio 1.000  out 2^-21.84 KS 2^-11.92 vterm 1.34e-05
+   kk =  8, np =  256, p =  512, m = 2: n =  736 (2^14,2) est  15.18 ms (rotation 15.11, KS 0.08) ratio 1.046  out 2^-20.23 KS 2^-12.17 vterm 8.63e-04
+   kk =  1, np = 2048, p = 4096, m = 1: n =  732 (2^15,2) est  16.28 ms (rotation 16.18, KS 0.10) ratio 1.122  out 2^-22.37 KS 2^-11.92 vterm 1.34e-05
+   kk = 16, np =  128, p =  256, m = 1: n =  784 (2^14,2) est  17.82 ms (rotation 17.76, KS 0.07) ratio 1.227  out 2^-20.48 KS 2^-13.25 vterm 3.69e-03
+   kk = 16, np =  128, p =  256, m = 2: n =  784 (2^15,2) est  23.15 ms (rotation 23.08, KS 0.07) ratio 1.594  out 2^-21.87 KS 2^-13.25 vterm 3.69e-03
+k = 4 (8 bits): kk = 1 best 16.16 ms (m = 2, n = 816, (2^14,2))
+   kk =  2, np = 1024, p = 2048, m = 2: n =  816 (2^14,2) est  12.36 ms (rotation 12.28, KS 0.08) ratio 0.765  out 2^-20.16 KS 2^-14.15 vterm 6.00e-05
+   kk =  4, np =  512, p = 1024, m = 1: n =  816 (2^14,2) est  12.40 ms (rotation 12.32, KS 0.08) ratio 0.768  out 2^-20.45 KS 2^-14.15 vterm 2.40e-04
+   kk =  4, np =  512, p = 1024, m = 2: n =  816 (2^14,2) est  12.75 ms (rotation 12.66, KS 0.08) ratio 0.789  out 2^-20.16 KS 2^-14.15 vterm 2.40e-04
+   kk =  2, np = 1024, p = 2048, m = 1: n =  816 (2^14,2) est  13.39 ms (rotation 13.31, KS 0.08) ratio 0.829  out 2^-20.45 KS 2^-14.15 vterm 6.00e-05
+   kk =  8, np =  256, p =  512, m = 1: n =  816 (2^15,2) est  14.37 ms (rotation 14.29, KS 0.08) ratio 0.890  out 2^-22.32 KS 2^-14.15 vterm 9.61e-04
+   kk =  1, np = 2048, p = 4096, m = 2: n =  816 (2^14,2) est  16.16 ms (rotation 16.07, KS 0.08) ratio 1.000  out 2^-20.15 KS 2^-14.15 vterm 1.50e-05
+   kk =  8, np =  256, p =  512, m = 2: n =  816 (2^15,2) est  16.83 ms (rotation 16.75, KS 0.08) ratio 1.042  out 2^-21.94 KS 2^-14.15 vterm 9.61e-04
+   kk =  1, np = 2048, p = 4096, m = 1: n =  816 (2^14,2) est  18.12 ms (rotation 18.04, KS 0.08) ratio 1.122  out 2^-20.45 KS 2^-14.15 vterm 1.50e-05
+k = 5 (10 bits): kk = 1 best 17.86 ms (m = 2, n = 900, (2^15,2))
+   kk =  2, np = 1024, p = 2048, m = 2: n =  896 (2^15,2) est  13.61 ms (rotation 13.48, KS 0.13) ratio 0.762  out 2^-21.80 KS 2^-16.18 vterm 6.62e-05
+   kk =  4, np =  512, p = 1024, m = 1: n =  896 (2^15,2) est  13.62 ms (rotation 13.53, KS 0.09) ratio 0.763  out 2^-22.26 KS 2^-16.14 vterm 2.65e-04
+   kk =  4, np =  512, p = 1024, m = 2: n =  904 (2^15,2) est  14.16 ms (rotation 14.03, KS 0.13) ratio 0.793  out 2^-21.72 KS 2^-16.26 vterm 2.67e-04
+   kk =  2, np = 1024, p = 2048, m = 1: n =  896 (2^15,2) est  14.71 ms (rotation 14.62, KS 0.09) ratio 0.824  out 2^-22.27 KS 2^-16.14 vterm 6.62e-05
+   kk =  8, np =  256, p =  512, m = 1: n =  902 (2^16,2) est  15.92 ms (rotation 15.79, KS 0.13) ratio 0.892  out 2^-22.45 KS 2^-16.24 vterm 1.07e-03
+   kk =  1, np = 2048, p = 4096, m = 2: n =  900 (2^15,2) est  17.86 ms (rotation 17.73, KS 0.13) ratio 1.000  out 2^-21.70 KS 2^-16.22 vterm 1.66e-05
+   kk =  8, np =  256, p =  512, m = 2: n =  912 (2^15,2) est  18.81 ms (rotation 18.72, KS 0.09) ratio 1.053  out 2^-21.86 KS 2^-16.50 vterm 1.08e-03
+   kk =  1, np = 2048, p = 4096, m = 1: n =  896 (2^15,2) est  19.90 ms (rotation 19.81, KS 0.09) ratio 1.114  out 2^-22.22 KS 2^-16.14 vterm 1.65e-05
+k = 6 (12 bits): kk = 1 best 25.55 ms (m = 2, n = 976, (2^11,3))
+   kk =  2, np = 1024, p = 2048, m = 2: n =  976 (2^11,3) est  19.89 ms (rotation 19.79, KS 0.11) ratio 0.779  out 2^-24.91 KS 2^-18.15 vterm 7.23e-05
+   kk =  4, np =  512, p = 1024, m = 1: n =  976 (2^11,3) est  20.57 ms (rotation 20.46, KS 0.11) ratio 0.805  out 2^-25.27 KS 2^-18.15 vterm 2.89e-04
+   kk =  4, np =  512, p = 1024, m = 2: n =  976 (2^11,3) est  21.13 ms (rotation 21.02, KS 0.11) ratio 0.827  out 2^-24.87 KS 2^-18.15 vterm 2.89e-04
+   kk =  2, np = 1024, p = 2048, m = 1: n =  976 (2^11,3) est  21.94 ms (rotation 21.84, KS 0.11) ratio 0.859  out 2^-25.28 KS 2^-18.15 vterm 7.23e-05
+   kk =  8, np =  256, p =  512, m = 1: n =  976 (2^12,3) est  24.38 ms (rotation 24.28, KS 0.11) ratio 0.954  out 2^-26.12 KS 2^-18.15 vterm 1.16e-03
+   kk =  1, np = 2048, p = 4096, m = 2: n =  976 (2^11,3) est  25.55 ms (rotation 25.44, KS 0.11) ratio 1.000  out 2^-24.86 KS 2^-18.15 vterm 1.81e-05
+   kk =  8, np =  256, p =  512, m = 2: n =  976 (2^12,3) est  28.63 ms (rotation 28.49, KS 0.14) ratio 1.121  out 2^-25.44 KS 2^-18.18 vterm 1.16e-03
+   kk =  1, np = 2048, p = 4096, m = 1: n =  976 (2^11,3) est  29.61 ms (rotation 29.51, KS 0.11) ratio 1.159  out 2^-25.26 KS 2^-18.15 vterm 1.81e-05
+k = 7 (14 bits): kk = 1 best 32.04 ms (m = 1, n = 1056, (2^12,3))
+   kk =  2, np = 1024, p = 2048, m = 2: n = 1088 (2^12,3) est  22.20 ms (rotation 22.06, KS 0.14) ratio 0.693  out 2^-25.14 KS 2^-20.99 vterm 8.09e-05
+   kk =  4, np =  512, p = 1024, m = 1: n = 1056 (2^12,3) est  22.25 ms (rotation 22.14, KS 0.11) ratio 0.694  out 2^-26.10 KS 2^-20.14 vterm 3.14e-04
+   kk =  2, np = 1024, p = 2048, m = 1: n = 1056 (2^12,3) est  23.74 ms (rotation 23.63, KS 0.11) ratio 0.741  out 2^-26.16 KS 2^-20.14 vterm 7.84e-05
+   kk =  8, np =  256, p =  512, m = 1: n = 1072 (2^12,3) est  26.77 ms (rotation 26.66, KS 0.11) ratio 0.836  out 2^-26.05 KS 2^-20.50 vterm 1.27e-03
+   kk =  4, np =  512, p = 1024, m = 2: n = 1056 (2^9,4) est  29.21 ms (rotation 29.10, KS 0.11) ratio 0.912  out 2^-27.36 KS 2^-20.14 vterm 3.14e-04
+   kk =  1, np = 2048, p = 4096, m = 1: n = 1056 (2^12,3) est  32.04 ms (rotation 31.92, KS 0.11) ratio 1.000  out 2^-25.92 KS 2^-20.14 vterm 1.96e-05
+   kk =  8, np =  256, p =  512, m = 2: n = 1104 (2^12,3) est  32.36 ms (rotation 32.22, KS 0.14) ratio 1.010  out 2^-25.35 KS 2^-21.38 vterm 1.31e-03
+   kk =  1, np = 2048, p = 4096, m = 2: n = 1056 (2^9,4) est  34.36 ms (rotation 34.25, KS 0.11) ratio 1.073  out 2^-27.33 KS 2^-20.14 vterm 1.96e-05
+k = 8 (16 bits): kk = 1 best 37.52 ms (m = 2, n = 1152, (2^9,4))
+   kk =  2, np = 1024, p = 2048, m = 2: n = 1152 (2^9,4) est  29.49 ms (rotation 29.38, KS 0.12) ratio 0.786  out 2^-27.41 KS 2^-22.51 vterm 8.58e-05
+   kk =  4, np =  512, p = 1024, m = 1: n = 1136 (2^9,4) est  30.64 ms (rotation 30.47, KS 0.17) ratio 0.817  out 2^-27.97 KS 2^-22.20 vterm 3.38e-04
+   kk =  4, np =  512, p = 1024, m = 2: n = 1160 (2^9,4) est  32.13 ms (rotation 31.96, KS 0.16) ratio 0.856  out 2^-27.29 KS 2^-22.68 vterm 3.46e-04
+   kk =  2, np = 1024, p = 2048, m = 1: n = 1136 (2^9,4) est  32.43 ms (rotation 32.30, KS 0.12) ratio 0.864  out 2^-27.99 KS 2^-22.15 vterm 8.46e-05
+   kk =  8, np =  256, p =  512, m = 1: n = 1152 (2^9,4) est  37.25 ms (rotation 37.14, KS 0.12) ratio 0.993  out 2^-27.95 KS 2^-22.51 vterm 1.37e-03
+   kk =  1, np = 2048, p = 4096, m = 2: n = 1152 (2^9,4) est  37.52 ms (rotation 37.36, KS 0.16) ratio 1.000  out 2^-27.26 KS 2^-22.60 vterm 2.15e-05
+   kk =  1, np = 2048, p = 4096, m = 1: n = 1136 (2^9,4) est  43.70 ms (rotation 43.57, KS 0.12) ratio 1.164  out 2^-27.91 KS 2^-22.15 vterm 2.11e-05
+   kk =  8, np =  256, p =  512, m = 2: n = 1168 (2^9,4) est  44.36 ms (rotation 44.21, KS 0.16) ratio 1.182  out 2^-27.51 KS 2^-23.00 vterm 1.39e-03
+written eb_glwe_cfgs.rs.txt, 35 configurations

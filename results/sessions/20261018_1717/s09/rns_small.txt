@@ -1,0 +1,72 @@
+RNS arithmetic on 16- and 32-bit integers with small moduli, TFHE-rs 1.8.1, one thread, N = 2048; variants ["32", "16", "32w", "16w"]
+  [32] 32-bit integers, moduli [25, 23, 21, 19, 17, 16, 13, 11] (2^33.05), B = 8 (p = 512, 1 integer(s) per call); R: n = 680, RGSW (2^14,2), aut (2^14,2) shift 3; P: n = 680, RGSW (2^11,3), aut (2^11,3) shift 3; product: trace (2^8,5), relin (2^10,4)   (keys 4 s)
+    check: 1 pairs of 32-bit integers: refresh, x + y, (x + y) y (mod 8923714800) with the operands from two P calls, and the refresh of the product by P and R, correct (CRT)
+    times: refresh (R)   45.809 ms per call (1 integer(s)),   45.809 ms per integer;  refresh before a product (P)   58.992 ms per call,   58.992 per integer
+           addition  0.00308 ms (0.04889 with a thousandth of a refresh);  products   9.918 ms (8 residues, 1.240 each);  multiplication   68.910 ms (one P refresh + products),   127.902 ms with both operands refreshed
+  [16] 16-bit integers, moduli [19, 17, 16, 15] (2^16.24), B = 4 (p = 1024, 1 integer(s) per call); R: n = 656, RGSW (2^14,2), aut (2^14,2) shift 2; P: n = 688, RGSW (2^14,2), aut (2^11,3) shift 2; product: trace (2^8,5), relin (2^10,4)   (keys 3 s)
+    check: 1 pairs of 16-bit integers: refresh, x + y, (x + y) y (mod 77520) with the operands from two P calls, and the refresh of the product by P and R, correct (CRT)
+    times: refresh (R)   38.857 ms per call (1 integer(s)),   38.857 ms per integer;  refresh before a product (P)   45.789 ms per call,   45.789 per integer
+           addition  0.00100 ms (0.03986 with a thousandth of a refresh);  products   4.960 ms (4 residues, 1.240 each);  multiplication   50.749 ms (one P refresh + products),    96.538 ms with both operands refreshed
+  [32w] 32-bit integers, moduli [25, 23, 21, 19, 17, 16, 13, 11] (2^33.05), B = 16 (p = 256, 2 integer(s) per call); R: n = 720, RGSW (2^14,2), aut (2^14,2) shift 4; P: n = 720, RGSW (2^11,3), aut (2^11,3) shift 4; product: trace (2^8,5), relin (2^10,4)   (keys 4 s)
+    check: 1 pairs of 32-bit integers: refresh, x + y, (x + y) y (mod 8923714800) with the operands from two P calls, and the refresh of the product by P and R, correct (CRT)
+    times: refresh (R)   60.020 ms per call (2 integer(s)),   30.010 ms per integer;  refresh before a product (P)   80.055 ms per call,   40.028 per integer
+           addition  0.00304 ms (0.03305 with a thousandth of a refresh);  products  10.012 ms (8 residues, 1.251 each);  multiplication   50.040 ms (one P refresh + products),    90.067 ms with both operands refreshed
+  [16w] 16-bit integers, moduli [19, 17, 16, 15] (2^16.24), B = 8 (p = 512, 2 integer(s) per call); R: n = 667, RGSW (2^14,2), aut (2^14,2) shift 3; P: n = 688, RGSW (2^11,3), aut (2^14,2) shift 3; product: trace (2^8,5), relin (2^10,4)   (keys 3 s)
+    check: 1 pairs of 16-bit integers: refresh, x + y, (x + y) y (mod 77520) with the operands from two P calls, and the refresh of the product by P and R, correct (CRT)
+    times: refresh (R)   44.646 ms per call (2 integer(s)),   22.323 ms per integer;  refresh before a product (P)   51.522 ms per call,   25.761 per integer
+           addition  0.00104 ms (0.02336 with a thousandth of a refresh);  products   4.949 ms (4 residues, 1.237 each);  multiplication   30.710 ms (one P refresh + products),    56.471 ms with both operands refreshed
+  check: 1 pairs of 32-bit integers, TFHE-rs CRT: x + y, x y (mod 8485840800) and the refresh of x y, correct
+  tfhers CRT 32 bits [19, 23, 25, 27, 29, 31, 32] (7 blocks, 2^32.98, MESSAGE_5_CARRY_1, n = 1006, N = 8192): refresh   815.834 ms (116.55 per block);  addition  0.01692 ms;  multiplication  1629.851 ms,  2448.166 ms with the refresh   (keys 15 s)
+     key switch 8.150 ms (7 % of a block refresh); without KS: refresh   758.781 ms, multiplication with the refresh  2277.006 ms
+  check: 1 pairs of 16-bit integers, TFHE-rs CRT: x + y, x y (mod 240240) and the refresh of x y, correct
+  tfhers CRT 16 bits [16, 15, 13, 11, 7] (5 blocks, 2^17.87, MESSAGE_4_CARRY_1, n = 935, N = 4096): refresh   173.293 ms (34.66 per block);  addition  0.00675 ms;  multiplication   346.024 ms,   518.532 ms with the refresh   (keys 3 s)
+     key switch 3.075 ms (9 % of a block refresh); without KS: refresh   157.920 ms, multiplication with the refresh   472.411 ms
+  tfhers FheUint32 (radix, 16 blocks, its key switch): refresh (&a & MAX)   241.905 ms;  addition   483.787 ms;  multiplication   6661.949 ms
+  tfhers FheUint16 (radix, 8 blocks, its key switch): refresh (&a & MAX)   121.108 ms;  addition   242.225 ms;  multiplication   1679.158 ms
+CSV
+rns32,32,refresh_call,45.8091,1
+rns32,32,refresh_int,45.8091
+rns32,32,refresh_p_call,58.9920,1
+rns32,32,refresh_p_int,58.9920
+rns32,32,add,0.003084,0.048893
+rns32,32,mul,68.9096,58.9920,9.9176
+rns32,32,mul_both,127.9016
+rns16,16,refresh_call,38.8574,1
+rns16,16,refresh_int,38.8574
+rns16,16,refresh_p_call,45.7895,1
+rns16,16,refresh_p_int,45.7895
+rns16,16,add,0.001000,0.039857
+rns16,16,mul,50.7490,45.7895,4.9595
+rns16,16,mul_both,96.5385
+rns32w,32,refresh_call,60.0203,2
+rns32w,32,refresh_int,30.0101
+rns32w,32,refresh_p_call,80.0554,2
+rns32w,32,refresh_p_int,40.0277
+rns32w,32,add,0.003042,0.033052
+rns32w,32,mul,50.0396,40.0277,10.0120
+rns32w,32,mul_both,90.0673
+rns16w,16,refresh_call,44.6457,2
+rns16w,16,refresh_int,22.3228
+rns16w,16,refresh_p_call,51.5217,2
+rns16w,16,refresh_p_int,25.7609
+rns16w,16,add,0.001041,0.023364
+rns16w,16,mul,30.7101,25.7609,4.9492
+rns16w,16,mul_both,56.4710
+tfhers_crt,32,refresh,815.8338,7
+tfhers_crt,32,add,0.016916
+tfhers_crt,32,mul,2448.1661,1629.8513
+tfhers_crt,32,ks,8.1505
+tfhers_crt,32,refresh_noks,758.7806
+tfhers_crt,32,mul_noks,2277.0065
+tfhers_crt,16,refresh,173.2935,5
+tfhers_crt,16,add,0.006750
+tfhers_crt,16,mul,518.5322,346.0243
+tfhers_crt,16,ks,3.0747
+tfhers_crt,16,refresh_noks,157.9197
+tfhers_crt,16,mul_noks,472.4109
+tfhers,32,refresh,241.9046
+tfhers,32,add,483.7874
+tfhers,32,mul,6661.9486
+tfhers,16,refresh,121.1075
+tfhers,16,add,242.2250
+tfhers,16,mul,1679.1581

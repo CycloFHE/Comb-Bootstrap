@@ -1,0 +1,110 @@
+Times (ms), T = 8 threads, TFHE-rs 1.8.1, same session (rayon pool of 8 threads)
+   2 bits: EB 1 thread    8.542 ms   (n = 566, (2^23,1))
+           EB 2 threads    6.536 ms  (speed-up 1.31)
+           EB 4 threads    5.737 ms  (speed-up 1.49)
+           EB 8 threads    6.765 ms  (speed-up 1.26)
+           CombBoot batch of 16 on 8 threads:    1.253 ms per ciphertext (20.1 ms)
+   4 bits: EB 1 thread   10.547 ms   (n = 688, (2^23,1))
+           EB 2 threads    8.354 ms  (speed-up 1.26)
+           EB 4 threads    6.896 ms  (speed-up 1.53)
+           EB 8 threads    8.229 ms  (speed-up 1.28)
+           CombBoot batch of 16 on 8 threads:    1.488 ms per ciphertext (23.8 ms)
+   6 bits: EB 1 thread   17.065 ms   (n = 732, (2^15,2))
+           EB 2 threads   12.220 ms  (speed-up 1.40)
+           EB 4 threads    8.498 ms  (speed-up 2.01)
+           EB 8 threads    9.629 ms  (speed-up 1.77)
+           CombBoot batch of 16 on 8 threads:    1.697 ms per ciphertext (27.2 ms)
+   8 bits: EB 1 thread   18.886 ms   (n = 816, (2^14,2))
+           EB 2 threads   13.762 ms  (speed-up 1.37)
+           EB 4 threads    9.482 ms  (speed-up 1.99)
+           EB 8 threads   10.529 ms  (speed-up 1.79)
+           CombBoot batch of 16 on 8 threads:    2.227 ms per ciphertext (35.6 ms)
+  12 bits: EB 1 thread   30.313 ms   (n = 976, (2^11,3))
+           EB 2 threads   20.898 ms  (speed-up 1.45)
+           EB 4 threads   15.150 ms  (speed-up 2.00)
+           EB 8 threads   14.544 ms  (speed-up 2.08)
+           CombBoot batch of 8 on 8 threads:    4.235 ms per ciphertext (33.9 ms)
+  16 bits: EB 1 thread   44.123 ms   (n = 1136, (2^9,4))
+           EB 2 threads   29.713 ms  (speed-up 1.48)
+           EB 4 threads   19.611 ms  (speed-up 2.25)
+           EB 8 threads   18.284 ms  (speed-up 2.41)
+           CombBoot batch of 8 on 8 threads:    6.446 ms per ciphertext (51.6 ms)
+  TFHE-rs classic   FheUint2 : latency   15.247 ms
+  TFHE-rs classic   FheUint4 : latency   15.602 ms
+  TFHE-rs classic   FheUint6 : latency   16.058 ms
+  TFHE-rs classic   FheUint8 : latency   16.188 ms
+  TFHE-rs classic   FheUint12: latency   16.555 ms
+  TFHE-rs classic   FheUint16: latency   16.070 ms
+  TFHE-rs multibit4 FheUint2 : latency    6.040 ms
+  TFHE-rs multibit4 FheUint4 : latency    6.644 ms
+  TFHE-rs multibit4 FheUint6 : latency    7.778 ms
+  TFHE-rs multibit4 FheUint8 : latency    9.701 ms
+  TFHE-rs multibit4 FheUint12: latency   13.562 ms
+  TFHE-rs multibit4 FheUint16: latency   16.469 ms
+  TFHE-rs core      FheUint2 : latency   15.147 ms  (blocks in parallel, its key switch)
+  TFHE-rs ours      FheUint2 : latency   13.941 ms  (blocks in parallel, our key switch)
+  TFHE-rs core      FheUint4 : latency   15.849 ms  (blocks in parallel, its key switch)
+  TFHE-rs ours      FheUint4 : latency   14.192 ms  (blocks in parallel, our key switch)
+  TFHE-rs core      FheUint6 : latency   15.784 ms  (blocks in parallel, its key switch)
+  TFHE-rs ours      FheUint6 : latency   14.345 ms  (blocks in parallel, our key switch)
+  TFHE-rs core      FheUint8 : latency   15.719 ms  (blocks in parallel, its key switch)
+  TFHE-rs ours      FheUint8 : latency   14.467 ms  (blocks in parallel, our key switch)
+  TFHE-rs core      FheUint12: latency   16.110 ms  (blocks in parallel, its key switch)
+  TFHE-rs ours      FheUint12: latency   14.792 ms  (blocks in parallel, our key switch)
+  TFHE-rs core      FheUint16: latency   16.221 ms  (blocks in parallel, its key switch)
+  TFHE-rs ours      FheUint16: latency   14.926 ms  (blocks in parallel, our key switch)
+CSV (what,bits,threads,ms)
+eb_latency,2,1,8.5418
+eb_latency,2,2,6.5355
+eb_latency,2,4,5.7372
+eb_latency,2,8,6.7655
+comb_batch,2,8,1.2534
+eb_latency,4,1,10.5475
+eb_latency,4,2,8.3540
+eb_latency,4,4,6.8958
+eb_latency,4,8,8.2293
+comb_batch,4,8,1.4880
+eb_latency,6,1,17.0651
+eb_latency,6,2,12.2197
+eb_latency,6,4,8.4978
+eb_latency,6,8,9.6292
+comb_batch,6,8,1.6973
+eb_latency,8,1,18.8863
+eb_latency,8,2,13.7617
+eb_latency,8,4,9.4815
+eb_latency,8,8,10.5293
+comb_batch,8,8,2.2270
+eb_latency,12,1,30.3134
+eb_latency,12,2,20.8982
+eb_latency,12,4,15.1500
+eb_latency,12,8,14.5442
+comb_batch,12,8,4.2345
+eb_latency,16,1,44.1226
+eb_latency,16,2,29.7127
+eb_latency,16,4,19.6110
+eb_latency,16,8,18.2837
+comb_batch,16,8,6.4458
+tfhers_classic_latency,2,8,15.2467
+tfhers_classic_latency,4,8,15.6021
+tfhers_classic_latency,6,8,16.0580
+tfhers_classic_latency,8,8,16.1883
+tfhers_classic_latency,12,8,16.5550
+tfhers_classic_latency,16,8,16.0701
+tfhers_multibit4_latency,2,8,6.0400
+tfhers_multibit4_latency,4,8,6.6444
+tfhers_multibit4_latency,6,8,7.7777
+tfhers_multibit4_latency,8,8,9.7015
+tfhers_multibit4_latency,12,8,13.5623
+tfhers_multibit4_latency,16,8,16.4687
+tfhers_core_latency,2,8,15.1466
+tfhers_ours_latency,2,8,13.9407
+tfhers_core_latency,4,8,15.8488
+tfhers_ours_latency,4,8,14.1924
+tfhers_core_latency,6,8,15.7844
+tfhers_ours_latency,6,8,14.3446
+tfhers_core_latency,8,8,15.7187
+tfhers_ours_latency,8,8,14.4671
+tfhers_core_latency,12,8,16.1102
+tfhers_ours_latency,12,8,14.7924
+tfhers_core_latency,16,8,16.2207
+tfhers_ours_latency,16,8,14.9257

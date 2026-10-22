@@ -1,0 +1,12 @@
+== Boot2
+Total time: 5482.179000 ms, amortized time: 2.676845 ms
+The number of coefficient errors: 0
+== Boot4
+Total time: 5706.067000 ms, amortized time: 2.786166 ms
+The number of coefficient errors: 0
+== Boot6
+Total time: 31557.701000 ms, amortized time: 7.704517 ms
+The number of coefficient errors: 0
+== Boot8
+Total time: 69984.505000 ms, amortized time: 17.086061 ms
+The number of coefficient errors: 0

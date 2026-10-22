@@ -1,0 +1,56 @@
+p̂ = 256, bootstrap n = 830, m = 2, (2^9,4); trace (2^8,6); relinearization (2^10,4); 400 products
+  inputs (refreshed):          log2 σ_e   =  -27.64   predicted  -28.12
+  trace, constant coefficient: log2 σ_t0  =  -27.32   predicted  -27.09  ((4^L-1)/3 V_KS)
+  trace, all coefficients:     log2 √T    =  -26.44   predicted  -26.30
+  product (exact):             log2 σ     =  -14.67   predicted  -14.61   without the trace  -15.93   p̂√(N/12)σ_e  -15.94
+  product (FFT):               log2 σ     =  -14.67
+  window 1/(4 u p̂): log2 = -13.71, margin 0.96 bits; max |error| = 0.137 of 1/(4p̂)
+  (31 s)
+p̂ = 256, bootstrap n = 830, m = 2, (2^9,4); trace (2^5,10); relinearization (2^10,4); 400 products
+  inputs (refreshed):          log2 σ_e   =  -27.53   predicted  -28.12
+  trace, constant coefficient: log2 σ_t0  =  -29.84   predicted  -29.72  ((4^L-1)/3 V_KS)
+  trace, all coefficients:     log2 √T    =  -29.01   predicted  -28.93
+  product (exact):             log2 σ     =  -15.76   predicted  -15.73   without the trace  -15.82   p̂√(N/12)σ_e  -15.82
+  product (FFT):               log2 σ     =  -15.76
+  window 1/(4 u p̂): log2 = -13.71, margin 2.05 bits; max |error| = 0.064 of 1/(4p̂)
+  (34 s)
+p̂ = 256, bootstrap n = 830, m = 2, (2^9,4); trace (2^4,12); relinearization (2^10,4); 400 products
+  inputs (refreshed):          log2 σ_e   =  -27.69   predicted  -28.12
+  trace, constant coefficient: log2 σ_t0  =  -30.58   predicted  -30.58  ((4^L-1)/3 V_KS)
+  trace, all coefficients:     log2 √T    =  -29.83   predicted  -29.79
+  product (exact):             log2 σ     =  -16.02   predicted  -15.95   without the trace  -15.98   p̂√(N/12)σ_e  -15.98
+  product (FFT):               log2 σ     =  -16.02
+  window 1/(4 u p̂): log2 = -13.71, margin 2.31 bits; max |error| = 0.087 of 1/(4p̂)
+  (34 s)
+p̂ = 64, bootstrap n = 780, m = 2, (2^16,2); trace (2^8,6); relinearization (2^10,4); 400 products
+  inputs (refreshed):          log2 σ_e   =  -21.71   predicted  -23.59
+  trace, constant coefficient: log2 σ_t0  =  -27.22   predicted  -27.09  ((4^L-1)/3 V_KS)
+  trace, all coefficients:     log2 √T    =  -26.42   predicted  -26.30
+  product (exact):             log2 σ     =  -12.14   predicted  -12.00   without the trace  -12.00   p̂√(N/12)σ_e  -12.00
+  product (FFT):               log2 σ     =  -12.14
+  window 1/(4 u p̂): log2 = -11.71, margin 0.43 bits; max |error| = 0.215 of 1/(4p̂)
+  (18 s)
+p̂ = 256, bootstrap n = 830, m = 2, (2^12,3); trace (2^5,10); relinearization (2^10,4); 400 products
+  inputs (refreshed):          log2 σ_e   =  -25.29   predicted  -27.36
+  trace, constant coefficient: log2 σ_t0  =  -29.94   predicted  -29.72  ((4^L-1)/3 V_KS)
+  trace, all coefficients:     log2 √T    =  -29.04   predicted  -28.93
+  product (exact):             log2 σ     =  -13.62   predicted  -13.58   without the trace  -13.59   p̂√(N/12)σ_e  -13.59
+  product (FFT):               log2 σ     =  -13.62
+  window 1/(4 u p̂): log2 = -13.71, margin -0.09 bits; max |error| = 0.380 of 1/(4p̂)
+  (27 s)
+p̂ = 64, bootstrap n = 780, m = 2, (2^12,3); trace (2^8,6); relinearization (2^10,4); 400 products
+  inputs (refreshed):          log2 σ_e   =  -25.37   predicted  -27.41
+  trace, constant coefficient: log2 σ_t0  =  -27.29   predicted  -27.09  ((4^L-1)/3 V_KS)
+  trace, all coefficients:     log2 √T    =  -26.43   predicted  -26.30
+  product (exact):             log2 σ     =  -15.55   predicted  -15.51   without the trace  -15.66   p̂√(N/12)σ_e  -15.66
+  product (FFT):               log2 σ     =  -15.55
+  window 1/(4 u p̂): log2 = -11.71, margin 3.84 bits; max |error| = 0.023 of 1/(4p̂)
+  (26 s)
+p̂ = 64, bootstrap n = 780, m = 2, (2^13,3); trace (2^8,6); relinearization (2^10,4); 400 products
+  inputs (refreshed):          log2 σ_e   =  -24.35   predicted  -26.70
+  trace, constant coefficient: log2 σ_t0  =  -27.30   predicted  -27.09  ((4^L-1)/3 V_KS)
+  trace, all coefficients:     log2 √T    =  -26.43   predicted  -26.30
+  product (exact):             log2 σ     =  -14.66   predicted  -14.60   without the trace  -14.64   p̂√(N/12)σ_e  -14.64
+  product (FFT):               log2 σ     =  -14.66
+  window 1/(4 u p̂): log2 = -11.71, margin 2.94 bits; max |error| = 0.043 of 1/(4p̂)
+  (25 s)

@@ -1,0 +1,23 @@
+CombBoot at p̂ = 256, N = 2048, m = 1, h = 1
+
+configuration 1: p = 512, B = 8, n = 826, RGSW (2^14,2), aut (2^8,4), (g,h) = (8,1)
+  noise (log2 σ, measured / predicted): out  -20.38 /  -20.35   KS  -14.25 /  -14.24   max |err|·R 3.3e-01   (2000 errors)
+  margin of the condition:  0.22 bits measured,  0.20 bits predicted   (19 s)
+  time per error: rotation   8.99 (8 errors in 71.9) + key switch  0.171 =   9.16 ms
+
+configuration 2: p = 512, B = 8, n = 816, RGSW (2^11,3), aut (2^8,4), (g,h) = (8,1)
+  noise (log2 σ, measured / predicted): out  -21.58 /  -21.59   KS  -14.10 /  -14.15   max |err|·R 1.5e-01   (2000 errors)
+  margin of the condition:  0.19 bits measured,  0.22 bits predicted   (20 s)
+  time per error: rotation  10.12 (8 errors in 80.9) + key switch  0.182 =  10.30 ms
+
+configuration 3: p = 256, B = 16, n = 896, RGSW (2^11,3), aut (2^7,5), (g,h) = (16,1)
+  noise (log2 σ, measured / predicted): out  -23.38 /  -23.39   KS  -16.11 /  -16.14   max |err|·R 2.0e-02   (2000 errors)
+  margin of the condition:  0.19 bits measured,  0.19 bits predicted   (16 s)
+  time per error: rotation   7.84 (16 errors in 125.5) + key switch  0.210 =   8.05 ms
+
+error bootstrap alone (run_curves.jl, k = 4): n = 816, (2^14,2), m = 2: rotation  14.61 + key switch  0.181 =  14.79 ms
+CSV (scheme,configuration,parameters,ms per error)
+mb,1,p512_B8_n826,9.1610
+mb,2,p512_B8_n816,10.3002
+mb,3,p256_B16_n896,8.0516
+eb,4,refresh,14.7912

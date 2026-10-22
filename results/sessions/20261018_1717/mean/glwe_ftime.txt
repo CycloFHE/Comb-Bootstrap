@@ -1,0 +1,56 @@
+Mean over 10 sessions (results/sessions/20261018_1717) of the minimum within each session
+CSV
+CSV,ftime,1,TFHE-rs FheUint2,15.0627,15.1560
+CSV,ftime,1,EB N = 2048; m = 2; n = 570; (2^23;1),7.8068,7.9445
+CSV,ftime,1,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 566; (2^23;1),6.5028,6.5655
+CSV,ftime,1,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 568; (2^23;1),5.8748,5.9370
+CSV,ftime,1,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 566; (2^23;1),8.6694,8.7981
+CSV,ftime,1,GLWE kk = 8; np = 256; p = 512; m = 1; n = 576; (2^22;1),6.3957,6.4688
+CSV,ftime,1,CombBoot B = 16; p = 256; m = 1; n = 608 (per ciphertext),2.7086,2.7359
+CSV,ftime,2,TFHE-rs FheUint4,30.1601,30.3756
+CSV,ftime,2,EB N = 2048; m = 1; n = 688; (2^23;1),10.3625,10.6048
+CSV,ftime,2,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 672; (2^23;1),7.5705,7.7189
+CSV,ftime,2,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 672; (2^23;1),6.8504,6.9601
+CSV,ftime,2,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 672; (2^23;1),10.1689,10.3755
+CSV,ftime,2,GLWE kk = 8; np = 256; p = 512; m = 1; n = 688; (2^23;1),7.6055,7.7256
+CSV,ftime,2,CombBoot B = 16; p = 256; m = 1; n = 688 (per ciphertext),3.5033,3.5434
+CSV,ftime,3,TFHE-rs FheUint6,45.3492,45.5862
+CSV,ftime,3,EB N = 2048; m = 2; n = 732; (2^15;2),14.6598,14.8210
+CSV,ftime,3,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 734; (2^14;2),12.7832,12.8801
+CSV,ftime,3,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 736; (2^13;2),11.7676,11.8601
+CSV,ftime,3,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 732; (2^15;2),17.0081,17.1069
+CSV,ftime,3,GLWE kk = 8; np = 256; p = 512; m = 1; n = 736; (2^13;2),13.5341,13.6365
+CSV,ftime,3,CombBoot B = 16; p = 256; m = 1; n = 784 (per ciphertext),4.0633,4.0917
+CSV,ftime,4,TFHE-rs FheUint8,60.6549,60.8460
+CSV,ftime,4,EB N = 2048; m = 2; n = 816; (2^14;2),16.3764,16.5259
+CSV,ftime,4,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 816; (2^14;2),14.1714,14.2567
+CSV,ftime,4,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 816; (2^14;2),13.0823,13.1515
+CSV,ftime,4,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 814; (2^15;2),19.0232,19.0993
+CSV,ftime,4,GLWE kk = 8; np = 256; p = 512; m = 1; n = 816; (2^15;2),14.9986,15.1147
+CSV,ftime,4,CombBoot B = 16; p = 256; m = 1; n = 896 (per ciphertext),6.2110,6.2511
+CSV,ftime,5,TFHE-rs FheUint10,75.9965,76.1165
+CSV,ftime,5,EB N = 2048; m = 2; n = 900; (2^15;2),18.0932,18.2187
+CSV,ftime,5,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 896; (2^15;2),15.5634,15.6399
+CSV,ftime,5,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 896; (2^15;2),14.3731,14.4433
+CSV,ftime,5,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 896; (2^15;2),20.7559,20.8473
+CSV,ftime,5,GLWE kk = 8; np = 256; p = 512; m = 1; n = 902; (2^16;2),16.6537,16.7608
+CSV,ftime,6,TFHE-rs FheUint12,91.1335,91.2833
+CSV,ftime,6,EB N = 2048; m = 2; n = 976; (2^11;3),25.8133,25.9116
+CSV,ftime,6,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 976; (2^11;3),22.6817,22.7647
+CSV,ftime,6,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 976; (2^11;3),30.2121,30.3178
+CSV,ftime,6,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 976; (2^11;3),21.2604,21.3621
+CSV,ftime,6,GLWE kk = 8; np = 256; p = 512; m = 1; n = 976; (2^12;3),24.9320,25.0725
+CSV,ftime,6,CombBoot B = 8; p = 512; m = 1; n = 986 (per ciphertext),10.6847,10.7278
+CSV,ftime,7,TFHE-rs FheUint14,106.4352,106.5415
+CSV,ftime,7,EB N = 2048; m = 1; n = 1060; (2^12;3),32.9410,33.0603
+CSV,ftime,7,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 1056; (2^12;3),24.5088,24.6172
+CSV,ftime,7,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 1056; (2^12;3),32.6459,32.7475
+CSV,ftime,7,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 1056; (2^12;3),23.0061,23.1133
+CSV,ftime,7,GLWE kk = 8; np = 256; p = 512; m = 1; n = 1072; (2^12;3),27.3681,27.5253
+CSV,ftime,8,TFHE-rs FheUint16,121.5450,121.7101
+CSV,ftime,8,EB N = 2048; m = 2; n = 1152; (2^9;4),38.0252,38.2713
+CSV,ftime,8,GLWE kk = 2; np = 1024; p = 2048; m = 1; n = 1136; (2^9;4),33.0406,33.2001
+CSV,ftime,8,GLWE kk = 1; np = 2048; p = 4096; m = 1; n = 1136; (2^9;4),44.0089,44.1605
+CSV,ftime,8,GLWE kk = 4; np = 512; p = 1024; m = 1; n = 1136; (2^9;4),31.3676,31.4757
+CSV,ftime,8,GLWE kk = 8; np = 256; p = 512; m = 1; n = 1152; (2^9;4),37.6718,37.8199
+CSV,ftime,8,CombBoot B = 8; p = 512; m = 1; n = 1157 (per ciphertext),22.1176,22.1879

@@ -1,0 +1,26 @@
+CombBoot (m = 1), one thread: orders of the key switchings [0, 1, 2, 3] (0: by automorphism, blocks; 1: by automorphism, whole; 2: by destination block; 3: by source block), min over 8
+   2 bits, B = 16, n =  608, KS gadget (2^14,2):  outputs bit-identical for the modes [0, 1, 2]; max |difference of the phases| to mode 0: 0: 0, 1: 0, 2: 0, 3: 2^-13.3
+    mode 0:    46.14 ms per call, 2.884 ms per ciphertext, ratio to mode 0 1.000;  µs per coordinate: digits+FFT 14.1, table 3.6, KS+PP 36.5, bwd 7.2, CMux 14.3
+    mode 1:    45.67 ms per call, 2.855 ms per ciphertext, ratio to mode 0 1.010;  µs per coordinate: digits+FFT 14.1, table 3.6, KS+PP 35.4, bwd 7.3, CMux 14.5
+    mode 2:    44.23 ms per call, 2.764 ms per ciphertext, ratio to mode 0 1.043;  µs per coordinate: digits+FFT 14.2, table 3.7, KS+PP 32.7, bwd 7.3, CMux 14.6
+    mode 3:    42.63 ms per call, 2.665 ms per ciphertext, ratio to mode 0 1.082;  µs per coordinate: digits+FFT 14.3, table 3.7, KS+PP 29.8, bwd 7.4, CMux 14.6
+   4 bits, B = 16, n =  688, KS gadget (2^14,2):  outputs bit-identical for the modes [0, 1, 2]; max |difference of the phases| to mode 0: 0: 0, 1: 0, 2: 0, 3: 2^-18.4
+    mode 0:    59.94 ms per call, 3.746 ms per ciphertext, ratio to mode 0 1.000;  µs per coordinate: digits+FFT 16.3, table 3.7, KS+PP 36.8, bwd 7.4, CMux 22.3
+    mode 1:    59.34 ms per call, 3.708 ms per ciphertext, ratio to mode 0 1.010;  µs per coordinate: digits+FFT 16.7, table 3.7, KS+PP 36.5, bwd 7.5, CMux 22.3
+    mode 2:    57.49 ms per call, 3.593 ms per ciphertext, ratio to mode 0 1.043;  µs per coordinate: digits+FFT 16.6, table 3.7, KS+PP 33.2, bwd 7.6, CMux 22.3
+    mode 3:    55.56 ms per call, 3.472 ms per ciphertext, ratio to mode 0 1.079;  µs per coordinate: digits+FFT 16.9, table 3.7, KS+PP 30.2, bwd 7.6, CMux 22.5
+   8 bits, B = 16, n =  896, KS gadget (2^11,3):  outputs bit-identical for the modes [0, 1, 2]; max |difference of the phases| to mode 0: 0: 0, 1: 0, 2: 0, 3: 2^-21.9
+    mode 0:   107.07 ms per call, 6.692 ms per ciphertext, ratio to mode 0 1.000;  µs per coordinate: digits+FFT 21.9, table 3.7, KS+PP 56.5, bwd 7.3, CMux 29.9
+    mode 1:   105.89 ms per call, 6.618 ms per ciphertext, ratio to mode 0 1.011;  µs per coordinate: digits+FFT 22.1, table 3.7, KS+PP 54.6, bwd 7.4, CMux 30.0
+    mode 2:    99.34 ms per call, 6.209 ms per ciphertext, ratio to mode 0 1.078;  µs per coordinate: digits+FFT 22.3, table 3.8, KS+PP 47.1, bwd 7.5, CMux 30.2
+    mode 3:    93.47 ms per call, 5.842 ms per ciphertext, ratio to mode 0 1.146;  µs per coordinate: digits+FFT 22.2, table 3.8, KS+PP 42.3, bwd 7.5, CMux 30.6
+  12 bits, B =  8, n =  986, KS gadget (2^11,3):  outputs bit-identical for the modes [0, 1, 2]; max |difference of the phases| to mode 0: 0: 0, 1: 0, 2: 0, 3: 2^-22.5
+    mode 0:    88.34 ms per call, 11.043 ms per ciphertext, ratio to mode 0 1.000;  µs per coordinate: digits+FFT 22.0, table 3.3, KS+PP 26.2, bwd 7.4, CMux 30.4
+    mode 1:    87.67 ms per call, 10.959 ms per ciphertext, ratio to mode 0 1.008;  µs per coordinate: digits+FFT 22.0, table 3.3, KS+PP 26.6, bwd 7.4, CMux 30.6
+    mode 2:    84.36 ms per call, 10.545 ms per ciphertext, ratio to mode 0 1.047;  µs per coordinate: digits+FFT 22.3, table 3.3, KS+PP 21.6, bwd 7.6, CMux 30.7
+    mode 3:    82.71 ms per call, 10.339 ms per ciphertext, ratio to mode 0 1.068;  µs per coordinate: digits+FFT 22.3, table 3.3, KS+PP 19.7, bwd 7.6, CMux 30.7
+  16 bits, B =  8, n = 1157, KS gadget (2^6,6):  outputs bit-identical for the modes [0, 1, 2]; max |difference of the phases| to mode 0: 0: 0, 1: 0, 2: 0, 3: 2^-27.0
+    mode 0:   180.28 ms per call, 22.536 ms per ciphertext, ratio to mode 0 1.000;  µs per coordinate: digits+FFT 36.8, table 3.3, KS+PP 61.5, bwd 7.7, CMux 46.7
+    mode 1:   180.65 ms per call, 22.581 ms per ciphertext, ratio to mode 0 0.998;  µs per coordinate: digits+FFT 36.9, table 3.3, KS+PP 61.6, bwd 7.7, CMux 46.7
+    mode 2:   175.94 ms per call, 21.993 ms per ciphertext, ratio to mode 0 1.025;  µs per coordinate: digits+FFT 36.9, table 3.3, KS+PP 57.3, bwd 7.6, CMux 46.8
+    mode 3:   174.76 ms per call, 21.845 ms per ciphertext, ratio to mode 0 1.032;  µs per coordinate: digits+FFT 37.2, table 3.4, KS+PP 56.3, bwd 7.7, CMux 46.5

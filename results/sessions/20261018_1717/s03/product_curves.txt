@@ -1,0 +1,26 @@
+Product (ms), one thread, TFHE-rs 1.8.1 for both; relinearization (2^10,4)
+  ebrs k = 1 ( 2 bits) before a product: m = 2, n =  564, (2^13,2), refresh  10.840 ms;  product, trace (2^8,5)  1.147 ms (one trace 0.480);  total  11.986 ms   (keys 2 s)
+  ebrs k = 2 ( 4 bits) before a product: m = 2, n =  650, (2^15,2), refresh  12.515 ms;  product, trace (2^8,5)  1.174 ms (one trace 0.491);  total  13.689 ms   (keys 2 s)
+  ebrs k = 3 ( 6 bits) before a product: m = 2, n =  734, (2^11,3), refresh  18.407 ms;  product, trace (2^8,5)  1.160 ms (one trace 0.483);  total  19.567 ms   (keys 3 s)
+  ebrs k = 4 ( 8 bits) before a product: m = 2, n =  816, (2^8,5), refresh  31.732 ms;  product, trace (2^6,8)  1.507 ms (one trace 0.657);  total  33.239 ms   (keys 6 s)
+  tfhers FheUint2  (k = 1) product    14.857 ms (min    14.690)
+  tfhers FheUint4  (k = 2) product    90.076 ms (min    90.018)
+  tfhers FheUint6  (k = 3) product   211.193 ms (min   210.929)
+  tfhers FheUint8  (k = 4) product   425.428 ms (min   424.115)
+  tfhers FheUint10 (k = 5) product   669.619 ms (min   667.111)
+  tfhers FheUint12 (k = 6) product   960.039 ms (min   956.449)
+  tfhers FheUint14 (k = 7) product  1300.693 ms (min  1293.312)
+  tfhers FheUint16 (k = 8) product  1688.725 ms (min  1686.192)
+CSV
+ebrs,1,product,11.9862,10.8395,1.1467
+ebrs,2,product,13.6892,12.5153,1.1739
+ebrs,3,product,19.5667,18.4072,1.1595
+ebrs,4,product,33.2394,31.7321,1.5073
+tfhers,1,product,14.8575,14.6901
+tfhers,2,product,90.0757,90.0183
+tfhers,3,product,211.1934,210.9294
+tfhers,4,product,425.4276,424.1153
+tfhers,5,product,669.6188,667.1106
+tfhers,6,product,960.0386,956.4487
+tfhers,7,product,1300.6931,1293.3115
+tfhers,8,product,1688.7248,1686.1918

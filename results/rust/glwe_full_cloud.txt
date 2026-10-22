@@ -1,0 +1,117 @@
+# Cloud run (2 vCPU, indicative; key generation on 2 threads, refreshes on one). The TFHE-rs lines at the end ran with RAYON_NUM_THREADS=2,
+# hence on two threads: not comparable. Single-thread TFHE-rs times: glwe_ftime_cloud.txt and glwe_ftime2_cloud.txt (interleaved).
+GLWE error bootstrap, whole refresh (stair key switch from 2048, rounding with selection, rotation, extraction, subtraction), one thread; times in ms (median, min of 9); noise on 200 refreshes; margin of (4p̂)^2 (ν σ_out^2 + σ_KS^2) + 16 V*/p^2 ≤ 1/U^2
+k = 1 (p̂ = 2^ 2): CombBoot B = 16, p = 256, m = 1, n = 608:   5.639 ms per ciphertext (min   5.155; 82.5 ms per call)
+CSV,comb,1,256,16,1,608,5.6387,5.1553
+k = 1 (p̂ = 2^ 2): EB N = 2048, p = 4096, m = 2, n = 570, (2^23,1): refresh  13.007 ms (min  12.524)
+CSV,eb,1,4096,2,570,23,1,13.0074,12.5243
+k = 1 (p̂ = 2^ 2): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  566, (2^23,1): refresh  11.162 ms (min  10.773); out  -15.46 /  -15.49, max 2^-13.88, failures 0; KS   -7.93 /   -7.95; margin  0.19 bits; vterm 4.099e-5; BSK 42 MB (keys 1 s)
+CSV,glwe,1,2048,2,1,566,23,1,11.1624,10.7734,-15.4632,-7.9267,0.187,0
+k = 1 (p̂ = 2^ 2): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  568, (2^23,1): refresh  15.130 ms (min  14.681); out  -15.43 /  -15.47, max 2^-13.61, failures 0; KS   -7.86 /   -7.97; margin  0.11 bits; vterm 1.646e-4; BSK 58 MB (keys 1 s)
+CSV,glwe,1,1024,4,1,568,23,1,15.1304,14.6808,-15.4269,-7.8637,0.107,0
+k = 1 (p̂ = 2^ 2): GLWE kk =  1, np = 2048, p = 4096, m = 1, n =  566, (2^23,1): refresh  13.294 ms (min  13.060); out  -15.44 /  -15.42, max 2^-14.04, failures 0; KS   -7.99 /   -7.95; margin  0.26 bits; vterm 1.025e-5; BSK 37 MB (keys 0 s)
+CSV,glwe,1,4096,1,1,566,23,1,13.2941,13.0601,-15.4405,-7.9929,0.255,0
+k = 1 (p̂ = 2^ 2): GLWE kk =  8, np =  256, p =  512, m = 1, n =  576, (2^22,1): refresh  22.281 ms (min  21.548); out  -14.76 /  -14.69, max 2^-13.25, failures 0; KS   -8.25 /   -8.24; margin  0.31 bits; vterm 6.680e-4; BSK 96 MB (keys 1 s)
+CSV,glwe,1,512,8,1,576,22,1,22.2809,21.5476,-14.7552,-8.2488,0.313,0
+k = 1 (p̂ = 2^ 2): GLWE kk = 16, np =  128, p =  256, m = 1, n =  596, (2^23,1): refresh  28.856 ms (min  27.705); out  -15.59 /  -15.40, max 2^-13.92, failures 0; KS   -8.72 /   -8.70; margin  0.21 bits; vterm 2.769e-3; BSK 176 MB (keys 1 s)
+CSV,glwe,1,256,16,1,596,23,1,28.8557,27.7049,-15.5891,-8.7158,0.214,0
+k = 2 (p̂ = 2^ 4): CombBoot B = 16, p = 256, m = 1, n = 688:   7.160 ms per ciphertext (min   6.871; 109.9 ms per call)
+CSV,comb,2,256,16,1,688,7.1597,6.8706
+k = 2 (p̂ = 2^ 4): EB N = 2048, p = 4096, m = 1, n = 688, (2^23,1): refresh  15.738 ms (min  15.244)
+CSV,eb,2,4096,1,688,23,1,15.7377,15.2437
+k = 2 (p̂ = 2^ 4): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  672, (2^23,1): refresh  13.994 ms (min  13.123); out  -15.50 /  -15.37, max 2^-13.83, failures 0; KS  -10.59 /  -10.57; margin  0.33 bits; vterm 4.905e-5; BSK 50 MB (keys 1 s)
+CSV,glwe,2,2048,2,1,672,23,1,13.9937,13.1228,-15.4976,-10.5926,0.331,0
+k = 2 (p̂ = 2^ 4): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  672, (2^23,1): refresh  16.880 ms (min  14.842); out  -15.51 /  -15.35, max 2^-13.92, failures 0; KS  -10.72 /  -10.57; margin  0.36 bits; vterm 1.962e-4; BSK 69 MB (keys 1 s)
+CSV,glwe,2,1024,4,1,672,23,1,16.8803,14.8419,-15.5069,-10.7153,0.360,0
+k = 2 (p̂ = 2^ 4): GLWE kk =  1, np = 2048, p = 4096, m = 1, n =  672, (2^23,1): refresh  15.635 ms (min  15.345); out  -15.27 /  -15.29, max 2^-13.81, failures 0; KS  -10.63 /  -10.57; margin  0.22 bits; vterm 1.226e-5; BSK 44 MB (keys 1 s)
+CSV,glwe,2,4096,1,1,672,23,1,15.6350,15.3454,-15.2679,-10.6263,0.221,0
+k = 2 (p̂ = 2^ 4): GLWE kk =  8, np =  256, p =  512, m = 1, n =  688, (2^23,1): refresh  22.760 ms (min  22.308); out  -15.31 /  -15.32, max 2^-13.86, failures 0; KS  -10.93 /  -10.93; margin  0.21 bits; vterm 8.043e-4; BSK 114 MB (keys 1 s)
+CSV,glwe,2,512,8,1,688,23,1,22.7600,22.3083,-15.3100,-10.9323,0.208,0
+k = 2 (p̂ = 2^ 4): GLWE kk = 16, np =  128, p =  256, m = 1, n =  688, (2^13,2): refresh  61.581 ms (min  55.605); out  -18.55 /  -18.58, max 2^-16.86, failures 0; KS  -10.96 /  -10.93; margin  0.22 bits; vterm 3.217e-3; BSK 407 MB (keys 3 s)
+CSV,glwe,2,256,16,1,688,13,2,61.5813,55.6053,-18.5483,-10.9636,0.223,0
+k = 3 (p̂ = 2^ 6): CombBoot B = 16, p = 256, m = 1, n = 784:   8.218 ms per ciphertext (min   7.814; 125.0 ms per call)
+CSV,comb,3,256,16,1,784,8.2178,7.8136
+k = 3 (p̂ = 2^ 6): EB N = 2048, p = 4096, m = 2, n = 732, (2^15,2): refresh  27.420 ms (min  26.001)
+CSV,eb,3,4096,2,732,15,2,27.4202,26.0007
+k = 3 (p̂ = 2^ 6): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  734, (2^14,2): refresh  30.471 ms (min  24.287); out  -20.38 /  -20.53, max 2^-18.64, failures 0; KS  -11.91 /  -11.94; margin  0.18 bits; vterm 5.378e-5; BSK 108 MB (keys 1 s)
+CSV,glwe,3,2048,2,1,734,14,2,30.4710,24.2867,-20.3790,-11.9097,0.183,0
+k = 3 (p̂ = 2^ 6): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  736, (2^13,2): refresh  27.275 ms (min  26.661); out  -18.41 /  -18.53, max 2^-16.87, failures 0; KS  -12.22 /  -12.17; margin  0.34 bits; vterm 2.157e-4; BSK 151 MB (keys 1 s)
+CSV,glwe,3,1024,4,1,736,13,2,27.2751,26.6613,-18.4080,-12.2187,0.338,0
+k = 3 (p̂ = 2^ 6): GLWE kk =  1, np = 2048, p = 4096, m = 1, n =  732, (2^15,2): refresh  31.799 ms (min  29.218); out  -22.43 /  -22.37, max 2^-20.95, failures 0; KS  -11.80 /  -11.92; margin  0.09 bits; vterm 1.341e-5; BSK 96 MB (keys 1 s)
+CSV,glwe,3,4096,1,1,732,15,2,31.7989,29.2185,-22.4325,-11.8030,0.088,0
+k = 3 (p̂ = 2^ 6): GLWE kk =  8, np =  256, p =  512, m = 1, n =  736, (2^13,2): refresh  39.200 ms (min  37.982); out  -18.62 /  -18.53, max 2^-17.24, failures 0; KS  -12.25 /  -12.17; margin  0.27 bits; vterm 8.629e-4; BSK 244 MB (keys 2 s)
+CSV,glwe,3,512,8,1,736,13,2,39.1997,37.9824,-18.6232,-12.2528,0.268,0
+k = 3 (p̂ = 2^ 6): GLWE kk = 16, np =  128, p =  256, m = 1, n =  784, (2^14,2): refresh  62.369 ms (min  59.700); out  -20.40 /  -20.48, max 2^-18.82, failures 0; KS  -13.24 /  -13.25; margin  0.20 bits; vterm 3.686e-3; BSK 464 MB (keys 3 s)
+CSV,glwe,3,256,16,1,784,14,2,62.3694,59.7004,-20.3966,-13.2351,0.198,0
+k = 4 (p̂ = 2^ 8): CombBoot B = 16, p = 256, m = 1, n = 896:  10.857 ms per ciphertext (min  10.506; 168.1 ms per call)
+CSV,comb,4,256,16,1,896,10.8569,10.5065
+k = 4 (p̂ = 2^ 8): EB N = 2048, p = 4096, m = 2, n = 816, (2^14,2): refresh  30.368 ms (min  28.508)
+CSV,eb,4,4096,2,816,14,2,30.3681,28.5084
+k = 4 (p̂ = 2^ 8): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  816, (2^14,2): refresh  30.715 ms (min  28.746); out  -20.49 /  -20.45, max 2^-19.18, failures 0; KS  -14.15 /  -14.15; margin  0.32 bits; vterm 6.004e-5; BSK 120 MB (keys 1 s)
+CSV,glwe,4,2048,2,1,816,14,2,30.7151,28.7460,-20.4880,-14.1509,0.324,0
+k = 4 (p̂ = 2^ 8): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  816, (2^14,2): refresh  31.671 ms (min  30.348); out  -20.52 /  -20.45, max 2^-19.07, failures 0; KS  -14.17 /  -14.15; margin  0.31 bits; vterm 2.402e-4; BSK 167 MB (keys 2 s)
+CSV,glwe,4,1024,4,1,816,14,2,31.6709,30.3479,-20.5204,-14.1692,0.309,0
+k = 4 (p̂ = 2^ 8): GLWE kk =  1, np = 2048, p = 4096, m = 1, n =  814, (2^15,2): refresh  31.211 ms (min  30.980); out  -22.31 /  -22.29, max 2^-20.82, failures 0; KS  -13.90 /  -13.92; margin  0.18 bits; vterm 1.497e-5; BSK 107 MB (keys 1 s)
+CSV,glwe,4,4096,1,1,814,15,2,31.2115,30.9805,-22.3122,-13.9043,0.183,0
+k = 4 (p̂ = 2^ 8): GLWE kk =  8, np =  256, p =  512, m = 1, n =  816, (2^15,2): refresh  45.168 ms (min  43.161); out  -22.46 /  -22.32, max 2^-20.49, failures 0; KS  -14.11 /  -14.15; margin  0.21 bits; vterm 9.606e-4; BSK 271 MB (keys 2 s)
+CSV,glwe,4,512,8,1,816,15,2,45.1681,43.1615,-22.4647,-14.1137,0.214,0
+k = 5 (p̂ = 2^10): EB N = 2048, p = 4096, m = 2, n = 900, (2^15,2): refresh  36.468 ms (min  35.378)
+CSV,eb,5,4096,2,900,15,2,36.4677,35.3777
+k = 5 (p̂ = 2^10): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  896, (2^15,2): refresh  36.616 ms (min  32.386); out  -22.25 /  -22.27, max 2^-20.65, failures 0; KS  -16.24 /  -16.14; margin  0.36 bits; vterm 6.616e-5; BSK 132 MB (keys 1 s)
+CSV,glwe,5,2048,2,1,896,15,2,36.6159,32.3855,-22.2460,-16.2383,0.356,0
+k = 5 (p̂ = 2^10): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  896, (2^15,2): refresh  33.964 ms (min  32.591); out  -22.33 /  -22.26, max 2^-20.70, failures 0; KS  -16.12 /  -16.14; margin  0.24 bits; vterm 2.647e-4; BSK 184 MB (keys 2 s)
+CSV,glwe,5,1024,4,1,896,15,2,33.9643,32.5906,-22.3319,-16.1224,0.242,0
+k = 5 (p̂ = 2^10): GLWE kk =  1, np = 2048, p = 4096, m = 1, n =  896, (2^15,2): refresh  33.841 ms (min  32.773); out  -22.17 /  -22.22, max 2^-20.49, failures 0; KS  -16.20 /  -16.14; margin  0.32 bits; vterm 1.654e-5; BSK 117 MB (keys 1 s)
+CSV,glwe,5,4096,1,1,896,15,2,33.8406,32.7734,-22.1651,-16.1967,0.317,0
+k = 5 (p̂ = 2^10): GLWE kk =  8, np =  256, p =  512, m = 1, n =  902, (2^16,2): refresh  52.207 ms (min  47.971); out  -22.73 /  -22.45, max 2^-21.32, failures 0; KS  -16.26 /  -16.24; margin  0.25 bits; vterm 1.066e-3; BSK 299 MB (keys 2 s)
+CSV,glwe,5,512,8,1,902,16,2,52.2074,47.9711,-22.7258,-16.2642,0.249,0
+k = 6 (p̂ = 2^12): CombBoot B =  8, p = 512, m = 1, n = 986:  17.647 ms per ciphertext (min  17.204; 137.6 ms per call)
+CSV,comb,6,512,8,1,986,17.6474,17.2043
+k = 6 (p̂ = 2^12): EB N = 2048, p = 4096, m = 2, n = 976, (2^11,3): refresh  59.128 ms (min  56.184)
+CSV,eb,6,4096,2,976,11,3,59.1282,56.1841
+k = 6 (p̂ = 2^12): GLWE kk =  2, np = 1024, p = 2048, m = 1, n =  976, (2^11,3): refresh  52.822 ms (min  50.292); out  -25.14 /  -25.28, max 2^-23.40, failures 0; KS  -18.32 /  -18.15; margin  0.53 bits; vterm 7.230e-5; BSK 216 MB (keys 3 s)
+CSV,glwe,6,2048,2,1,976,11,3,52.8215,50.2925,-25.1417,-18.3167,0.531,0
+k = 6 (p̂ = 2^12): GLWE kk =  1, np = 2048, p = 4096, m = 1, n =  976, (2^11,3): refresh  51.802 ms (min  50.449); out  -25.30 /  -25.26, max 2^-23.87, failures 0; KS  -18.17 /  -18.15; margin  0.42 bits; vterm 1.807e-5; BSK 192 MB (keys 2 s)
+CSV,glwe,6,4096,1,1,976,11,3,51.8022,50.4495,-25.2995,-18.1699,0.418,0
+k = 6 (p̂ = 2^12): GLWE kk =  4, np =  512, p = 1024, m = 1, n =  976, (2^11,3): refresh  53.970 ms (min  51.584); out  -25.28 /  -25.27, max 2^-23.71, failures 0; KS  -18.06 /  -18.15; margin  0.26 bits; vterm 2.892e-4; BSK 300 MB (keys 3 s)
+CSV,glwe,6,1024,4,1,976,11,3,53.9703,51.5839,-25.2793,-18.0612,0.263,0
+k = 6 (p̂ = 2^12): GLWE kk =  8, np =  256, p =  512, m = 1, n =  976, (2^12,3): refresh  74.485 ms (min  71.976); out  -26.31 /  -26.12, max 2^-24.96, failures 0; KS  -18.11 /  -18.15; margin  0.18 bits; vterm 1.157e-3; BSK 486 MB (keys 4 s)
+CSV,glwe,6,512,8,1,976,12,3,74.4851,71.9765,-26.3105,-18.1113,0.179,0
+k = 7 (p̂ = 2^14): EB N = 2048, p = 4096, m = 1, n = 1060, (2^12,3): refresh  57.825 ms (min  56.551)
+CSV,eb,7,4096,1,1060,12,3,57.8254,56.5515
+k = 7 (p̂ = 2^14): GLWE kk =  2, np = 1024, p = 2048, m = 1, n = 1056, (2^12,3): refresh  61.073 ms (min  53.469); out  -26.13 /  -26.16, max 2^-24.57, failures 0; KS  -20.18 /  -20.14; margin  0.28 bits; vterm 7.844e-5; BSK 234 MB (keys 3 s)
+CSV,glwe,7,2048,2,1,1056,12,3,61.0728,53.4694,-26.1309,-20.1789,0.285,0
+k = 7 (p̂ = 2^14): GLWE kk =  1, np = 2048, p = 4096, m = 1, n = 1056, (2^12,3): refresh  55.544 ms (min  54.512); out  -26.09 /  -25.92, max 2^-24.07, failures 0; KS  -20.21 /  -20.14; margin  0.31 bits; vterm 1.961e-5; BSK 208 MB (keys 3 s)
+CSV,glwe,7,4096,1,1,1056,12,3,55.5436,54.5116,-26.0851,-20.2086,0.309,0
+k = 7 (p̂ = 2^14): GLWE kk =  4, np =  512, p = 1024, m = 1, n = 1056, (2^12,3): refresh  88.037 ms (min  73.195); out  -26.23 /  -26.10, max 2^-24.39, failures 0; KS  -20.21 /  -20.14; margin  0.29 bits; vterm 3.138e-4; BSK 324 MB (keys 4 s)
+CSV,glwe,7,1024,4,1,1056,12,3,88.0371,73.1954,-26.2310,-20.2123,0.286,0
+k = 7 (p̂ = 2^14): GLWE kk =  8, np =  256, p =  512, m = 1, n = 1072, (2^12,3): refresh  84.745 ms (min  81.196); out  -26.25 /  -26.05, max 2^-24.60, failures 0; KS  -20.48 /  -20.50; margin  0.28 bits; vterm 1.275e-3; BSK 533 MB (keys 4 s)
+CSV,glwe,7,512,8,1,1072,12,3,84.7450,81.1956,-26.2453,-20.4807,0.278,0
+k = 8 (p̂ = 2^16): CombBoot B =  8, p = 512, m = 1, n = 1157:  37.249 ms per ciphertext (min  34.723; 277.8 ms per call)
+CSV,comb,8,512,8,1,1157,37.2486,34.7231
+k = 8 (p̂ = 2^16): EB N = 2048, p = 4096, m = 2, n = 1152, (2^9,4): refresh  92.137 ms (min  86.787)
+CSV,eb,8,4096,2,1152,9,4,92.1365,86.7867
+k = 8 (p̂ = 2^16): GLWE kk =  2, np = 1024, p = 2048, m = 1, n = 1136, (2^9,4): refresh  85.145 ms (min  83.092); out  -28.10 /  -27.99, max 2^-26.23, failures 0; KS  -22.26 /  -22.15; margin  0.34 bits; vterm 8.459e-5; BSK 335 MB (keys 5 s)
+CSV,glwe,8,2048,2,1,1136,9,4,85.1447,83.0915,-28.0985,-22.2601,0.338,0
+k = 8 (p̂ = 2^16): GLWE kk =  1, np = 2048, p = 4096, m = 1, n = 1136, (2^9,4): refresh 110.930 ms (min  80.500); out  -27.87 /  -27.91, max 2^-26.42, failures 0; KS  -22.03 /  -22.15; margin  0.12 bits; vterm 2.115e-5; BSK 298 MB (keys 4 s)
+CSV,glwe,8,4096,1,1,1136,9,4,110.9298,80.4999,-27.8724,-22.0311,0.124,0
+k = 8 (p̂ = 2^16): GLWE kk =  4, np =  512, p = 1024, m = 1, n = 1136, (2^9,4): refresh  82.282 ms (min  77.947); out  -27.95 /  -27.97, max 2^-26.52, failures 0; KS  -22.15 /  -22.20; margin  0.18 bits; vterm 3.384e-4; BSK 465 MB (keys 6 s)
+CSV,glwe,8,1024,4,1,1136,9,4,82.2823,77.9471,-27.9549,-22.1484,0.180,0
+k = 8 (p̂ = 2^16): GLWE kk =  8, np =  256, p =  512, m = 1, n = 1152, (2^9,4): refresh 141.453 ms (min 133.670); out  -28.05 /  -27.95, max 2^-26.49, failures 0; KS  -22.63 /  -22.51; margin  0.29 bits; vterm 1.373e-3; BSK 764 MB (keys 6 s)
+CSV,glwe,8,512,8,1,1152,9,4,141.4529,133.6701,-28.0483,-22.6321,0.290,0
+k = 1 (p̂ = 2^ 2): TFHE-rs FheUint2 refresh (default parameters)  38.046 ms (min  26.110)
+CSV,tfhers,1,38.0464,26.1102
+k = 2 (p̂ = 2^ 4): TFHE-rs FheUint4 refresh (default parameters)  31.782 ms (min  27.022)
+CSV,tfhers,2,31.7817,27.0222
+k = 3 (p̂ = 2^ 6): TFHE-rs FheUint6 refresh (default parameters)  59.924 ms (min  56.319)
+CSV,tfhers,3,59.9237,56.3191
+k = 4 (p̂ = 2^ 8): TFHE-rs FheUint8 refresh (default parameters)  68.703 ms (min  65.832)
+CSV,tfhers,4,68.7034,65.8319
+k = 5 (p̂ = 2^10): TFHE-rs FheUint10 refresh (default parameters)  84.431 ms (min  80.413)
+CSV,tfhers,5,84.4305,80.4130
+k = 6 (p̂ = 2^12): TFHE-rs FheUint12 refresh (default parameters)  80.661 ms (min  78.315)
+CSV,tfhers,6,80.6607,78.3146
+k = 7 (p̂ = 2^14): TFHE-rs FheUint14 refresh (default parameters) 107.546 ms (min 104.443)
+CSV,tfhers,7,107.5459,104.4431
+k = 8 (p̂ = 2^16): TFHE-rs FheUint16 refresh (default parameters) 117.009 ms (min 105.577)
+CSV,tfhers,8,117.0092,105.5775

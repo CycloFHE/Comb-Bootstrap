@@ -1,0 +1,21 @@
+Comb bootstrap at 2 to 16 bits, N = 2048, m = 1, h = 1
+
+ 2 bits: p = 256, B = 16, n = 608, RGSW (2^23,1), aut (2^14,2), V* = 11.60
+  end to end: E_k (rotation inputs) σ   2.08 measured /   2.06 predicted, max |E_k| 17 (window 64), mean 0.072;  selection: V ≤ V* in 2000/2000, mean V 11.45, 100 trials on average;  output noise  -15.24   (2000 ciphertexts)
+  margin of the condition, end to end:  0.21 bits (measured variance of E_k),  0.23 bits predicted   (19 s)
+
+ 4 bits: p = 256, B = 16, n = 688, RGSW (2^14,2), aut (2^14,2) shifted by 4, V* = 13.20
+  end to end: E_k (rotation inputs) σ   2.08 measured /   2.07 predicted, max |E_k| 15 (window 64), mean -0.084;  selection: V ≤ V* in 2000/2000, mean V 13.04, 107 trials on average;  output noise  -19.96   (2000 ciphertexts)
+  margin of the condition, end to end:  0.21 bits (measured variance of E_k),  0.22 bits predicted   (18 s)
+
+ 8 bits: p = 256, B = 16, n = 896, RGSW (2^11,3), aut (2^11,3) shifted by 4, V* = 17.37
+  end to end: E_k (rotation inputs) σ   2.12 measured /   2.09 predicted, max |E_k| 13 (window 64), mean -0.076;  selection: V ≤ V* in 2000/2000, mean V 17.18, 102 trials on average;  output noise  -23.77   (2000 ciphertexts)
+  margin of the condition, end to end:  0.17 bits (measured variance of E_k),  0.19 bits predicted   (29 s)
+
+12 bits: p = 512, B = 8, n = 986, RGSW (2^11,3), aut (2^11,3) shifted by 3, V* = 19.18
+  end to end: E_k (rotation inputs) σ   3.13 measured /   3.09 predicted, max |E_k| 27 (window 128), mean 0.102;  selection: V ≤ V* in 2000/2000, mean V 18.98, 105 trials on average;  output noise  -24.40   (2000 ciphertexts)
+  margin of the condition, end to end:  0.16 bits (measured variance of E_k),  0.20 bits predicted   (47 s)
+
+16 bits: p = 512, B = 8, n = 1157, RGSW (2^8,5), aut (2^6,6) shifted by 3, V* = 22.63
+  end to end: E_k (rotation inputs) σ   3.08 measured /   3.08 predicted, max |E_k| 32 (window 128), mean 0.403;  selection: V ≤ V* in 2000/2000, mean V 22.42, 104 trials on average;  output noise  -28.03   (2000 ciphertexts)
+  margin of the condition, end to end:  0.20 bits (measured variance of E_k),  0.21 bits predicted   (88 s)

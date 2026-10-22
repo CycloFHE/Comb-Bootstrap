@@ -1,0 +1,37 @@
+Mean over 10 sessions (results/sessions/20261018_1717) of the minimum within each session
+CSV
+ebrs_m2,1,refresh,7.5210
+ebrs_m1,2,refresh,10.3563
+ebrs_m2,3,refresh,14.3421
+ebrs_m2,4,refresh,16.0461
+ebrs_m2,5,refresh,17.8985
+ebrs_m2,6,refresh,25.5262
+ebrs_m1,7,refresh,33.1226
+ebrs_m2,8,refresh,37.7590
+tfhers_pbs,classic (2^23,1), default,918,1.2716,13.8944,15.1660
+tfhers_pbs,multi-bit group 3 (2^15,2),918,1.5586,22.7587,24.3173
+tfhers_pbs,multi-bit group 4 (2^22,1),920,1.2955,15.7716,17.0671
+tfhers,1,refresh,15.1972,15.1158
+tfhers,2,refresh,30.0342,29.9117
+tfhers,3,refresh,45.1011,44.9922
+tfhers,4,refresh,60.3055,60.1871
+tfhers,5,refresh,75.5195,75.4142
+tfhers,6,refresh,90.6608,90.5286
+tfhers,7,refresh,105.8183,105.6352
+tfhers,8,refresh,120.9743,120.8259
+tfhers_core,1,refresh,15.2058,15.1720
+tfhers_ours,1,refresh,13.9971,13.9639
+tfhers_core,2,refresh,30.4005,30.3507
+tfhers_ours,2,refresh,27.9853,27.9375
+tfhers_core,3,refresh,45.6155,45.5527
+tfhers_ours,3,refresh,41.9871,41.9041
+tfhers_core,4,refresh,60.7998,60.7344
+tfhers_ours,4,refresh,55.9421,55.8389
+tfhers_core,5,refresh,75.9652,75.8461
+tfhers_ours,5,refresh,69.9430,69.8180
+tfhers_core,6,refresh,91.1929,91.0821
+tfhers_ours,6,refresh,83.9484,83.8113
+tfhers_core,7,refresh,106.4034,106.2884
+tfhers_ours,7,refresh,97.9263,97.7377
+tfhers_core,8,refresh,121.6385,121.5486
+tfhers_ours,8,refresh,111.9423,111.7897

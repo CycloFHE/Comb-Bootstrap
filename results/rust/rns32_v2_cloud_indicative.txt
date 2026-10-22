@@ -1,0 +1,50 @@
+RNS arithmetic on 32-bit integers, TFHE-rs 1.8.1, one thread, N = 2048; variants ["4", "16", "8"] (4: 4 moduli up to 263, B = 8; 16: 8 moduli up to 25, B = 16; 8: the same, B = 8)
+  [4] moduli [263, 262, 261, 259] (2^32.12): CombBoot B = 8 (p = 512, 2 integer(s) per call), n = 832, RGSW (2^14,2), aut (2^14,2) shift 3; before a product: m = 2, n = 816, (2^8,5), trace (2^5,9)   (keys 10 s)
+    check: 5 pairs of 32-bit integers: refresh, x + y, x y (mod 4657976694) and the refresh of x y and x + y, correct (CRT)
+    times: refresh   68.129 ms per CombBoot (2 integer(s)),   34.064 ms per integer;  addition  0.00192 ms (0.03599 with a thousandth of a refresh);  multiplication  234.492 ms (refresh before a product 223.899 + product 10.593, 4 residues: 55.97 + 2.65 per residue)
+    CombBoot noise (1600 errors): out  -19.98 /  -19.94 predicted, max |e| 2^-18.36, margin 0.26 bits at p̂ = 263 after 1000 additions (KS -14.51)
+    product noise (100 products, moduli in turn): in  -28.75   √T  -29.05   √V0  -29.86   product  -16.58 (predicted at p̂ = 263 from the measured inputs  -16.63)   KS  -14.15 predicted   (13 s)
+  [16] moduli [25, 23, 21, 19, 17, 16, 13, 11] (2^33.05): CombBoot B = 16 (p = 256, 2 integer(s) per call), n = 720, RGSW (2^14,2), aut (2^14,2) shift 4; before a product: m = 2, n = 672, (2^15,2), trace (2^8,5)   (keys 5 s)
+    check: 5 pairs of 32-bit integers: refresh, x + y, x y (mod 8923714800) and the refresh of x y and x + y, correct (CRT)
+    times: refresh  102.924 ms per CombBoot (2 integer(s)),   51.462 ms per integer;  addition  0.00378 ms (0.05525 with a thousandth of a refresh);  multiplication  185.197 ms (refresh before a product 169.615 + product 15.582, 8 residues: 21.20 + 1.95 per residue)
+    CombBoot noise (1600 errors): out  -19.90 /  -19.95 predicted, max |e| 2^-18.11, margin 0.24 bits at p̂ = 25 after 1000 additions (KS -11.79)
+    product noise (200 products, moduli in turn): in  -22.05   √T  -25.62   √V0  -26.46   product  -14.08 (predicted at p̂ = 25 from the measured inputs  -13.69)   KS  -10.62 predicted   (11 s)
+  [8] moduli [25, 23, 21, 19, 17, 16, 13, 11] (2^33.05): CombBoot B = 8 (p = 512, 1 integer(s) per call), n = 680, RGSW (2^14,2), aut (2^14,2) shift 3; before a product: m = 2, n = 672, (2^15,2), trace (2^8,5)   (keys 5 s)
+    check: 5 pairs of 32-bit integers: refresh, x + y, x y (mod 8923714800) and the refresh of x y and x + y, correct (CRT)
+    times: refresh   55.958 ms per CombBoot (1 integer(s)),   55.958 ms per integer;  addition  0.00326 ms (0.05922 with a thousandth of a refresh);  multiplication  178.495 ms (refresh before a product 165.725 + product 12.770, 8 residues: 20.72 + 1.60 per residue)
+    CombBoot noise (1600 errors): out  -20.10 /  -20.08 predicted, max |e| 2^-18.21, margin 0.20 bits at p̂ = 25 after 1000 additions (KS -10.70)
+    product noise (200 products, moduli in turn): in  -21.97   √T  -25.59   √V0  -26.43   product  -14.10 (predicted at p̂ = 25 from the measured inputs  -13.62)   KS  -10.62 predicted   (11 s)
+  check: 5 pairs of 32-bit integers, TFHE-rs CRT: x + y, x y (mod 8485840800) and the refresh of x y, correct
+  tfhers CRT [19, 23, 25, 27, 29, 31, 32] (7 blocks, 2^32.98, MESSAGE_5_CARRY_1, n = 1006, N = 8192): refresh  1396.023 ms (199.43 per block);  addition  0.02221 ms;  multiplication  3087.142 ms,  4122.436 ms with the refresh   (keys 20 s)
+     key switch 39.817 ms (20 % of a block refresh); without KS: refresh  1117.302 ms, multiplication with the refresh  3286.273 ms
+  tfhers FheUint32 (radix, 16 blocks): refresh (&a & MAX)   399.971 ms;  addition   768.596 ms;  multiplication  11039.162 ms;  16 blocks refreshed:  381.294 ms with its key switch,  285.701 ms with ours
+CSV
+rns4,32,refresh_call,68.1286,2
+rns4,32,refresh_int,34.0643
+rns4,32,add,0.001921,0.035985
+rns4,32,mul,234.4920,223.8992,10.5928
+rns4,32,comb_margin,0.264
+noise,263,4.935506e-18,3.251871e-18,1.050968e-18,1.045334e-10,3.046148e-9,1.501000e-5
+rns16,32,refresh_call,102.9237,2
+rns16,32,refresh_int,51.4618
+rns16,32,add,0.003784,0.055246
+rns16,32,mul,185.1975,169.6154,15.5821
+rns16,32,comb_margin,0.237
+noise,25,5.336321e-14,3.762971e-16,1.168560e-16,3.334741e-9,4.049704e-7,1.226200e-5
+rns8,32,refresh_call,55.9583,1
+rns8,32,refresh_int,55.9583
+rns8,32,add,0.003257,0.059215
+rns8,32,mul,178.4950,165.7245,12.7704
+rns8,32,comb_margin,0.201
+noise,25,5.890246e-14,3.916831e-16,1.224132e-16,3.239475e-9,4.049704e-7,1.226200e-5
+tfhers_crt,32,refresh,1396.0227
+tfhers_crt,32,add,0.022206
+tfhers_crt,32,mul,4122.4364,3087.1416
+tfhers_crt,32,ks,39.8173
+tfhers_crt,32,refresh_noks,1117.3017
+tfhers_crt,32,mul_noks,3286.2733
+tfhers,32,refresh,399.9711
+tfhers,32,add,768.5958
+tfhers,32,mul,11039.1624
+tfhers,32,refresh_blocks_theirs,381.2939
+tfhers,32,refresh_blocks_ours,285.7014

@@ -1,0 +1,40 @@
+Times (ms), one thread, TFHE-rs 1.8.1 for both
+  ebrs k = 1 ( 2 bits), m = 1, n =  566, (2^23,1): refresh   8.738 ms  [mean: key switch 0.180, rounding 0.049, rotation 8.618, rest 0.002]
+  ebrs k = 2 ( 4 bits), m = 1, n =  688, (2^23,1): refresh  10.510 ms  [mean: key switch 0.132, rounding 0.028, rotation 10.461, rest 0.002]
+  ebrs k = 3 ( 6 bits), m = 1, n =  732, (2^15,2): refresh  17.087 ms  [mean: key switch 0.222, rounding 0.081, rotation 16.936, rest 0.002]
+  ebrs k = 4 ( 8 bits), m = 1, n =  816, (2^14,2): refresh  18.900 ms  [mean: key switch 0.175, rounding 0.041, rotation 18.734, rest 0.002]
+  ebrs k = 5 (10 bits), m = 1, n =  896, (2^15,2): refresh  20.797 ms  [mean: key switch 0.195, rounding 0.140, rotation 20.575, rest 0.002]
+  ebrs k = 6 (12 bits), m = 1, n =  976, (2^11,3): refresh  30.336 ms  [mean: key switch 0.218, rounding 0.098, rotation 30.084, rest 0.002]
+  ebrs k = 7 (14 bits), m = 1, n = 1060, (2^12,3): refresh  33.064 ms  [mean: key switch 0.425, rounding 0.127, rotation 32.715, rest 0.002]
+  ebrs k = 8 (16 bits), m = 1, n = 1136, (2^9,4): refresh  44.261 ms  [mean: key switch 0.338, rounding 0.139, rotation 44.591, rest 0.003]
+  tfhers_pbs classic (2^23,1), default          n =  918: key switch  1.249 + PBS  13.903 =  15.151 ms per block
+  tfhers_pbs multi-bit group 3 (2^15,2)         n =  918: key switch  1.563 + PBS  24.482 =  26.045 ms per block
+  tfhers_pbs multi-bit group 4 (2^22,1)         n =  920: key switch  1.319 + PBS  15.948 =  17.267 ms per block
+  tfhers FheUint2  (k = 1) refresh    15.182 ms (min    15.134)
+  tfhers FheUint4  (k = 2) refresh    30.244 ms (min    30.141)
+  tfhers FheUint6  (k = 3) refresh    45.264 ms (min    45.215)
+  tfhers FheUint8  (k = 4) refresh    60.487 ms (min    60.379)
+  tfhers FheUint10 (k = 5) refresh    75.570 ms (min    75.464)
+  tfhers FheUint12 (k = 6) refresh    90.638 ms (min    90.489)
+  tfhers FheUint14 (k = 7) refresh   105.891 ms (min   105.730)
+  tfhers FheUint16 (k = 8) refresh   120.842 ms (min   120.749)
+CSV
+ebrs_m1,1,refresh,8.7377
+ebrs_m1,2,refresh,10.5103
+ebrs_m1,3,refresh,17.0869
+ebrs_m1,4,refresh,18.8999
+ebrs_m1,5,refresh,20.7965
+ebrs_m1,6,refresh,30.3362
+ebrs_m1,7,refresh,33.0635
+ebrs_m1,8,refresh,44.2610
+tfhers_pbs,classic (2^23,1), default,918,1.2486,13.9025,15.1511
+tfhers_pbs,multi-bit group 3 (2^15,2),918,1.5632,24.4817,26.0449
+tfhers_pbs,multi-bit group 4 (2^22,1),920,1.3188,15.9478,17.2667
+tfhers,1,refresh,15.1817,15.1340
+tfhers,2,refresh,30.2440,30.1414
+tfhers,3,refresh,45.2643,45.2155
+tfhers,4,refresh,60.4870,60.3792
+tfhers,5,refresh,75.5695,75.4637
+tfhers,6,refresh,90.6376,90.4890
+tfhers,7,refresh,105.8912,105.7297
+tfhers,8,refresh,120.8424,120.7493

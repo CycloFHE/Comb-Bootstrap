@@ -1,0 +1,23 @@
+# Curves in Julia: refresh and addition from curves_times_mac2.txt; product (k <= 4) from curves_times_exact_mac.txt
+# (configurations P chosen with the exact law of the noise of the product, PCFG=exact); no product for k = 5 (Appendix J of the paper).
+CSV (scheme,k,operation,ms)
+eb,1,refresh,6.2397
+eb,1,addition,0.00661
+eb,1,product,11.6342
+eb,2,refresh,11.5063
+eb,2,addition,0.01188
+eb,2,product,14.0230
+eb,3,refresh,13.2544
+eb,3,addition,0.01363
+eb,3,product,20.2520
+eb,4,refresh,14.7940
+eb,4,addition,0.01517
+eb,4,product,34.7985
+eb,5,refresh,16.0746
+eb,5,addition,0.01645
+eb,6,refresh,24.3691
+eb,6,addition,0.02474
+eb,7,refresh,27.0607
+eb,7,addition,0.02744
+eb,8,refresh,36.4317
+eb,8,addition,0.03681

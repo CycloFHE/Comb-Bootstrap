@@ -1,0 +1,6 @@
+gl = 2, separate: µs per coordinate: blocks 50.96, whole 43.00   (16.607816409656152)
+gl = 2, pad 0   : µs per coordinate: blocks 36.29, whole 30.96   (-174.12147628105194)
+gl = 2, pad 48  : µs per coordinate: blocks 28.46, whole 23.58   (28.154861228646773)
+gl = 3, separate: µs per coordinate: blocks 50.67, whole 43.00   (250.8410143408954)
+gl = 3, pad 0   : µs per coordinate: blocks 50.96, whole 43.29   (-19.399436592914792)
+gl = 3, pad 48  : µs per coordinate: blocks 39.25, whole 32.58   (-185.14666726892062)

@@ -1,0 +1,16 @@
+TFHE-rs 1.8.1, PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128 (n = 918, N = 2048, PBS (2^23,1), KS (2^4,4)), one thread
+  key switch noise over 2000 samples: TFHE-rs 2^-11.00 (predicted 2^-11.02), ours 2^-11.33 (predicted 2^-11.32)
+  correctness: the 16 inputs of a block give x & 3 with both key switches
+  one block: key switch TFHE-rs 1.266 ms, ours 0.051 ms; PBS 13.023 ms (C) / 13.362 ms (D)
+  FheUint8 refresh (4 blocks): A high-level 57.834 ms, B shortint 58.333 ms, C core with the key switch of TFHE-rs 57.804 ms, D core with our key switch 53.723 ms
+CSV (item,variant,value)
+ks,tfhers,1.2659
+ks,ours,0.0513
+pbs,c,13.0232
+pbs,d,13.3623
+refresh8,A,57.8340
+refresh8,B,58.3328
+refresh8,C,57.8044
+refresh8,D,53.7225
+ksnoise,tfhers,-11.004
+ksnoise,ours,-11.328

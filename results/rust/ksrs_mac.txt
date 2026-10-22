@@ -1,0 +1,2 @@
+gl = 2: us per coordinate: blocks 43.04, whole 36.17   (255.519928803713)
+gl = 3: us per coordinate: blocks 54.25, whole 46.50   (149.57653444106566)

@@ -1,0 +1,8 @@
+A. one rotation of one ciphertext, N = 2048
+  error bootstrap, p̂ = 256, refresh                n =  800, m = 2, (2^15,2):   13.36 ms   keys 0.147 GB
+  error bootstrap, p̂ = 256, before a product       n =  830, m = 2, (2^9,4):   24.57 ms   keys 0.306 GB
+  error bootstrap, p̂ = 64, refresh and product     n =  780, m = 2, (2^12,3):   19.45 ms   keys 0.216 GB
+  TFHE PBS, 4-bit blocks (p̂ = 16)                  n =  704, m = 1, (2^23,1):    9.12 ms   keys 0.043 GB
+B. TFHE in a single ring, one rotation (all n coordinates): p̂ = 256 (N = 2^15), 512 (N = 2^16)
+  N = 32768, n = 848, m = 2, (2^16,2):   304.4 ms   keys 2.49 GB
+  N = 65536, n = 896, m = 2, (2^16,2):   686.8 ms   keys 5.25 GB

@@ -1,0 +1,1 @@
+8 bits, n = 896, B = 16: 118.9 ms per call (7.430 ms per error): digits+FFT 20.3, table 6.7, products+KS 59.7, backward FFT 5.4, CMux 26.8

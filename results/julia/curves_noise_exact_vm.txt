@@ -1,0 +1,11 @@
+Noise (log2 σ, measured / predicted; margin of the condition in bits, measured noises), PCFG = exact  [refresh lines: NREF = 10 only; k = 2 in a second run]
+k = 1 (p̂ = 2^ 2), refresh, n =  570, (2^23,1)  out  -14.86 /  -14.91 ( -15.39 without FFT)   KS   -8.02 /   -7.97   margin  0.25 bits   (10 s)
+k = 1 (p̂ = 2^ 2), product, n =  564, (2^13,2)  in  -18.47 /  -18.43   trace (2^8,5)   √T  -25.57 /  -25.54  √V0  -26.37   product  -12.78 /  -12.76 (FFT  -12.78)   KS   -7.93 /   -7.92   margin  0.21 bits   (45 s)
+k = 2 (p̂ = 2^ 4), refresh, n =  650, (2^13,2)  out  -18.45 /  -18.33 ( -18.33 without FFT)   KS  -10.04 /   -9.93   margin  0.31 bits   (12 s)
+k = 2 (p̂ = 2^ 4), product, n =  650, (2^15,2)  in  -22.03 /  -22.03   trace (2^8,5)   √T  -25.59 /  -25.54  √V0  -26.37   product  -14.04 /  -14.31 (FFT  -14.04)   KS  -10.00 /   -9.93   margin  0.29 bits   (49 s)
+k = 3 (p̂ = 2^ 6), refresh, n =  732, (2^15,2)  out  -21.78 /  -21.94 ( -22.23 without FFT)   KS  -11.87 /  -11.92   margin  0.16 bits   (6 s)
+k = 3 (p̂ = 2^ 6), product, n =  734, (2^11,3)  in  -25.04 /  -25.11   trace (2^8,5)   √T  -25.57 /  -25.54  √V0  -26.35   product  -15.16 /  -15.05 (FFT  -15.16)   KS  -11.90 /  -11.94   margin  0.18 bits   (51 s)
+k = 4 (p̂ = 2^ 8), refresh, n =  816, (2^14,2)  out  -20.11 /  -20.16 ( -20.16 without FFT)   KS  -14.20 /  -14.15   margin  0.31 bits   (5 s)
+k = 4 (p̂ = 2^ 8), product, n =  816, (2^8,5)   in  -28.91 /  -28.97   trace (2^6,8)   √T  -28.18 /  -28.09  √V0  -29.03   product  -16.36 /  -16.24 (FFT  -16.36)   KS  -14.17 /  -14.15   margin  0.42 bits   (76 s)
+k = 5 (p̂ = 2^10), refresh, n =  896, (2^15,2)  out  -21.71 /  -21.79 ( -22.08 without FFT)   KS  -16.09 /  -16.18   margin  0.12 bits   (6 s)
+k = 5 (p̂ = 2^10), product, n =  996, (2^2,22)  in  -30.98 /  -33.73   trace (2^2,24)  √T  -31.38 /  -31.20  √V0  -32.23   product  -16.75 /  -16.94 (FFT  -16.75)   KS  -18.51 /  -18.62   margin  0.97 bits   (308 s)

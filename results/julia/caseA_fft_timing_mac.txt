@@ -1,0 +1,21 @@
+Error of the FFT against the exact backend (same keys, same inputs)
+  p = 2039, B = 1, transform zero padding: one external product (2^14,2) 2^-29.62 (standard deviation per coordinate of the phase)
+  p = 2017, B = 1, transform Rader: one external product (2^14,2) 2^-28.84 (standard deviation per coordinate of the phase)
+  p = 257, B = 8, transform Rader: one external product (2^11,3) 2^-31.56, one key switching (2^11,3) 2^-32.05 (standard deviation per coordinate of the phase)
+Error bootstrap, n = 816, BR (2^14,2)
+  case (A), p = 2039, M0 = 1, B = 1, N = 2038, transform zero padding (keys 1 s)
+    FFT          :   60.09 ms per call (min 59.89),  60.09 ms per error; σ_out 2^-20.51 measured / 2^-19.93 predicted (exact backend), max |e| 2^-19.46, 16 outputs
+  case (A), p = 2017, M0 = 1, B = 1, N = 2016, transform Rader (keys 1 s)
+    FFT          :   52.72 ms per call (min 52.40),  52.72 ms per error; σ_out 2^-20.33 measured / 2^-19.94 predicted (exact backend), max |e| 2^-19.29, 16 outputs
+  case (B), p = 4096, B = 1, N = 2048 (keys 0 s)
+    FFT, reference:   34.43 ms per call (min 31.46),  34.43 ms per error; σ_out 2^-20.90 measured / 2^-20.47 predicted (exact backend), 16 outputs
+    FFT, optimized:   17.51 ms per call (min 17.26),  17.51 ms per error; σ_out 2^-20.91
+  error bootstrap, p = 2039: case (A) / case (B), reference implementations: 1.75; case (A) optimized as case (B): about 30.57 ms per error
+  error bootstrap, p = 2017: case (A) / case (B), reference implementations: 1.53; case (A) optimized as case (B): about 26.81 ms per error
+Comb bootstrap, B = 8, n = 896, BR and aut (2^11,3), h = 1
+  case (A), p = 257, M0 = 16, B = 8, N = 2048, transform Rader (keys 2 s)
+    FFT          :  168.68 ms per call (min 166.81),  21.09 ms per error; σ_out 2^-22.63 measured / 2^-21.95 predicted (exact backend), max |e| 2^-21.90, 32 outputs
+  case (B), p = 512, B = 8, N = 2048 (keys 1 s)
+    FFT, reference:  112.34 ms per call (min 111.69),  14.04 ms per error; σ_out 2^-22.96 measured / 2^-22.48 predicted (exact backend), 32 outputs
+    FFT, optimized:   74.55 ms per call (min 74.37),   9.32 ms per error; σ_out 2^-22.53
+  comb bootstrap: case (A) / case (B), reference implementations: 1.50; case (A) optimized as case (B): about 13.99 ms per error

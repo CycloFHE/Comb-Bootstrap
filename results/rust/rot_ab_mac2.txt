@@ -1,0 +1,14 @@
+Blind rotation, one thread: CMux of TFHE-rs (m = 1) / our multi-bit rotation (m = 2), min over 20 runs
+  k = 1 n =  566 (2^23,1): m = 1   7.939 ms (14.03 us/coord), m = 2   7.931 ms (14.01 us/coord), ratio 1.001   |message diff| 2^-14.1
+    m = 2, us per pair (mean): decomposition 2.76, forward FFTs 4.29, monomials 1.55, products 14.34, backward FFTs 5.26
+  k = 4 n =  816 (2^14,2): m = 1  17.381 ms (21.30 us/coord), m = 2  23.230 ms (28.47 us/coord), ratio 0.748   |message diff| 2^-19.6
+    m = 2, us per pair (mean): decomposition 4.33, forward FFTs 9.29, monomials 1.70, products 40.76, backward FFTs 5.68
+  k = 6 n =  976 (2^11,3): m = 1  27.988 ms (28.68 us/coord), m = 2  44.006 ms (45.09 us/coord), ratio 0.636   |message diff| 2^-30.5
+    m = 2, us per pair (mean): decomposition 5.18, forward FFTs 12.99, monomials 2.02, products 65.27, backward FFTs 5.30
+  k = 8 n = 1136 (2^9,4): m = 1  41.396 ms (36.44 us/coord), m = 2  72.419 ms (63.75 us/coord), ratio 0.572   |message diff| 2^-27.9
+    m = 2, us per pair (mean): decomposition 6.38, forward FFTs 17.49, monomials 2.27, products 96.57, backward FFTs 5.34
+CSV (rot,k,n,logB,l,ms m=1,ms m=2,us per pair: decomposition,forward,monomials,products,backward)
+rot,1,566,23,1,7.9385,7.9313,2.761,4.295,1.551,14.341,5.262
+rot,4,816,14,2,17.3808,23.2304,4.331,9.294,1.702,40.762,5.685
+rot,6,976,11,3,27.9882,44.0058,5.181,12.992,2.024,65.270,5.296
+rot,8,1136,9,4,41.3962,72.4193,6.381,17.487,2.271,96.574,5.339

@@ -1,0 +1,72 @@
+Times (ms), T = 8 threads, TFHE-rs 1.8.1, same session (rayon pool of 8 threads)
+   2 bits: EB 1 thread    8.708 ms   (n = 566, (2^23,1))
+           EB 2 threads    6.593 ms  (speed-up 1.32)
+           EB 4 threads    5.650 ms  (speed-up 1.54)
+           EB 8 threads    7.014 ms  (speed-up 1.24)
+           CombBoot batch of 16 on 8 threads:    1.313 ms per ciphertext (21.0 ms)
+   4 bits: EB 1 thread   10.600 ms   (n = 688, (2^23,1))
+           EB 2 threads    8.422 ms  (speed-up 1.26)
+           EB 4 threads    7.123 ms  (speed-up 1.49)
+           EB 8 threads    8.983 ms  (speed-up 1.18)
+           CombBoot batch of 16 on 8 threads:    1.610 ms per ciphertext (25.8 ms)
+   8 bits: EB 1 thread   18.920 ms   (n = 816, (2^14,2))
+           EB 2 threads   13.794 ms  (speed-up 1.37)
+           EB 4 threads    9.510 ms  (speed-up 1.99)
+           EB 8 threads   10.728 ms  (speed-up 1.76)
+           CombBoot batch of 16 on 8 threads:    2.354 ms per ciphertext (37.7 ms)
+  12 bits: EB 1 thread   30.319 ms   (n = 976, (2^11,3))
+           EB 2 threads   21.007 ms  (speed-up 1.44)
+           EB 4 threads   15.034 ms  (speed-up 2.02)
+           EB 8 threads   14.375 ms  (speed-up 2.11)
+           CombBoot batch of 8 on 8 threads:    4.244 ms per ciphertext (34.0 ms)
+  16 bits: EB 1 thread   44.227 ms   (n = 1136, (2^9,4))
+           EB 2 threads   29.781 ms  (speed-up 1.49)
+           EB 4 threads   19.723 ms  (speed-up 2.24)
+           EB 8 threads   18.245 ms  (speed-up 2.42)
+           CombBoot batch of 8 on 8 threads:    6.563 ms per ciphertext (52.5 ms)
+  TFHE-rs classic   FheUint2 : latency   15.219 ms
+  TFHE-rs classic   FheUint4 : latency   15.810 ms
+  TFHE-rs classic   FheUint8 : latency   16.150 ms
+  TFHE-rs classic   FheUint12: latency   16.532 ms
+  TFHE-rs classic   FheUint16: latency   16.943 ms
+  TFHE-rs multibit4 FheUint2 : latency    5.572 ms
+  TFHE-rs multibit4 FheUint4 : latency    6.834 ms
+  TFHE-rs multibit4 FheUint8 : latency   10.297 ms
+  TFHE-rs multibit4 FheUint12: latency   14.101 ms
+  TFHE-rs multibit4 FheUint16: latency   16.974 ms
+CSV (what,bits,threads,ms)
+eb_latency,2,1,8.7080
+eb_latency,2,2,6.5929
+eb_latency,2,4,5.6497
+eb_latency,2,8,7.0144
+comb_batch,2,8,1.3133
+eb_latency,4,1,10.5997
+eb_latency,4,2,8.4221
+eb_latency,4,4,7.1232
+eb_latency,4,8,8.9832
+comb_batch,4,8,1.6105
+eb_latency,8,1,18.9204
+eb_latency,8,2,13.7944
+eb_latency,8,4,9.5097
+eb_latency,8,8,10.7282
+comb_batch,8,8,2.3539
+eb_latency,12,1,30.3192
+eb_latency,12,2,21.0070
+eb_latency,12,4,15.0339
+eb_latency,12,8,14.3751
+comb_batch,12,8,4.2442
+eb_latency,16,1,44.2268
+eb_latency,16,2,29.7815
+eb_latency,16,4,19.7234
+eb_latency,16,8,18.2453
+comb_batch,16,8,6.5630
+tfhers_classic_latency,2,8,15.2195
+tfhers_classic_latency,4,8,15.8104
+tfhers_classic_latency,8,8,16.1503
+tfhers_classic_latency,12,8,16.5317
+tfhers_classic_latency,16,8,16.9432
+tfhers_multibit4_latency,2,8,5.5721
+tfhers_multibit4_latency,4,8,6.8339
+tfhers_multibit4_latency,8,8,10.2974
+tfhers_multibit4_latency,12,8,14.1010
+tfhers_multibit4_latency,16,8,16.9739

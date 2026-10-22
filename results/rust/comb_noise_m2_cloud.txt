@@ -1,0 +1,6 @@
+Comb bootstrap on TFHE-rs 1.8.1 (h = 1, m = 2): output noise, log2 σ measured / predicted
+ 2 bits: p = 256, B = 16, n = 608, RGSW (2^23,1), aut (2^14,2) shift 0: out  -15.25 /  -15.26 (with aut FFT 2^-88.5:  -15.26), max |e| 2^-13.09, window 2^-4, margin 0.27 bits (KS predicted -8.97)   comb 94.3 ms per call (5.89 ms per error), keygen 1 s
+ 4 bits: p = 256, B = 16, n = 688, RGSW (2^14,2), aut (2^14,2) shift 4: out  -20.15 /  -20.31 (with aut FFT 2^-88.5:  -20.22), max |e| 2^-18.34, window 2^-6, margin 0.22 bits (KS predicted -10.93)   comb 115.7 ms per call (7.23 ms per error), keygen 2 s
+ 8 bits: p = 256, B = 16, n = 896, RGSW (2^11,3), aut (2^11,3) shift 4: out  -23.73 /  -24.98 (with aut FFT 2^-88.5:  -24.07), max |e| 2^-21.84, window 2^-10, margin 0.19 bits (KS predicted -16.14)   comb 192.1 ms per call (12.01 ms per error), keygen 3 s
+12 bits: p = 512, B = 8, n = 986, RGSW (2^11,3), aut (2^11,3) shift 3: out  -24.50 /  -24.97 (with aut FFT 2^-88.5:  -24.61), max |e| 2^-22.57, window 2^-14, margin 0.22 bits (KS predicted -18.28)   comb 170.9 ms per call (21.36 ms per error), keygen 3 s
+16 bits: p = 512, B = 8, n = 1157, RGSW (2^8,5), aut (2^6,6) shift 3: out  -28.06 /  -28.27 (with aut FFT 2^-88.5:  -28.18), max |e| 2^-26.37, window 2^-18, margin 0.30 bits (KS predicted -22.65)   comb 269.0 ms per call (33.63 ms per error), keygen 12 s

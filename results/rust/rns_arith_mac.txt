@@ -1,0 +1,13 @@
+RNS arithmetic on TFHE-rs 1.8.1, one thread: moduli [263, 262, 261, 259, 257, 253, 251, 247] (M = 2^64.03); refresh: CombBoot B = 8, n = 832; before a product: error bootstrap m = 2, n = 816, (2^8,5), trace (2^5,9)
+  check: 5 pairs of 64-bit integers: x + y, x y (mod M) and the refresh of x y, correct (CRT)
+  rns  64 bits: refresh (CombBoot)   53.902 ms;  addition   0.0029 ms;  multiplication  310.702 ms (refresh before a product 297.498 + product 13.204, 8 residues)   (keys 8 s)
+    noise (200 products, moduli in turn): in  -28.70   √T  -29.05   √V0  -29.96   product  -16.59 (predicted at p̂ = 263 from the measured inputs  -16.61)   KS  -14.15 predicted   (16 s)
+  tfhers FheUint64: refresh (&a & MAX)   485.272 ms;  addition   964.394 ms;  multiplication  26408.137 ms
+CSV
+rns,64,refresh,53.9024
+rns,64,add,0.00287
+rns,64,mul,310.7023,297.4981,13.2043
+noise,263,5.225097e-18,3.219826e-18,9.223084e-19,1.020547e-10,3.046148e-9,1.501000e-5
+tfhers,64,refresh,485.2721
+tfhers,64,add,964.3936
+tfhers,64,mul,26408.1371

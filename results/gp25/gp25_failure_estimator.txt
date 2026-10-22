@@ -1,0 +1,14 @@
+# Failure probability per coefficient, estimator of Guimaraes-Pereira (third_party/Fast-Amortized-Bootstrapping/scripts/noise_estimator.py,
+# class LeveledRGSW, binary sets as in the script). 'next bootstrap after a sum of a outputs': variance a*var_res + var_fbs
+# (output noise of a bootstrap summed a times, plus the modulus switching term of the next bootstrap).
+# set        log2 p (a=1)   a=4    a=10
+2_3_2048       -120        -32    -14
+2_3_4096        -63        -18     -8
+2_3_8192       -120        -32    -14
+4_5_2048        -94        -27    -12
+4_5_4096       -167        -49    -22
+4_5_8192        -98        -28    -12
+6_7_4096        -64        -51    -36
+6_7_8192        -69        -45    -27
+8_9_4096        -62        -48    -34
+8_9_8192        -72        -51    -33

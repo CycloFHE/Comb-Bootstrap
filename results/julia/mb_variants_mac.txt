@@ -1,0 +1,51 @@
+CombBoot at p̂ = 256, N = 2048, variants in h and m
+
+variant 1: p = 256, B = 16, n = 896, m = 1, (g,h) = (16,1), RGSW (2^11,3), aut (2^7,5)
+  noise (log2 σ, measured / predicted): out  -23.38 /  -23.37   KS  -16.10 /  -16.14   (2000 errors)
+  margin of the condition:  0.19 bits measured,  0.19 bits predicted   (16 s)
+  time per error: rotation   7.41 (16 errors in 118.6) + key switch  0.205 =   7.62 ms
+  µs per coordinate (batch): division 1.5; FFTs, digits, tables 27.4; baby + public 68.5; giant steps 0.0; inv FFT, digits C_L 21.1; ext. product 8.5; final inv FFT 5.3; total 132.3
+  (fast_opt.jl: rotation   7.85 + key switch  0.205 =   8.05 ms per error)
+
+variant 2: p = 256, B = 16, n = 896, m = 1, (g,h) = (8,2), RGSW (2^11,3), aut (2^7,5)
+  noise (log2 σ, measured / predicted): out  -23.43 /  -23.41   KS  -16.09 /  -16.14   (2000 errors)
+  margin of the condition:  0.19 bits measured,  0.19 bits predicted   (15 s)
+  time per error: rotation   7.62 (16 errors in 122.0) + key switch  0.209 =   7.83 ms
+  µs per coordinate (batch): division 1.5; FFTs, digits, tables 27.5; baby + public 42.3; giant steps 30.3; inv FFT, digits C_L 21.1; ext. product 8.5; final inv FFT 5.2; total 136.4
+  (fast_opt.jl: rotation   7.89 + key switch  0.209 =   8.10 ms per error)
+
+variant 3: p = 512, B = 8, n = 826, m = 1, (g,h) = (8,1), RGSW (2^14,2), aut (2^8,4)
+  noise (log2 σ, measured / predicted): out  -20.30 /  -20.30   KS  -14.22 /  -14.24   (2000 errors)
+  margin of the condition:  0.19 bits measured,  0.20 bits predicted   (19 s)
+  time per error: rotation   9.16 (8 errors in 73.3) + key switch  0.182 =   9.34 ms
+  µs per coordinate (batch): division 1.5; FFTs, digits, tables 23.7; baby + public 35.8; giant steps 0.0; inv FFT, digits C_L 16.2; ext. product 5.6; final inv FFT 5.2; total 88.1
+  (fast_opt.jl: rotation   9.22 + key switch  0.182 =   9.40 ms per error)
+
+variant 4: p = 512, B = 8, n = 826, m = 1, (g,h) = (4,2), RGSW (2^14,2), aut (2^8,4)
+  noise (log2 σ, measured / predicted): out  -20.42 /  -20.37   KS  -14.26 /  -14.24   (2000 errors)
+  margin of the condition:  0.23 bits measured,  0.21 bits predicted   (21 s)
+  time per error: rotation  10.19 (8 errors in 81.5) + key switch  0.182 =  10.37 ms
+  µs per coordinate (batch): division 1.5; FFTs, digits, tables 23.7; baby + public 21.4; giant steps 25.3; inv FFT, digits C_L 16.2; ext. product 5.4; final inv FFT 5.2; total 98.6
+  (fast_opt.jl: rotation  10.99 + key switch  0.182 =  11.17 ms per error)
+
+variant 5: p = 512, B = 8, n = 822, m = 2, (g,h) = (8,1), RGSW (2^14,2), aut (2^8,4)
+  noise (log2 σ, measured / predicted): out  -20.56 /  -20.51   KS  -14.19 /  -14.21   (2000 errors)
+  margin of the condition:  0.20 bits measured,  0.21 bits predicted   (16 s)
+  time per error: rotation   7.81 (8 errors in 62.5) + key switch  0.186 =   7.99 ms
+  µs per coordinate (batch): division 0.7; FFTs, digits, tables 14.1; baby + public 26.4; giant steps 0.0; inv FFT, digits C_L 24.4; ext. product 7.7; final inv FFT 2.6; total 76.0
+
+variant 6: p = 512, B = 8, n = 836, m = 2, (g,h) = (8,1), RGSW (2^14,2), aut (2^10,3)
+  noise (log2 σ, measured / predicted): out  -19.56 /  -19.55   KS  -14.62 /  -14.62   (2000 errors)
+  margin of the condition:  0.20 bits measured,  0.20 bits predicted   (15 s)
+  time per error: rotation   7.41 (8 errors in 59.3) + key switch  0.242 =   7.65 ms
+  µs per coordinate (batch): division 0.7; FFTs, digits, tables 12.2; baby + public 22.4; giant steps 0.0; inv FFT, digits C_L 24.3; ext. product 8.2; final inv FFT 2.6; total 70.6
+
+error bootstrap alone (run_curves.jl, k = 4): n = 816, (2^14,2), m = 2: rotation  14.44 + key switch  0.187 =  14.63 ms
+CSV (scheme,variant,parameters,ms per error)
+mbv,1,p256_B16_n896_m1_h1,7.6172
+mbv,2,p256_B16_n896_m1_h2,7.8321
+mbv,3,p512_B8_n826_m1_h1,9.3414
+mbv,4,p512_B8_n826_m1_h2,10.3697
+mbv,5,p512_B8_n822_m2_h1,7.9938
+mbv,6,p512_B8_n836_m2_h1,7.6515
+eb,4,refresh,14.6313

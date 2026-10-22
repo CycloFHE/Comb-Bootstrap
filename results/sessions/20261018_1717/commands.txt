@@ -1,0 +1,14 @@
+sessions: 10, out: <path> QUICK=0 COOL=60 COOL_SESS=180 LOADMAX=1.5 GLWE=1 TP=1 TPT=8 MREPS=3
+rustc: rustc 1.99.0 (b940084d7 2026-09-28)
+eb_curves: env RAYON_NUM_THREADS=1 REPS=10 KS=1,2,3,4,5,6,7,8 <path>
+comb_curves: env RAYON_NUM_THREADS=1 REPS=5 BITS=2,4,8,12,16 <path>
+product_curves: env RAYON_NUM_THREADS=1 REPS=10 NPROD=0 KS=1,2,3,4 TKS=1,2,3,4,5,6,7,8 <path>
+tfhe_curves: env RAYON_NUM_THREADS=1 THREADS=1 REPS=10 <path>
+rns_small: env RAYON_NUM_THREADS=1 VARIANTS=32,16,32w,16w TF=1 RADIX=1 NE=0 NPROD=0 CHECK=1 REPS=5 MREPS=3 <path>
+glwe_ftime: env RAYON_NUM_THREADS=1 MODE=ftime KS=1,2,3,4,5,6,7,8 KKS=1,2,4,8 REPS=15 <path>
+md5 eb_curves 4f01216d2a448ef413ca58dcacc91e6c
+md5 comb_curves af9842ceab9c6f97a2c511d00ef469d6
+md5 product_curves f3f683df282416193fe01b4c6b58a6f3
+md5 rns_small_arith d8e1e6d9645fb8b4ecc5a29b7b41e452
+md5 eb_glwe 7bc0a5df543a868407dedc2d7cdd5e52
+md5 tfhe-rs-bench/curves bb8a29c8278a2edc112eb8aa773425f1

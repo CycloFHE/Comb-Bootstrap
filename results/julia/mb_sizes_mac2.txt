@@ -1,0 +1,27 @@
+Comb bootstrap at 2 to 16 bits, N = 2048, m = 1, h = 1
+
+ 2 bits: p = 256, B = 16, n = 608, RGSW (2^23,1), aut (2^14,2), V* = 11.60
+  time per error: rotation   2.64 (16 errors in 42.2) + key switch  0.113 + rounding with selection  0.023 =   2.78 ms;  error bootstrap alone (n = 570, (2^23,1), m = 2):   5.69 +  0.126 =   5.82 ms;  ratio 2.10
+
+ 4 bits: p = 256, B = 16, n = 688, RGSW (2^14,2), aut (2^14,2) shifted by 4, V* = 13.20
+  time per error: rotation   3.33 (16 errors in 53.2) + key switch  0.130 + rounding with selection  0.026 =   3.48 ms;  error bootstrap alone (n = 650, (2^13,2), m = 2):  11.04 +  0.194 =  11.24 ms;  ratio 3.23
+
+ 8 bits: p = 256, B = 16, n = 896, RGSW (2^11,3), aut (2^11,3) shifted by 4, V* = 17.37
+  time per error: rotation   5.70 (16 errors in 91.2) + key switch  0.194 + rounding with selection  0.033 =   5.93 ms;  error bootstrap alone (n = 816, (2^14,2), m = 2):  13.76 +  0.175 =  13.94 ms;  ratio 2.35
+
+12 bits: p = 512, B = 8, n = 986, RGSW (2^11,3), aut (2^11,3) shifted by 3, V* = 19.18
+  time per error: rotation   9.98 (8 errors in 79.9) + key switch  0.281 + rounding with selection  0.039 =  10.30 ms;  error bootstrap alone (n = 976, (2^11,3), m = 2):  22.88 +  0.218 =  23.10 ms;  ratio 2.24
+
+16 bits: p = 512, B = 8, n = 1157, RGSW (2^8,5), aut (2^6,6) shifted by 3, V* = 22.63
+  time per error: rotation  18.40 (8 errors in 147.2) + key switch  0.317 + rounding with selection  0.045 =  18.76 ms;  error bootstrap alone (n = 1152, (2^9,4), m = 2):  34.98 +  0.224 =  35.20 ms;  ratio 1.88
+CSV (scheme,bits or k,parameters,ms per error)
+cbs,2,p256_B16_n608,2.7758
+eb,1,refresh,5.8211
+cbs,4,p256_B16_n688,3.4832
+eb,2,refresh,11.2360
+cbs,8,p256_B16_n896,5.9291
+eb,4,refresh,13.9362
+cbs,12,p512_B8_n986,10.3032
+eb,6,refresh,23.0963
+cbs,16,p512_B8_n1157,18.7619
+eb,8,refresh,35.2019

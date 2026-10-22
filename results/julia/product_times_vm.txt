@@ -1,0 +1,4 @@
+Times (FFT backend), N = 2048, one thread, ms
+  trace (2^8,6): conversion and trace of one input 0.906, tensor product 0.181, relinearization (2^10,4) 0.031, product 1.925
+  trace (2^5,10): conversion and trace of one input 1.161, tensor product 0.211, relinearization (2^10,4) 0.031, product 2.526
+  trace (2^4,12): conversion and trace of one input 1.340, tensor product 0.182, relinearization (2^10,4) 0.031, product 2.830

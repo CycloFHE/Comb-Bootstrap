@@ -1,0 +1,37 @@
+CombBoot at 2 to 16 bits, N = 2048, m = 1, h = 1
+
+ 2 bits: p = 256, B = 16, n = 608, RGSW (2^23,1), aut (2^14,2)
+  noise (log2 σ, measured / predicted): out  -15.28 /  -14.62   KS   -9.04 /   -8.97   (2000 errors)
+  margin of the condition:  0.28 bits measured,  0.23 bits predicted   (7 s)
+  time per error: rotation   2.81 (16 errors in 44.9) + key switch  0.112 =   2.92 ms;  error bootstrap alone (n = 570, (2^23,1), m = 2):   6.09 +  0.127 =   6.21 ms;  ratio 2.13
+
+ 4 bits: p = 256, B = 16, n = 688, RGSW (2^14,2), aut (2^14,2) shifted by 4
+  noise (log2 σ, measured / predicted): out  -19.93 /  -19.98   KS  -10.94 /  -10.93   (2000 errors)
+  margin of the condition:  0.22 bits measured,  0.22 bits predicted   (7 s)
+  time per error: rotation   3.57 (16 errors in 57.0) + key switch  0.139 =   3.70 ms;  error bootstrap alone (n = 650, (2^13,2), m = 2):  11.54 +  0.207 =  11.74 ms;  ratio 3.17
+
+ 8 bits: p = 256, B = 16, n = 896, RGSW (2^11,3), aut (2^11,3) shifted by 4
+  noise (log2 σ, measured / predicted): out  -23.79 /  -23.84   KS  -16.13 /  -16.14   (2000 errors)
+  margin of the condition:  0.19 bits measured,  0.19 bits predicted   (12 s)
+  time per error: rotation   6.07 (16 errors in 97.1) + key switch  0.204 =   6.27 ms;  error bootstrap alone (n = 816, (2^14,2), m = 2):  15.09 +  0.184 =  15.27 ms;  ratio 2.43
+
+12 bits: p = 512, B = 8, n = 986, RGSW (2^11,3), aut (2^11,3) shifted by 3
+  noise (log2 σ, measured / predicted): out  -24.37 /  -24.33   KS  -18.31 /  -18.28   (2000 errors)
+  margin of the condition:  0.22 bits measured,  0.20 bits predicted   (22 s)
+  time per error: rotation  10.82 (8 errors in 86.6) + key switch  0.299 =  11.12 ms;  error bootstrap alone (n = 976, (2^11,3), m = 2):  24.81 +  0.229 =  25.03 ms;  ratio 2.25
+
+16 bits: p = 512, B = 8, n = 1157, RGSW (2^8,5), aut (2^6,6) shifted by 3
+  noise (log2 σ, measured / predicted): out  -28.09 /  -27.72   KS  -22.59 /  -22.65   (2000 errors)
+  margin of the condition:  0.28 bits measured,  0.21 bits predicted   (39 s)
+  time per error: rotation  19.08 (8 errors in 152.7) + key switch  0.338 =  19.42 ms;  error bootstrap alone (n = 1152, (2^9,4), m = 2):  36.55 +  0.243 =  36.80 ms;  ratio 1.89
+CSV (scheme,bits or k,parameters,ms per error)
+mbs,2,p256_B16_n608,2.9209
+eb,1,refresh,6.2129
+mbs,4,p256_B16_n688,3.7044
+eb,2,refresh,11.7432
+mbs,8,p256_B16_n896,6.2741
+eb,4,refresh,15.2700
+mbs,12,p512_B8_n986,11.1222
+eb,6,refresh,25.0340
+mbs,16,p512_B8_n1157,19.4222
+eb,8,refresh,36.7955

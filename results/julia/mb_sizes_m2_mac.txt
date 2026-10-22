@@ -1,0 +1,62 @@
+Comb bootstrap at 2 to 16 bits, N = 2048, m = 2, h = 1
+
+ 2 bits: p = 256, B = 16, n = 608, RGSW (2^23,1), aut (2^14,2), V* = 11.60, m = 2
+  noise (log2 σ, measured / predicted): out  -15.25 /  -14.62   KS   -9.07 /   -8.97   (2000 errors)
+  margin of the condition:  0.29 bits measured,  0.23 bits predicted   (6 s)
+  end to end: E_k (rotation inputs) σ   2.06 measured /   2.06 predicted, max |E_k| 15 (window 64), mean 0.095;  selection: V ≤ V* in 2000/2000, mean V 11.44, 100 trials on average;  output noise  -15.29   (2000 ciphertexts)
+  margin of the condition, end to end:  0.23 bits (measured variance of E_k),  0.23 bits predicted   (7 s)
+  rotation per error, same session: m = 2   2.43 ms, m = 1   2.81 ms (ratio 0.865)
+  time per error: rotation   2.43 (16 errors in 38.9) + key switch  0.120 + rounding with selection  0.025 =   2.58 ms;  error bootstrap alone (n = 570, (2^23,1), m = 2):   6.00 +  0.134 =   6.14 ms;  ratio 2.38
+
+ 4 bits: p = 256, B = 16, n = 688, RGSW (2^14,2), aut (2^14,2) shifted by 4, V* = 13.20, m = 2
+  noise (log2 σ, measured / predicted): out  -20.20 /  -19.98   KS  -10.89 /  -10.93   (2000 errors)
+  margin of the condition:  0.21 bits measured,  0.22 bits predicted   (7 s)
+  end to end: E_k (rotation inputs) σ   2.06 measured /   2.07 predicted, max |E_k| 13 (window 64), mean 0.020;  selection: V ≤ V* in 2000/2000, mean V 13.04, 104 trials on average;  output noise  -20.21   (2000 ciphertexts)
+  margin of the condition, end to end:  0.22 bits (measured variance of E_k),  0.22 bits predicted   (8 s)
+  rotation per error, same session: m = 2   3.31 ms, m = 1   3.57 ms (ratio 0.928)
+  time per error: rotation   3.31 (16 errors in 52.9) + key switch  0.136 + rounding with selection  0.029 =   3.47 ms;  error bootstrap alone (n = 650, (2^13,2), m = 2):  11.64 +  0.208 =  11.85 ms;  ratio 3.41
+
+ 8 bits: p = 256, B = 16, n = 896, RGSW (2^11,3), aut (2^11,3) shifted by 4, V* = 17.37, m = 2
+  noise (log2 σ, measured / predicted): out  -23.99 /  -23.84   KS  -16.13 /  -16.14   (2000 errors)
+  margin of the condition:  0.19 bits measured,  0.19 bits predicted   (11 s)
+  end to end: E_k (rotation inputs) σ   2.08 measured /   2.09 predicted, max |E_k| 15 (window 64), mean 0.134;  selection: V ≤ V* in 2000/2000, mean V 17.17, 106 trials on average;  output noise  -24.04   (2000 ciphertexts)
+  margin of the condition, end to end:  0.21 bits (measured variance of E_k),  0.19 bits predicted   (13 s)
+  rotation per error, same session: m = 2   5.48 ms, m = 1   5.98 ms (ratio 0.917)
+  time per error: rotation   5.48 (16 errors in 87.7) + key switch  0.203 + rounding with selection  0.035 =   5.72 ms;  error bootstrap alone (n = 816, (2^14,2), m = 2):  14.73 +  0.185 =  14.92 ms;  ratio 2.61
+
+12 bits: p = 512, B = 8, n = 986, RGSW (2^11,3), aut (2^11,3) shifted by 3, V* = 19.18, m = 2
+  noise (log2 σ, measured / predicted): out  -24.59 /  -24.33   KS  -18.33 /  -18.28   (2000 errors)
+  margin of the condition:  0.26 bits measured,  0.20 bits predicted   (21 s)
+  end to end: E_k (rotation inputs) σ   3.10 measured /   3.09 predicted, max |E_k| 27 (window 128), mean 0.147;  selection: V ≤ V* in 2000/2000, mean V 18.99, 103 trials on average;  output noise  -24.59   (2000 ciphertexts)
+  margin of the condition, end to end:  0.19 bits (measured variance of E_k),  0.20 bits predicted   (23 s)
+  rotation per error, same session: m = 2  10.08 ms, m = 1  10.78 ms (ratio 0.935)
+  time per error: rotation  10.08 (8 errors in 80.6) + key switch  0.300 + rounding with selection  0.044 =  10.42 ms;  error bootstrap alone (n = 976, (2^11,3), m = 2):  24.70 +  0.229 =  24.93 ms;  ratio 2.39
+
+16 bits: p = 512, B = 8, n = 1158, RGSW (2^8,5), aut (2^6,6) shifted by 3, V* = 22.65, m = 2
+  noise (log2 σ, measured / predicted): out  -28.17 /  -27.72   KS  -22.68 /  -22.66   (2000 errors)
+  margin of the condition:  0.33 bits measured,  0.21 bits predicted   (36 s)
+  end to end: E_k (rotation inputs) σ   3.07 measured /   3.08 predicted, max |E_k| 30 (window 128), mean 0.210;  selection: V ≤ V* in 2000/2000, mean V 22.44, 105 trials on average;  output noise  -28.14   (2000 ciphertexts)
+  margin of the condition, end to end:  0.21 bits (measured variance of E_k),  0.21 bits predicted   (39 s)
+  rotation per error, same session: m = 2  17.80 ms, m = 1  19.48 ms (ratio 0.914)
+  time per error: rotation  17.80 (8 errors in 142.4) + key switch  0.339 + rounding with selection  0.048 =  18.19 ms;  error bootstrap alone (n = 1152, (2^9,4), m = 2):  37.29 +  0.239 =  37.53 ms;  ratio 2.06
+CSV (scheme,bits or k,parameters,ms per error)
+rot,2,m1,2.8123
+rot,2,m2,2.4317
+cbs,2,p256_B16_n608_m2,2.5765
+eb,1,refresh,6.1383
+rot,4,m1,3.5658
+rot,4,m2,3.3073
+cbs,4,p256_B16_n688_m2,3.4725
+eb,2,refresh,11.8508
+rot,8,m1,5.9772
+rot,8,m2,5.4789
+cbs,8,p256_B16_n896_m2,5.7176
+eb,4,refresh,14.9200
+rot,12,m1,10.7802
+rot,12,m2,10.0766
+cbs,12,p512_B8_n986_m2,10.4203
+eb,6,refresh,24.9315
+rot,16,m1,19.4787
+rot,16,m2,17.8015
+cbs,16,p512_B8_n1158_m2,18.1889
+eb,8,refresh,37.5288

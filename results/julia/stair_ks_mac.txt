@@ -1,0 +1,7 @@
+Polynomial stair key switch, d = 16, one thread (log2 σ: measured / predicted)
+  error bootstrap, p̂ = 256, refresh              2048 ->  800 (17 steps): log2 σ  -13.74 /  -13.76     0.181 ms   keys    2.7 MB
+  error bootstrap, p̂ = 256, before a product     2048 ->  830 (10 steps): log2 σ  -13.89 /  -13.90     0.131 ms   keys    1.9 MB
+  error bootstrap, p̂ = 64                        2048 ->  780 ( 8 steps): log2 σ  -12.21 /  -12.28     0.096 ms   keys    1.5 MB
+  TFHE PBS, 4-bit blocks                         2048 ->  704 (13 steps): log2 σ  -11.24 /  -11.28     0.130 ms   keys    1.8 MB
+  TFHE single ring, N = 2^15                    32768 ->  848 (15 steps): log2 σ  -14.88 /  -14.86     3.118 ms   keys   63.2 MB
+  TFHE single ring, N = 2^16                    65536 ->  896 (17 steps): log2 σ  -16.12 /  -16.14     6.385 ms   keys  128.6 MB

@@ -1,0 +1,50 @@
+TFHE-rs 1.8.1, 1 thread(s), 10 repetitions, default parameters
+  FheUint2  (k = 1) refresh       14.521 ms  (min     14.331)
+  FheUint2  (k = 1) addition      29.302 ms  (min     28.507)
+  FheUint2  (k = 1) product       14.235 ms  (min     14.200)
+  FheUint4  (k = 2) refresh       28.794 ms  (min     28.747)
+  FheUint4  (k = 2) addition      57.732 ms  (min     57.666)
+  FheUint4  (k = 2) product       87.532 ms  (min     87.330)
+  FheUint6  (k = 3) refresh       43.835 ms  (min     43.623)
+  FheUint6  (k = 3) addition      88.212 ms  (min     87.211)
+  FheUint6  (k = 3) product      210.564 ms  (min    210.216)
+  FheUint8  (k = 4) refresh       59.894 ms  (min     59.662)
+  FheUint8  (k = 4) addition     119.008 ms  (min    118.711)
+  FheUint8  (k = 4) product      423.351 ms  (min    421.866)
+  FheUint10 (k = 5) refresh       75.358 ms  (min     75.248)
+  FheUint10 (k = 5) addition     149.523 ms  (min    149.469)
+  FheUint10 (k = 5) product      668.322 ms  (min    668.105)
+  FheUint12 (k = 6) refresh       90.958 ms  (min     90.740)
+  FheUint12 (k = 6) addition     180.737 ms  (min    180.601)
+  FheUint12 (k = 6) product      957.896 ms  (min    957.635)
+  FheUint14 (k = 7) refresh      106.396 ms  (min    106.273)
+  FheUint14 (k = 7) addition     211.681 ms  (min    211.433)
+  FheUint14 (k = 7) product     1293.930 ms  (min   1292.992)
+  FheUint16 (k = 8) refresh      121.636 ms  (min    121.336)
+  FheUint16 (k = 8) addition     243.546 ms  (min    242.697)
+  FheUint16 (k = 8) product     1688.980 ms  (min   1688.262)
+CSV (scheme,k,operation,median_ms,min_ms)
+tfhers,1,refresh,14.5205,14.3311
+tfhers,1,addition,29.3017,28.5068
+tfhers,1,product,14.2348,14.2000
+tfhers,2,refresh,28.7943,28.7475
+tfhers,2,addition,57.7322,57.6660
+tfhers,2,product,87.5315,87.3296
+tfhers,3,refresh,43.8348,43.6230
+tfhers,3,addition,88.2120,87.2112
+tfhers,3,product,210.5643,210.2164
+tfhers,4,refresh,59.8941,59.6621
+tfhers,4,addition,119.0075,118.7112
+tfhers,4,product,423.3510,421.8665
+tfhers,5,refresh,75.3578,75.2479
+tfhers,5,addition,149.5235,149.4688
+tfhers,5,product,668.3223,668.1045
+tfhers,6,refresh,90.9580,90.7401
+tfhers,6,addition,180.7365,180.6015
+tfhers,6,product,957.8963,957.6350
+tfhers,7,refresh,106.3963,106.2728
+tfhers,7,addition,211.6812,211.4335
+tfhers,7,product,1293.9298,1292.9916
+tfhers,8,refresh,121.6364,121.3364
+tfhers,8,addition,243.5460,242.6975
+tfhers,8,product,1688.9800,1688.2623

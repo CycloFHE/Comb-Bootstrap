@@ -1,0 +1,75 @@
+Tail of the error at the bootstrap, nu = 1 (one fresh output, key switch, rounding with recentering and selection); 1000000 samples per k, 12 threads
+k = 1 (p_hat = 2^2), m = 2, n = 570, (2^23,1): sigma_out 2^-14.82 (predicted 2^-14.77), sigma_D/R 2^-7.94, window/sigma_D 15.3; z: mean -0.0087, std 1.0295, kurtosis 2.994 (1100 s)
+   D (bootstrap input): mean -0.0087, std 1.0295, kurtosis 2.994
+   t    |z|>=t observed / expected (model)    |z/std|>=t observed / expected
+  2.0      52847 /    45500.1  (ratio 1.16)           45185 /    45500.1  (ratio 0.99)
+CSV,D (bootstrap input),1,2,52847,45185,45500.078,999996
+  2.5      15001 /    12419.3  (ratio 1.21)           12454 /    12419.3  (ratio 1.00)
+CSV,D (bootstrap input),1,2.5,15001,12454,12419.280,999996
+  3.0       3532 /     2699.8  (ratio 1.31)            2623 /     2699.8  (ratio 0.97)
+CSV,D (bootstrap input),1,3,3532,2623,2699.785,999996
+  3.5        620 /      465.3  (ratio 1.33)             428 /      465.3  (ratio 0.92)
+CSV,D (bootstrap input),1,3.5,620,428,465.256,999996
+  4.0        108 /       63.3  (ratio 1.71)              70 /       63.3  (ratio 1.11)
+CSV,D (bootstrap input),1,4,108,70,63.342,999996
+  4.5          7 /        6.8  (ratio 1.03)               3 /        6.8  (ratio 0.44)
+CSV,D (bootstrap input),1,4.5,7,3,6.795,999996
+  5.0          1 /        0.6  (ratio 1.74)               0 /        0.6  (ratio 0.00)
+CSV,D (bootstrap input),1,5,1,0,0.573,999996
+  5.5          0 /        0.0  (ratio 0.00)               0 /        0.0  (ratio 0.00)
+CSV,D (bootstrap input),1,5.5,0,0,0.038,999996
+   e_out (output of the refresh): mean 0.0112, std 0.9665, kurtosis 2.995
+   t    |z|>=t observed / expected (model)    |z/std|>=t observed / expected
+  2.0      38609 /    45500.1  (ratio 0.85)           45739 /    45500.1  (ratio 1.01)
+CSV,e_out (output of the refresh),1,2,38609,45739,45500.078,999996
+  2.5       9566 /    12419.3  (ratio 0.77)           12309 /    12419.3  (ratio 0.99)
+CSV,e_out (output of the refresh),1,2.5,9566,12309,12419.280,999996
+  3.0       1868 /     2699.8  (ratio 0.69)            2638 /     2699.8  (ratio 0.98)
+CSV,e_out (output of the refresh),1,3,1868,2638,2699.785,999996
+  3.5        276 /      465.3  (ratio 0.59)             446 /      465.3  (ratio 0.96)
+CSV,e_out (output of the refresh),1,3.5,276,446,465.256,999996
+  4.0         38 /       63.3  (ratio 0.60)              62 /       63.3  (ratio 0.98)
+CSV,e_out (output of the refresh),1,4,38,62,63.342,999996
+  4.5          5 /        6.8  (ratio 0.74)               5 /        6.8  (ratio 0.74)
+CSV,e_out (output of the refresh),1,4.5,5,5,6.795,999996
+  5.0          0 /        0.6  (ratio 0.00)               0 /        0.6  (ratio 0.00)
+CSV,e_out (output of the refresh),1,5,0,0,0.573,999996
+  5.5          0 /        0.0  (ratio 0.00)               0 /        0.0  (ratio 0.00)
+CSV,e_out (output of the refresh),1,5.5,0,0,0.038,999996
+k = 4 (p_hat = 2^8), m = 2, n = 816, (2^14,2): sigma_out 2^-20.12 (predicted 2^-20.15), sigma_D/R 2^-14.13, window/sigma_D 17.5; z: mean 0.0126, std 1.0053, kurtosis 3.000 (2604 s)
+   D (bootstrap input): mean 0.0126, std 1.0053, kurtosis 3.000
+   t    |z|>=t observed / expected (model)    |z/std|>=t observed / expected
+  2.0      46347 /    45500.1  (ratio 1.02)           45440 /    45500.1  (ratio 1.00)
+CSV,D (bootstrap input),4,2,46347,45440,45500.078,999996
+  2.5      12862 /    12419.3  (ratio 1.04)           12553 /    12419.3  (ratio 1.01)
+CSV,D (bootstrap input),4,2.5,12862,12553,12419.280,999996
+  3.0       2836 /     2699.8  (ratio 1.05)            2674 /     2699.8  (ratio 0.99)
+CSV,D (bootstrap input),4,3,2836,2674,2699.785,999996
+  3.5        474 /      465.3  (ratio 1.02)             446 /      465.3  (ratio 0.96)
+CSV,D (bootstrap input),4,3.5,474,446,465.256,999996
+  4.0         64 /       63.3  (ratio 1.01)              59 /       63.3  (ratio 0.93)
+CSV,D (bootstrap input),4,4,64,59,63.342,999996
+  4.5          8 /        6.8  (ratio 1.18)               7 /        6.8  (ratio 1.03)
+CSV,D (bootstrap input),4,4.5,8,7,6.795,999996
+  5.0          1 /        0.6  (ratio 1.74)               1 /        0.6  (ratio 1.74)
+CSV,D (bootstrap input),4,5,1,1,0.573,999996
+  5.5          1 /        0.0  (ratio 26.33)               0 /        0.0  (ratio 0.00)
+CSV,D (bootstrap input),4,5.5,1,0,0.038,999996
+   e_out (output of the refresh): mean 0.0020, std 1.0232, kurtosis 3.006
+   t    |z|>=t observed / expected (model)    |z/std|>=t observed / expected
+  2.0      50601 /    45500.1  (ratio 1.11)           45530 /    45500.1  (ratio 1.00)
+CSV,e_out (output of the refresh),4,2,50601,45530,45500.078,999996
+  2.5      14722 /    12419.3  (ratio 1.19)           12534 /    12419.3  (ratio 1.01)
+CSV,e_out (output of the refresh),4,2.5,14722,12534,12419.280,999996
+  3.0       3455 /     2699.8  (ratio 1.28)            2770 /     2699.8  (ratio 1.03)
+CSV,e_out (output of the refresh),4,3,3455,2770,2699.785,999996
+  3.5        609 /      465.3  (ratio 1.31)             467 /      465.3  (ratio 1.00)
+CSV,e_out (output of the refresh),4,3.5,609,467,465.256,999996
+  4.0         86 /       63.3  (ratio 1.36)              61 /       63.3  (ratio 0.96)
+CSV,e_out (output of the refresh),4,4,86,61,63.342,999996
+  4.5          9 /        6.8  (ratio 1.32)               7 /        6.8  (ratio 1.03)
+CSV,e_out (output of the refresh),4,4.5,9,7,6.795,999996
+  5.0          2 /        0.6  (ratio 3.49)               1 /        0.6  (ratio 1.74)
+CSV,e_out (output of the refresh),4,5,2,1,0.573,999996
+  5.5          1 /        0.0  (ratio 26.33)               0 /        0.0  (ratio 0.00)
+CSV,e_out (output of the refresh),4,5.5,1,0,0.038,999996

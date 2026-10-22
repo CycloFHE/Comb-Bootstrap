@@ -1,0 +1,23 @@
+date: 2026-10-18 17:17:37
+uname: Darwin MacBook-Pro-6.local 25.6.0 Darwin Kernel Version 25.6.0: Fri Jul 31 19:18:53 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T6031 arm64
+ProductName:		macOS ProductVersion:		26.6.2 BuildVersion:		25G83 
+cpu: Apple M3 Max
+cores: 14; performance 10, efficiency 4
+power: 'AC Power'
+low power mode: powermode=0 
+thermal: 
+uptime: 17:17  up 19 mins, 2 users, load averages: 1,89 3,55 6,07
+--- processes using the most CPU
+PID   COMMAND          %CPU  MEM   
+817   mediaanalysisd   112.3 21M+  
+0     kernel_task      6.7   9712K-
+2930  top              5.9   4128K+
+905   Claude Helper (R 4.2   343M+ 
+372   mds              4.2   30M-  
+448   airportd         4.0   8241K 
+591   mds_stores       3.7   21M+  
+409   bluetoothd       3.1   8369K+
+790   duetexpertd      2.9   10M+  
+658   identityservices 2.4   11M+  
+826   WiFiAgent        2.3   7745K 
+1243  spotlightknowled 2.2   4625K+

@@ -1,0 +1,16 @@
+[package]
+name = "eb_tfhers"
+version = "0.1.0"
+edition = "2021"
+description = "Error bootstrap and comb bootstrap (case (B), p = 2N) on top of TFHE-rs 1.8.1, and same-library comparison with TFHE-rs"
+
+[dependencies]
+tfhe = { version = "=1.8.1", features = ["integer"] }
+rand = "0.8"
+rand_distr = "0.4"
+rayon = "1"
+tfhe-fft = "=0.10.1"
+pulp = "=0.22.3"
+
+[profile.release]
+opt-level = 3
